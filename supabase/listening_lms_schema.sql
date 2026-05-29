@@ -305,3 +305,30 @@ grant select, insert, update on table public.profiles to authenticated;
 grant select, insert, update, delete on table public.assignments to authenticated;
 grant select, insert, update on table public.assignment_progress to authenticated;
 grant select, insert, update on table public.segment_progress to authenticated;
+
+-- Fixed teacher bootstrap.
+-- This confirms existing Auth users and marks only these two emails as teachers.
+-- Create the two Auth users in Authentication > Users first, or run the private
+-- teacher password SQL separately in SQL Editor.
+update auth.users
+set email_confirmed_at = coalesce(email_confirmed_at, now()),
+    updated_at = now()
+where lower(email) in ('chensijruth@gmail.com', 'terrywai7114@gmail.com');
+
+insert into public.profiles (id, email, full_name, role)
+select
+  id,
+  lower(email),
+  case lower(email)
+    when 'chensijruth@gmail.com' then '老师 1'
+    when 'terrywai7114@gmail.com' then '老师 2'
+    else split_part(email, '@', 1)
+  end,
+  'teacher'::public.user_role
+from auth.users
+where lower(email) in ('chensijruth@gmail.com', 'terrywai7114@gmail.com')
+on conflict (id) do update
+set email = excluded.email,
+    full_name = excluded.full_name,
+    role = 'teacher',
+    updated_at = now();
