@@ -257,6 +257,18 @@ async function signUp() {
     setAuthStatus("请输入邮箱和密码。");
     return;
   }
+
+  setAuthStatus("正在检查账号...");
+  const signInAttempt = await state.supabase.auth.signInWithPassword({ email, password });
+  if (!signInAttempt.error) {
+    setAuthStatus("账号已存在，已直接登录。");
+    return;
+  }
+  if (!isInvalidLoginError(signInAttempt.error)) {
+    setAuthStatus(signInAttempt.error.message);
+    return;
+  }
+
   setAuthStatus("注册中...");
   const { data, error } = await state.supabase.auth.signUp({
     email,
@@ -264,12 +276,25 @@ async function signUp() {
     options: { data: { full_name: fullName } },
   });
   if (error) {
-    setAuthStatus(error.message);
+    if (isEmailRateLimitError(error)) {
+      setAuthStatus("Supabase 注册邮箱限流了：如果这个邮箱已注册，请点“登录”；新账号请稍后再试，或在 Supabase 调整 Auth 邮件限制。");
+    } else {
+      setAuthStatus(error.message);
+    }
     return;
   }
   if (!data.session) {
     setAuthStatus("注册成功。若开启了邮箱确认，请先去邮箱完成确认。");
   }
+}
+
+function isInvalidLoginError(error) {
+  const message = String(error?.message || "").toLowerCase();
+  return message.includes("invalid login credentials") || message.includes("email not confirmed");
+}
+
+function isEmailRateLimitError(error) {
+  return String(error?.message || "").toLowerCase().includes("rate limit");
 }
 
 async function signOut() {
