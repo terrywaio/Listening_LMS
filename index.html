@@ -26,24 +26,24 @@
         <div>
           <p id="configStatus" class="status-pill">检查 Supabase 配置</p>
           <h2>登录精听作业</h2>
-          <p class="muted">学生只能看到老师分配的任务；老师可以分配课包并查看完成情况。</p>
+          <p class="muted">学生填姓名直接进入；老师用邮箱密码登录并分配课包。</p>
         </div>
 
         <label>
           姓名
-          <input id="fullNameInput" autocomplete="name" placeholder="注册时填写" />
+          <input id="fullNameInput" autocomplete="name" placeholder="学生进入时填写" />
         </label>
         <label>
-          邮箱
-          <input id="emailInput" autocomplete="email" inputmode="email" placeholder="name@example.com" />
+          老师邮箱
+          <input id="emailInput" autocomplete="email" inputmode="email" placeholder="teacher@example.com" />
         </label>
         <label>
-          密码
+          老师密码
           <input id="passwordInput" autocomplete="current-password" type="password" placeholder="至少 6 位" />
         </label>
         <div class="inline-actions">
-          <button class="primary-button" id="signInButton" type="button">登录</button>
-          <button class="secondary-button" id="signUpButton" type="button">注册/登录学生账号</button>
+          <button class="primary-button" id="signInButton" type="button">老师登录</button>
+          <button class="secondary-button" id="signUpButton" type="button">学生免邮箱进入</button>
         </div>
         <p id="authStatus" class="course-status">等待登录</p>
       </div>
