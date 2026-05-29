@@ -1,6 +1,10 @@
-const APP_VERSION = "20260529-lms-3";
+const APP_VERSION = "20260529-lms-4";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 3;
+const FIXED_TEACHERS = [
+  { email: "chensijruth@gmail.com", name: "老师 1" },
+  { email: "terrywai7114@gmail.com", name: "老师 2" },
+];
 
 const state = {
   configReady: false,
@@ -76,7 +80,7 @@ function bindElements() {
     "configStatus",
     "authStatus",
     "fullNameInput",
-    "emailInput",
+    "teacherEmailSelect",
     "passwordInput",
     "signInButton",
     "signUpButton",
@@ -239,10 +243,14 @@ async function initializeAuth() {
 
 async function signIn() {
   if (!state.supabase) return;
-  const email = els.emailInput.value.trim();
+  const email = selectedTeacherEmail();
   const password = els.passwordInput.value;
-  if (!email || !password) {
-    setAuthStatus("请输入邮箱和密码。");
+  if (!email || !isFixedTeacherEmail(email)) {
+    setAuthStatus("请选择固定老师账号。");
+    return;
+  }
+  if (!password) {
+    setAuthStatus("请输入老师密码。");
     return;
   }
   setAuthStatus("登录中...");
@@ -304,6 +312,9 @@ async function handleSessionChanged() {
 
   try {
     state.profile = await ensureProfile();
+    if (isFixedTeacherEmail(state.session.user.email) && state.profile.role !== "teacher") {
+      throw new Error("固定老师账号还没有初始化为 teacher，请先运行老师账号 SQL。");
+    }
     if (isTeacher()) {
       await loadTeacherDashboard();
     } else {
@@ -311,6 +322,7 @@ async function handleSessionChanged() {
     }
   } catch (error) {
     setAuthStatus(`账号数据加载失败：${error.message}`);
+    disableAuthControls(false);
   }
   renderShell();
 }
@@ -329,6 +341,7 @@ function resetUserState() {
 async function ensureProfile() {
   const user = state.session.user;
   const preferredName = preferredProfileName(user);
+  const fixedTeacher = fixedTeacherForEmail(user.email);
   const { data, error } = await state.supabase
     .from("profiles")
     .select("id,email,full_name,role,created_at")
@@ -336,6 +349,7 @@ async function ensureProfile() {
     .maybeSingle();
   if (error) throw error;
   if (data) {
+    if (fixedTeacher && data.role !== "teacher") return data;
     if (preferredName && data.role === "student" && data.full_name !== preferredName) {
       const { data: updated, error: updateError } = await state.supabase
         .from("profiles")
@@ -347,6 +361,9 @@ async function ensureProfile() {
       return { ...data, full_name: preferredName };
     }
     return data;
+  }
+  if (fixedTeacher) {
+    throw new Error("固定老师账号还没有创建 profile，请先运行老师账号 SQL。");
   }
 
   const fallbackName = preferredName || user.email?.split("@")[0] || "Student";
@@ -382,6 +399,19 @@ function hydrateAuthForm() {
   if (studentName && els.fullNameInput && !els.fullNameInput.value) {
     els.fullNameInput.value = studentName;
   }
+}
+
+function selectedTeacherEmail() {
+  return String(els.teacherEmailSelect?.value || "").trim().toLowerCase();
+}
+
+function isFixedTeacherEmail(email) {
+  return Boolean(fixedTeacherForEmail(email));
+}
+
+function fixedTeacherForEmail(email) {
+  const normalized = String(email || "").trim().toLowerCase();
+  return FIXED_TEACHERS.find((teacher) => teacher.email === normalized) || null;
 }
 
 async function loadLibrary() {
@@ -1413,7 +1443,7 @@ function getListenCount(segment) {
 }
 
 function isTeacher() {
-  return state.profile?.role === "teacher";
+  return state.profile?.role === "teacher" && isFixedTeacherEmail(state.profile.email || state.session?.user?.email);
 }
 
 function isStudent() {
