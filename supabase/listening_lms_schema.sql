@@ -162,6 +162,13 @@ on public.profiles for insert
 to authenticated
 with check (id = auth.uid() and role = 'student');
 
+drop policy if exists "profiles_update_own_student" on public.profiles;
+create policy "profiles_update_own_student"
+on public.profiles for update
+to authenticated
+using (id = auth.uid() and role = 'student')
+with check (id = auth.uid() and role = 'student');
+
 drop policy if exists "assignments_select_owned" on public.assignments;
 create policy "assignments_select_owned"
 on public.assignments for select
@@ -294,7 +301,7 @@ grant execute on function public.is_teacher() to authenticated;
 grant usage on schema public to authenticated;
 grant usage on type public.user_role to authenticated;
 
-grant select, insert on table public.profiles to authenticated;
+grant select, insert, update on table public.profiles to authenticated;
 grant select, insert, update, delete on table public.assignments to authenticated;
 grant select, insert, update on table public.assignment_progress to authenticated;
 grant select, insert, update on table public.segment_progress to authenticated;
