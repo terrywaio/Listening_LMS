@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>精听 LMS</title>
-    <link rel="stylesheet" href="./styles.css?v=20260529-lms-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260529-lms-4" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script defer src="./supabase-config.js?v=20260529-lms-3"></script>
-    <script defer src="./app.js?v=20260529-lms-3"></script>
+    <script defer src="./supabase-config.js?v=20260529-lms-4"></script>
+    <script defer src="./app.js?v=20260529-lms-4"></script>
   </head>
   <body>
     <header class="topbar">
@@ -34,8 +34,11 @@
           <input id="fullNameInput" autocomplete="name" placeholder="学生进入时填写" />
         </label>
         <label>
-          老师邮箱
-          <input id="emailInput" autocomplete="email" inputmode="email" placeholder="teacher@example.com" />
+          老师账号
+          <select id="teacherEmailSelect">
+            <option value="chensijruth@gmail.com">老师 1 · chensijruth@gmail.com</option>
+            <option value="terrywai7114@gmail.com">老师 2 · terrywai7114@gmail.com</option>
+          </select>
         </label>
         <label>
           老师密码
