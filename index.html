@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>精听 LMS</title>
-    <link rel="stylesheet" href="./styles.css?v=20260530-lms-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260530-lms-4" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script defer src="./supabase-config.js?v=20260530-lms-3"></script>
-    <script defer src="./app.js?v=20260530-lms-3"></script>
+    <script defer src="./supabase-config.js?v=20260530-lms-4"></script>
+    <script defer src="./app.js?v=20260530-lms-4"></script>
   </head>
   <body>
     <header class="topbar">
@@ -36,8 +36,12 @@
 
         <div class="auth-mode-panel" id="studentAuthPanel">
           <label>
-            学生姓名
-            <input id="fullNameInput" autocomplete="name" placeholder="输入同一个姓名会进入同一个账户" />
+            学生账号
+            <select id="studentLoginSelect"></select>
+          </label>
+          <label>
+            学生密码
+            <input id="studentPasswordInput" autocomplete="current-password" type="password" placeholder="默认 123456" />
           </label>
           <button class="secondary-button" id="signUpButton" type="button">进入学生端</button>
         </div>

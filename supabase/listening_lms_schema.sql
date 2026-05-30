@@ -408,3 +408,121 @@ set email = excluded.email,
     full_name = excluded.full_name,
     role = 'teacher',
     updated_at = now();
+
+-- Fixed student bootstrap and cleanup.
+-- This removes existing non-fixed student test accounts, then creates the
+-- current fixed student accounts. Default student password: 123456.
+drop table if exists fixed_student_accounts;
+create temporary table fixed_student_accounts (
+  email text primary key,
+  full_name text not null,
+  login_key text not null,
+  password text not null
+) on commit drop;
+
+insert into fixed_student_accounts (email, full_name, login_key, password)
+values
+  ('student-hty@students.listeninglab.app', 'HTY', 'hty', '123456'),
+  ('student-xumaoheng@students.listeninglab.app', 'xumaoheng', 'xumaoheng', '123456'),
+  ('student-2@students.listeninglab.app', '学生2', 'student2', '123456'),
+  ('student-3@students.listeninglab.app', '学生3', 'student3', '123456'),
+  ('student-4@students.listeninglab.app', '学生4', 'student4', '123456');
+
+with doomed_students as (
+  select p.id
+  from public.profiles p
+  where p.role = 'student'::public.user_role
+    and lower(coalesce(p.email, '')) not in (select email from fixed_student_accounts)
+)
+delete from auth.users u
+using doomed_students d
+where u.id = d.id;
+
+insert into auth.users (
+  instance_id,
+  id,
+  aud,
+  role,
+  email,
+  encrypted_password,
+  email_confirmed_at,
+  raw_app_meta_data,
+  raw_user_meta_data,
+  created_at,
+  updated_at,
+  confirmation_token,
+  recovery_token,
+  email_change_token_new,
+  email_change
+)
+select
+  '00000000-0000-0000-0000-000000000000'::uuid,
+  gen_random_uuid(),
+  'authenticated',
+  'authenticated',
+  s.email,
+  crypt(s.password, gen_salt('bf')),
+  now(),
+  '{"provider":"email","providers":["email"]}'::jsonb,
+  jsonb_build_object('full_name', s.full_name, 'student_login_name', s.login_key, 'role', 'student'),
+  now(),
+  now(),
+  '',
+  '',
+  '',
+  ''
+from fixed_student_accounts s
+where not exists (
+  select 1 from auth.users u
+  where lower(u.email) = s.email
+);
+
+update auth.users u
+set encrypted_password = crypt(s.password, gen_salt('bf')),
+    email_confirmed_at = coalesce(u.email_confirmed_at, now()),
+    raw_app_meta_data = '{"provider":"email","providers":["email"]}'::jsonb,
+    raw_user_meta_data = jsonb_build_object('full_name', s.full_name, 'student_login_name', s.login_key, 'role', 'student'),
+    aud = 'authenticated',
+    role = 'authenticated',
+    updated_at = now()
+from fixed_student_accounts s
+where lower(u.email) = s.email;
+
+insert into auth.identities (
+  provider_id,
+  user_id,
+  identity_data,
+  provider,
+  last_sign_in_at,
+  created_at,
+  updated_at
+)
+select
+  u.id::text,
+  u.id,
+  jsonb_build_object('sub', u.id::text, 'email', lower(u.email), 'email_verified', true, 'phone_verified', false),
+  'email',
+  now(),
+  now(),
+  now()
+from auth.users u
+join fixed_student_accounts s on lower(u.email) = s.email
+where not exists (
+  select 1 from auth.identities i
+  where i.provider = 'email'
+    and i.user_id = u.id
+);
+
+insert into public.profiles (id, email, full_name, role)
+select
+  u.id,
+  s.email,
+  s.full_name,
+  'student'::public.user_role
+from auth.users u
+join fixed_student_accounts s on lower(u.email) = s.email
+on conflict (id) do update
+set email = excluded.email,
+    full_name = excluded.full_name,
+    role = 'student',
+    updated_at = now();

@@ -1,10 +1,18 @@
-const APP_VERSION = "20260530-lms-3";
+const APP_VERSION = "20260530-lms-4";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
+const FIXED_STUDENT_PASSWORD = "123456";
 const FIXED_TEACHERS = [
   { email: "chensijruth@gmail.com", name: "老师 1" },
   { email: "terrywai7114@gmail.com", name: "老师 2" },
+];
+const FIXED_STUDENTS = [
+  { key: "hty", name: "HTY", email: `student-hty@${STUDENT_AUTH_DOMAIN}` },
+  { key: "xumaoheng", name: "xumaoheng", email: `student-xumaoheng@${STUDENT_AUTH_DOMAIN}` },
+  { key: "student2", name: "学生2", email: `student-2@${STUDENT_AUTH_DOMAIN}` },
+  { key: "student3", name: "学生3", email: `student-3@${STUDENT_AUTH_DOMAIN}` },
+  { key: "student4", name: "学生4", email: `student-4@${STUDENT_AUTH_DOMAIN}` },
 ];
 
 const state = {
@@ -60,6 +68,7 @@ const lessonRepository = {
 
 document.addEventListener("DOMContentLoaded", async () => {
   bindElements();
+  renderFixedStudentOptions();
   hydrateAuthForm();
   bindEvents();
   setAuthMode(state.authMode);
@@ -87,7 +96,8 @@ function bindElements() {
     "teacherModeButton",
     "studentAuthPanel",
     "teacherAuthPanel",
-    "fullNameInput",
+    "studentLoginSelect",
+    "studentPasswordInput",
     "teacherEmailSelect",
     "passwordInput",
     "signInButton",
@@ -274,16 +284,17 @@ async function signIn() {
 
 async function signUp() {
   if (!state.supabase) return;
-  const fullName = els.fullNameInput.value.trim();
-  if (!fullName) {
-    setAuthStatus("学生进入前请先填写姓名。");
+  const student = selectedFixedStudent();
+  if (!student) {
+    setAuthStatus("请选择学生账号。");
     return;
   }
+  const password = els.studentPasswordInput.value || FIXED_STUDENT_PASSWORD;
 
-  state.pendingProfileName = fullName;
-  localStorage.setItem(studentNameKey(), fullName);
-  const email = studentAuthEmail(fullName);
-  const password = studentAuthPassword(fullName);
+  state.pendingProfileName = student.name;
+  localStorage.setItem(studentSelectionKey(), student.key);
+  localStorage.setItem(studentNameKey(), student.name);
+  const email = student.email;
   setAuthStatus("正在进入学生端...");
   disableAuthControls(true);
   const signInResult = await state.supabase.auth.signInWithPassword({ email, password });
@@ -304,8 +315,8 @@ async function signUp() {
     password,
     options: {
       data: {
-        full_name: fullName,
-        student_login_name: normalizeStudentLoginName(fullName),
+        full_name: student.name,
+        student_login_name: student.key,
         role: "student",
       },
     },
@@ -458,10 +469,21 @@ async function reconcileStudentIdentity() {
 }
 
 function hydrateAuthForm() {
-  const studentName = localStorage.getItem(studentNameKey());
-  if (studentName && els.fullNameInput && !els.fullNameInput.value) {
-    els.fullNameInput.value = studentName;
+  const studentKey = localStorage.getItem(studentSelectionKey());
+  if (studentKey && els.studentLoginSelect) {
+    els.studentLoginSelect.value = studentKey;
   }
+}
+
+function renderFixedStudentOptions() {
+  if (!els.studentLoginSelect) return;
+  els.studentLoginSelect.innerHTML = "";
+  FIXED_STUDENTS.forEach((student) => {
+    const option = document.createElement("option");
+    option.value = student.key;
+    option.textContent = student.name;
+    els.studentLoginSelect.appendChild(option);
+  });
 }
 
 function setAuthMode(mode) {
@@ -477,6 +499,11 @@ function setAuthMode(mode) {
 
 function selectedTeacherEmail() {
   return String(els.teacherEmailSelect?.value || "").trim().toLowerCase();
+}
+
+function selectedFixedStudent() {
+  const key = String(els.studentLoginSelect?.value || "").trim();
+  return FIXED_STUDENTS.find((student) => student.key === key) || FIXED_STUDENTS[0] || null;
 }
 
 function isFixedTeacherEmail(email) {
@@ -1471,31 +1498,12 @@ function selectedAssignmentKey() {
   return `${STORAGE_PREFIX}${state.session?.user?.id || "anon"}:selected-assignment`;
 }
 
+function studentSelectionKey() {
+  return `${STORAGE_PREFIX}student-selection`;
+}
+
 function studentNameKey() {
   return `${STORAGE_PREFIX}student-name`;
-}
-
-function normalizeStudentLoginName(fullName) {
-  return String(fullName || "").trim().replace(/\s+/g, " ").toLowerCase();
-}
-
-function studentAuthEmail(fullName) {
-  return `student-${stableHash(normalizeStudentLoginName(fullName))}@${STUDENT_AUTH_DOMAIN}`;
-}
-
-function studentAuthPassword(fullName) {
-  const normalized = normalizeStudentLoginName(fullName);
-  const reversed = [...normalized].reverse().join("");
-  return `Ll-${stableHash(normalized)}-${stableHash(reversed)}-2026`;
-}
-
-function stableHash(text) {
-  let hash = 2166136261;
-  for (const char of String(text || "")) {
-    hash ^= char.codePointAt(0);
-    hash = Math.imul(hash, 16777619);
-  }
-  return (hash >>> 0).toString(36);
 }
 
 function updateSentenceStatus(segment) {
