@@ -1,4 +1,4 @@
-const APP_VERSION = "20260529-lms-4";
+const APP_VERSION = "20260530-course-1";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 3;
 const FIXED_TEACHERS = [

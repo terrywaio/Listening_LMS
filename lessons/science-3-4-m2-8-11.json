@@ -1,0 +1,199 @@
+{
+  "title": "科学 · 3.4 M2 8-11",
+  "source": "3.4 M2 讲座 8-11",
+  "category": "科学",
+  "language": "en",
+  "audioSrc": "./07-3-4/audio.m4a",
+  "audioFileName": "science-3-4-m2-8-11.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 1304.5,
+      "end": 1307.9,
+      "speaker": "Host",
+      "text": "Listen to a talk on an astronomy podcast."
+    },
+    {
+      "id": "s002",
+      "start": 1310.16,
+      "end": 1315.52,
+      "speaker": "Host",
+      "text": "When I was growing up, Pluto was known as the ninth planet in our solar system."
+    },
+    {
+      "id": "s003",
+      "start": 1316.44,
+      "end": 1322.4,
+      "speaker": "Host",
+      "text": "Alas, Pluto was demoted to dwarf planet status in 2006."
+    },
+    {
+      "id": "s004",
+      "start": 1323.0,
+      "end": 1327.44,
+      "speaker": "Host",
+      "text": "And not only because it's so small, maybe half the width of the United States."
+    },
+    {
+      "id": "s005",
+      "start": 1327.44,
+      "end": 1330.78,
+      "speaker": "Host",
+      "text": "It's mainly because in 2006,"
+    },
+    {
+      "id": "s006",
+      "start": 1330.78,
+      "end": 1336.18,
+      "speaker": "Host",
+      "text": "it was decided that planets had to meet three criteria."
+    },
+    {
+      "id": "s007",
+      "start": 1336.94,
+      "end": 1343.12,
+      "speaker": "Host",
+      "text": "They had to orbit the sun and be round in shape, check and check."
+    },
+    {
+      "id": "s008",
+      "start": 1343.62,
+      "end": 1348.6,
+      "speaker": "Host",
+      "text": "But they also had to be the main object in their orbit."
+    },
+    {
+      "id": "s009",
+      "start": 1348.68,
+      "end": 1353.94,
+      "speaker": "Host",
+      "text": "which, well, Pluto is in the Kuiper Belt"
+    },
+    {
+      "id": "s010",
+      "start": 1354.72,
+      "end": 1358.52,
+      "speaker": "Host",
+      "text": "region, in the far outer reaches of the solar system."
+    },
+    {
+      "id": "s011",
+      "start": 1358.52,
+      "end": 1362.26,
+      "speaker": "Host",
+      "text": "with many other bodies that orbit the sun."
+    },
+    {
+      "id": "s012",
+      "start": 1363.16,
+      "end": 1365.22,
+      "speaker": "Host",
+      "text": "So Pluto lost its planet status."
+    },
+    {
+      "id": "s013",
+      "start": 1365.22,
+      "end": 1371.58,
+      "speaker": "Host",
+      "text": "As a result, many scientists dismissed Pluto as just a ball of ice anyway."
+    },
+    {
+      "id": "s014",
+      "start": 1372.16,
+      "end": 1374.8,
+      "speaker": "Host",
+      "text": "However, about ten years later."
+    },
+    {
+      "id": "s015",
+      "start": 1374.94,
+      "end": 1380.99,
+      "speaker": "Host",
+      "text": "the New Horizons spacecraft sent back new images and data showing that Pluto."
+    },
+    {
+      "id": "s016",
+      "start": 1380.99,
+      "end": 1384.72,
+      "speaker": "Host",
+      "text": "is far more complex than previously thought."
+    },
+    {
+      "id": "s017",
+      "start": 1385.34,
+      "end": 1388.2,
+      "speaker": "Host",
+      "text": "We're talking volcanoes, dunes."
+    },
+    {
+      "id": "s018",
+      "start": 1388.62,
+      "end": 1390.32,
+      "speaker": "Host",
+      "text": "I mean, get this."
+    },
+    {
+      "id": "s019",
+      "start": 1390.38,
+      "end": 1394.72,
+      "speaker": "Host",
+      "text": "Pluto has a deep basin with three types of ice."
+    },
+    {
+      "id": "s020",
+      "start": 1395.08,
+      "end": 1400.56,
+      "speaker": "Host",
+      "text": "and New Horizons images suggest there's convection in the basin of ice."
+    },
+    {
+      "id": "s021",
+      "start": 1400.66,
+      "end": 1404.76,
+      "speaker": "Host",
+      "text": "With convection, warmer ice rises to the surface."
+    },
+    {
+      "id": "s022",
+      "start": 1404.98,
+      "end": 1410.02,
+      "speaker": "Host",
+      "text": "then cools and sinks at the edge of the basin, so"
+    },
+    {
+      "id": "s023",
+      "start": 1410.26,
+      "end": 1415.94,
+      "speaker": "Host",
+      "text": "the surface is continuously rejuvenating, renewing itself."
+    },
+    {
+      "id": "s024",
+      "start": 1416.64,
+      "end": 1422.04,
+      "speaker": "Host",
+      "text": "Moreover, under the basin of ice may be something astonishing."
+    },
+    {
+      "id": "s025",
+      "start": 1422.6,
+      "end": 1426.54,
+      "speaker": "Host",
+      "text": "A saltwater ocean. Life could exist there."
+    },
+    {
+      "id": "s026",
+      "start": 1426.74,
+      "end": 1432.383,
+      "speaker": "Host",
+      "text": "This means many neighboring bodies in the Kuiper Belt could also have oceans."
+    },
+    {
+      "id": "s027",
+      "start": 1432.383,
+      "end": 1434.762,
+      "speaker": "Host",
+      "text": "and potentially be habitable."
+    }
+  ]
+}

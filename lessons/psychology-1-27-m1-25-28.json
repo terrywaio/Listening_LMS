@@ -1,0 +1,143 @@
+{
+  "title": "心理学 · 1.27 M1 25-28",
+  "source": "1.27 M1 讲座 25-28",
+  "category": "心理学",
+  "language": "en",
+  "audioSrc": "./01-1-27-part1/audio.m4a",
+  "audioFileName": "psychology-1-27-m1-25-28.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 565.28,
+      "end": 568.54,
+      "speaker": "Professor",
+      "text": "Listen to a talk in a psychology class."
+    },
+    {
+      "id": "s002",
+      "start": 570.86,
+      "end": 574.82,
+      "speaker": "Professor",
+      "text": "Positive reinforcement is a powerful concept in psychology and behavior training."
+    },
+    {
+      "id": "s003",
+      "start": 575.26,
+      "end": 580.0,
+      "speaker": "Professor",
+      "text": "It means giving a reward after someone performs an action you want them to do again."
+    },
+    {
+      "id": "s004",
+      "start": 580.88,
+      "end": 586.4,
+      "speaker": "Professor",
+      "text": "The basic idea is that if a behavior leads to a positive outcome, it's more likely to be repeated."
+    },
+    {
+      "id": "s005",
+      "start": 587.02,
+      "end": 590.78,
+      "speaker": "Professor",
+      "text": "In other words, we tend to repeat actions that bring us something positive."
+    },
+    {
+      "id": "s006",
+      "start": 591.48,
+      "end": 595.36,
+      "speaker": "Professor",
+      "text": "This principle applies to both humans and animals, but the way it works can differ."
+    },
+    {
+      "id": "s007",
+      "start": 595.66,
+      "end": 599.98,
+      "speaker": "Professor",
+      "text": "Animals need to receive rewards immediately after the desired behavior."
+    },
+    {
+      "id": "s008",
+      "start": 600.58,
+      "end": 606.2,
+      "speaker": "Professor",
+      "text": "For example, if a dog sits and gets a treat right away, it learns that sitting leads to something good."
+    },
+    {
+      "id": "s009",
+      "start": 606.76,
+      "end": 609.86,
+      "speaker": "Professor",
+      "text": "If the reward comes too late, the connection is lost."
+    },
+    {
+      "id": "s010",
+      "start": 610.58,
+      "end": 613.62,
+      "speaker": "Professor",
+      "text": "Humans, however, can understand delayed rewards."
+    },
+    {
+      "id": "s011",
+      "start": 614.06,
+      "end": 618.88,
+      "speaker": "Professor",
+      "text": "They might work hard today because they're aiming for a future goal, like earning a degree,"
+    },
+    {
+      "id": "s012",
+      "start": 619.06,
+      "end": 623.32,
+      "speaker": "Professor",
+      "text": "or they might feel motivated by praise even if the reward is intangible."
+    },
+    {
+      "id": "s013",
+      "start": 623.88,
+      "end": 626.86,
+      "speaker": "Professor",
+      "text": "But rewards must be used carefully."
+    },
+    {
+      "id": "s014",
+      "start": 627.32,
+      "end": 632.66,
+      "speaker": "Professor",
+      "text": "If a parent gives a child candy to stop whining, the child may learn that whining gets rewarded."
+    },
+    {
+      "id": "s015",
+      "start": 633.26,
+      "end": 635.56,
+      "speaker": "Professor",
+      "text": "It's like watering weeds instead of flowers."
+    },
+    {
+      "id": "s016",
+      "start": 635.8,
+      "end": 637.56,
+      "speaker": "Professor",
+      "text": "You're encouraging the wrong behavior."
+    },
+    {
+      "id": "s017",
+      "start": 638.24,
+      "end": 643.16,
+      "speaker": "Professor",
+      "text": "And if rewards are given too frequently, they can reduce a person's internal motivation,"
+    },
+    {
+      "id": "s018",
+      "start": 643.66,
+      "end": 647.06,
+      "speaker": "Professor",
+      "text": "making them rely more on external incentives to take action."
+    },
+    {
+      "id": "s019",
+      "start": 647.78,
+      "end": 654.46,
+      "speaker": "Professor",
+      "text": "So while positive reinforcement is effective, it works best when applied thoughtfully and with clear intent."
+    }
+  ]
+}
