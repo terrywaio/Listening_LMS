@@ -1,7 +1,7 @@
-const APP_VERSION = "20260530-lms-2";
+const APP_VERSION = "20260530-lms-3";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
-const STUDENT_AUTH_DOMAIN = "students.listeninglab.test";
+const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
 const FIXED_TEACHERS = [
   { email: "chensijruth@gmail.com", name: "老师 1" },
   { email: "terrywai7114@gmail.com", name: "老师 2" },
