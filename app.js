@@ -1,4 +1,4 @@
-const APP_VERSION = "20260603-lms-6";
+const APP_VERSION = "20260603-lms-7";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
@@ -177,7 +177,7 @@ function bindEvents() {
     if (!segment) return;
     state.answers[segment.id] = els.dictationInput.value;
     if (isSubmitted(segment)) {
-      state.scores[segment.id] = scoreAnswer(segment.text, els.dictationInput.value.trim());
+      state.scores[segment.id] = scoreAnswer(segmentAnswerText(segment), els.dictationInput.value.trim());
     }
     saveLocalProgress();
     scheduleCloudSave(segment);
@@ -292,7 +292,11 @@ async function signUp() {
     setAuthStatus("请选择学生账号。");
     return;
   }
-  const password = els.studentPasswordInput.value || FIXED_STUDENT_PASSWORD;
+  const password = els.studentPasswordInput.value;
+  if (!password) {
+    setAuthStatus("请输入学生密码。");
+    return;
+  }
 
   state.pendingProfileName = student.name;
   localStorage.setItem(studentSelectionKey(), student.key);
@@ -365,12 +369,21 @@ function isMissingRpcError(error) {
 
 async function signOut() {
   if (!state.supabase) return;
-  await state.supabase.auth.signOut();
+  clearTimeout(cloudSaveTimer);
+  setAuthStatus("正在退出...");
+  disableAuthControls(true);
+  const { error } = await state.supabase.auth.signOut();
+  if (error) {
+    setAuthStatus(`退出失败：${error.message}`);
+    disableAuthControls(false);
+  }
 }
 
 async function handleSessionChanged() {
   if (!state.session) {
     resetUserState();
+    disableAuthControls(false);
+    setAuthStatus("等待登录");
     renderShell();
     return;
   }
@@ -394,6 +407,8 @@ async function handleSessionChanged() {
 }
 
 function resetUserState() {
+  clearTimeout(cloudSaveTimer);
+  cloudSaveTimer = null;
   state.profile = null;
   state.students = [];
   state.teacherAssignments = [];
@@ -402,6 +417,9 @@ function resetUserState() {
   state.studentAssignments = [];
   state.studentProgressRows = [];
   state.assignment = null;
+  state.saving = false;
+  state.pendingSaveSegmentId = "";
+  state.pendingSaveRequested = false;
   clearPracticeData();
 }
 
@@ -843,6 +861,8 @@ function renderPractice() {
   els.timeRange.textContent = `${formatTime(segment.start)} - ${formatTime(segmentEnd(segment))}`;
   els.dictationInput.value = state.answers[segment.id] || "";
   els.dictationInput.readOnly = false;
+  els.dictationInput.placeholder = isTranslationSegment(segment) ? "输入中文翻译" : "输入听到的内容";
+  els.checkAnswer.textContent = isTranslationSegment(segment) ? "提交翻译" : "提交答案";
   els.checkAnswer.disabled = isSubmitted(segment);
   els.copySegment.disabled = !isSubmitted(segment);
   els.previousSegment.disabled = state.currentIndex <= 0;
@@ -866,9 +886,9 @@ function renderAnswerText(segment) {
   const shouldHide = !isSubmitted(segment);
   els.answerText.classList.toggle("is-hidden", shouldHide);
   if (shouldHide) {
-    els.answerText.innerHTML = maskText(segment.text);
+    els.answerText.innerHTML = maskText(segmentAnswerText(segment));
   } else {
-    els.answerText.textContent = segment.text || "暂无文本";
+    els.answerText.textContent = segmentAnswerText(segment) || "暂无文本";
   }
 }
 
@@ -1022,7 +1042,9 @@ function renderTeacherProgressDetails() {
     return `
       <tr>
         <td>${index + 1}</td>
+        <td>${isTranslationSegment(segment) ? "听翻" : "听抄"}</td>
         <td class="question-cell">${escapeHtml(segment.text || "")}</td>
+        <td class="question-cell">${escapeHtml(segmentAnswerText(segment) || "")}</td>
         <td class="answer-cell">${escapeHtml(row.answer || "")}</td>
         <td>${Number(row.listen_count || 0)}</td>
         <td>${row.submitted ? "已提交" : "未提交"}</td>
@@ -1037,7 +1059,9 @@ function renderTeacherProgressDetails() {
       <thead>
         <tr>
           <th>#</th>
+          <th>题型</th>
           <th>题目原文</th>
+          <th>标准答案</th>
           <th>学生答案</th>
           <th>听了几次</th>
           <th>状态</th>
@@ -1074,25 +1098,41 @@ function currentSegment() {
 function normalizeLesson(rawLesson) {
   const lesson = rawLesson && typeof rawLesson === "object" ? rawLesson : {};
   const rawSegments = Array.isArray(lesson.segments) ? lesson.segments : [];
+  const defaultTaskType = normalizeTaskType(lesson.taskType || lesson.mode || lesson.practiceType || lesson.type || lesson.title);
   const segments = rawSegments
-    .map((segment, index) => ({
-      id: String(segment.id || `s${String(index + 1).padStart(3, "0")}`),
-      start: toNumberOrNull(segment.start),
-      end: toNumberOrNull(segment.end),
-      speaker: segment.speaker || "",
-      module: segment.module || "",
-      text: String(segment.text || "").trim(),
-    }))
+    .map((segment, index) => {
+      const taskType = normalizeTaskType(segment.taskType || segment.mode || segment.practiceType || segment.type || defaultTaskType);
+      const text = String(segment.text || segment.transcript || "").trim();
+      return {
+        id: String(segment.id || `s${String(index + 1).padStart(3, "0")}`),
+        start: toNumberOrNull(segment.start),
+        end: toNumberOrNull(segment.end),
+        speaker: segment.speaker || "",
+        module: segment.module || "",
+        taskType,
+        text,
+        answerText: String(segment.answerText || segment.expectedAnswer || segment.answer || segment.translation || segment.zh || "").trim(),
+      };
+    })
     .filter((segment) => segment.text || segment.start !== null || segment.end !== null);
 
   return {
     title: lesson.title || "未命名课程",
     source: lesson.source || "",
     language: lesson.language || "en",
+    taskType: defaultTaskType,
     audioSrc: lesson.audioSrc || lesson.audio || "",
     audioFileName: lesson.audioFileName || "",
     segments,
   };
+}
+
+function normalizeTaskType(value) {
+  const text = String(value || "").toLowerCase();
+  if (text.includes("听翻") || text.includes("听译") || text.includes("翻译") || text.includes("translation") || text.includes("translate")) {
+    return "translation";
+  }
+  return "dictation";
 }
 
 function clearPracticeData() {
@@ -1243,7 +1283,7 @@ function submitAnswer() {
   }
 
   const now = new Date().toISOString();
-  const score = scoreAnswer(segment.text, value);
+  const score = scoreAnswer(segmentAnswerText(segment), value);
   state.answers[segment.id] = els.dictationInput.value;
   state.submitted[segment.id] = true;
   state.scores[segment.id] = score;
@@ -1615,7 +1655,7 @@ function updateScoreBadge(segment) {
     els.scoreBadge.textContent = (state.answers[segment.id] || "").trim() ? "未提交" : "未作答";
     return;
   }
-  const score = state.scores[segment.id] ?? scoreAnswer(segment.text, state.answers[segment.id] || "");
+  const score = state.scores[segment.id] ?? scoreAnswer(segmentAnswerText(segment), state.answers[segment.id] || "");
   els.scoreBadge.textContent = `${score}%`;
   els.scoreBadge.className = "score-badge";
   if (score >= 85) els.scoreBadge.classList.add("is-high");
@@ -1625,6 +1665,15 @@ function updateScoreBadge(segment) {
 
 function isSubmitted(segment) {
   return Boolean(segment && state.submitted[segment.id]);
+}
+
+function isTranslationSegment(segment) {
+  return segment?.taskType === "translation";
+}
+
+function segmentAnswerText(segment) {
+  if (!segment) return "";
+  return isTranslationSegment(segment) ? segment.answerText || segment.text || "" : segment.answerText || segment.text || "";
 }
 
 function isPlayedThrough(segment) {
@@ -1707,11 +1756,23 @@ function maskText(text) {
 }
 
 function scoreAnswer(reference, answer) {
-  const ref = normalizeText(reference).split(" ").filter(Boolean);
-  const hyp = normalizeText(answer).split(" ").filter(Boolean);
+  const ref = answerTokens(reference);
+  const hyp = answerTokens(answer);
   if (!ref.length) return 0;
   const distance = levenshtein(ref, hyp);
   return Math.max(0, Math.round((1 - distance / ref.length) * 100));
+}
+
+function answerTokens(value) {
+  const raw = String(value || "");
+  if (/[\u3400-\u9fff]/.test(raw)) {
+    return raw
+      .replace(/[^\u3400-\u9fffA-Za-z0-9]/g, "")
+      .toLowerCase()
+      .split("")
+      .filter(Boolean);
+  }
+  return normalizeText(raw).split(" ").filter(Boolean);
 }
 
 function normalizeText(value) {
