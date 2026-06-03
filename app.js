@@ -1,4 +1,4 @@
-const APP_VERSION = "20260530-lms-5";
+const APP_VERSION = "20260603-lms-6";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
@@ -599,21 +599,29 @@ async function assignTask() {
 
   els.teacherStatus.textContent = "正在分配...";
   try {
-    const rawLesson = await lessonRepository.load(lessonPath);
-    const lesson = normalizeLesson(rawLesson);
+    let lessonTitle = lessonMeta.title || lessonPath;
+    let segmentCount = Number(lessonMeta.segmentCount || 0);
+    try {
+      const rawLesson = await lessonRepository.load(lessonPath);
+      const lesson = normalizeLesson(rawLesson);
+      lessonTitle = lesson.title || lessonTitle;
+      segmentCount = lesson.segments.length || segmentCount;
+    } catch (lessonError) {
+      console.warn("Lesson preload failed; assigning from library metadata.", lessonError);
+    }
     const dueAt = els.dueAtInput.value ? new Date(els.dueAtInput.value).toISOString() : null;
     const { error } = await state.supabase.from("assignments").insert({
       teacher_id: state.session.user.id,
       student_id: studentId,
-      lesson_title: lesson.title || lessonMeta.title,
+      lesson_title: lessonTitle,
       lesson_path: lessonPath,
-      lesson_segment_count: lesson.segments.length,
+      lesson_segment_count: segmentCount,
       due_at: dueAt,
       note: els.assignmentNote.value.trim() || null,
       source_type: "static_lesson",
       content_ref: {
         path: lessonPath,
-        title: lesson.title || lessonMeta.title,
+        title: lessonTitle,
         futureItemType: "sentence_item_set",
       },
     });
