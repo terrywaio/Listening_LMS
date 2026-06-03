@@ -1,4 +1,4 @@
-const APP_VERSION = "20260603-lms-9";
+const APP_VERSION = "20260603-lms-10";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const ASSIGNMENT_INSERT_ATTEMPTS = 3;
@@ -1749,7 +1749,8 @@ function isTranslationSegment(segment) {
 
 function segmentAnswerText(segment) {
   if (!segment) return "";
-  return isTranslationSegment(segment) ? segment.answerText || segment.text || "" : segment.answerText || segment.text || "";
+  if (isTranslationSegment(segment)) return segment.answerText || "";
+  return segment.answerText || segment.text || "";
 }
 
 function isPlayedThrough(segment) {
