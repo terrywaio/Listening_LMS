@@ -1,6 +1,8 @@
-const APP_VERSION = "20260603-lms-8";
+const APP_VERSION = "20260603-lms-9";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
+const ASSIGNMENT_INSERT_ATTEMPTS = 3;
+const ASSIGNMENT_RETRY_DELAY_MS = 900;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
 const FIXED_STUDENT_PASSWORD = "123456";
 const FIXED_TEACHERS = [
@@ -618,6 +620,7 @@ async function assignTask() {
   }
 
   els.teacherStatus.textContent = "正在分配...";
+  if (els.assignTaskButton) els.assignTaskButton.disabled = true;
   try {
     let lessonTitle = lessonMeta.title || lessonPath;
     let segmentCount = Number(lessonMeta.segmentCount || 0);
@@ -630,7 +633,7 @@ async function assignTask() {
       console.warn("Lesson preload failed; assigning from library metadata.", lessonError);
     }
     const dueAt = els.dueAtInput.value ? new Date(els.dueAtInput.value).toISOString() : null;
-    const { error } = await state.supabase.from("assignments").insert({
+    const payload = {
       teacher_id: state.session.user.id,
       student_id: studentId,
       lesson_title: lessonTitle,
@@ -644,14 +647,85 @@ async function assignTask() {
         title: lessonTitle,
         futureItemType: "sentence_item_set",
       },
-    });
-    if (error) throw error;
+    };
+    await insertAssignmentWithRetry(payload);
     els.assignmentNote.value = "";
     els.teacherStatus.textContent = "任务已分配";
     await loadTeacherDashboard();
   } catch (error) {
-    els.teacherStatus.textContent = `分配失败：${error.message}`;
+    console.error("Assignment failed", error);
+    els.teacherStatus.textContent = `分配失败：${teacherAssignmentErrorMessage(error)}`;
+  } finally {
+    if (els.assignTaskButton) els.assignTaskButton.disabled = false;
   }
+}
+
+async function insertAssignmentWithRetry(payload) {
+  let lastError = null;
+  for (let attempt = 1; attempt <= ASSIGNMENT_INSERT_ATTEMPTS; attempt += 1) {
+    try {
+      const { error } = await state.supabase.from("assignments").insert(payload);
+      if (!error) return;
+      lastError = error;
+    } catch (error) {
+      lastError = error;
+    }
+
+    if (!isRetryableAssignmentError(lastError) || attempt === ASSIGNMENT_INSERT_ATTEMPTS) break;
+    els.teacherStatus.textContent = `网络不稳定，正在重试 ${attempt + 1}/${ASSIGNMENT_INSERT_ATTEMPTS}...`;
+    await delay(ASSIGNMENT_RETRY_DELAY_MS * attempt);
+  }
+
+  if (isFetchLikeError(lastError)) {
+    els.teacherStatus.textContent = "Supabase SDK 请求失败，正在用备用通道重试...";
+    await insertAssignmentViaRest(payload, lastError);
+    return;
+  }
+
+  throw lastError || new Error("未知分配错误");
+}
+
+async function insertAssignmentViaRest(payload, originalError) {
+  const config = window.LISTENING_LAB_SUPABASE || {};
+  const accessToken = state.session?.access_token;
+  if (!config.url || !config.anonKey || !accessToken) throw originalError || new Error("缺少 Supabase 登录状态");
+
+  const response = await fetch(`${config.url}/rest/v1/assignments`, {
+    method: "POST",
+    headers: {
+      apikey: config.anonKey,
+      Authorization: `Bearer ${accessToken}`,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    const body = await response.text().catch(() => "");
+    const error = new Error(body || `HTTP ${response.status}`);
+    error.status = response.status;
+    throw error;
+  }
+}
+
+function isRetryableAssignmentError(error) {
+  const message = String(error?.message || error || "").toLowerCase();
+  return isFetchLikeError(error) || message.includes("timeout") || message.includes("network") || message.includes("temporarily");
+}
+
+function isFetchLikeError(error) {
+  const message = String(error?.message || error || "").toLowerCase();
+  return message.includes("failed to fetch") || message.includes("fetch failed") || message.includes("networkerror");
+}
+
+function teacherAssignmentErrorMessage(error) {
+  const message = cloudErrorMessage(error);
+  if (isFetchLikeError(error)) return `${message}。请检查网络后刷新页面再试；系统已经自动重试过。`;
+  return message;
+}
+
+function delay(ms) {
+  return new Promise((resolve) => window.setTimeout(resolve, ms));
 }
 
 async function loadStudentAssignments() {
