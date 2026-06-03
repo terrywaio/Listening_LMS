@@ -1,4 +1,4 @@
-const APP_VERSION = "20260603-lms-7";
+const APP_VERSION = "20260603-lms-8";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
@@ -412,8 +412,10 @@ function resetUserState() {
   state.profile = null;
   state.students = [];
   state.teacherAssignments = [];
+  state.teacherAssignmentProgressRows = [];
   state.teacherProgressRows = [];
   state.teacherLessonDetails = {};
+  state.selectedTeacherAssignmentId = "";
   state.studentAssignments = [];
   state.studentProgressRows = [];
   state.assignment = null;
