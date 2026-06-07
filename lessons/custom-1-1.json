@@ -1,0 +1,241 @@
+{
+  "title": "自定义精听 · 1(1)",
+  "source": "1(1).m4a",
+  "category": "自定义",
+  "language": "en",
+  "audioSrc": "./custom-1-1/audio.m4a",
+  "audioFileName": "1(1).m4a",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.24,
+      "speaker": "Speaker",
+      "text": "Sam, have you booked your flights for next month's conference yet?"
+    },
+    {
+      "id": "s002",
+      "start": 4.64,
+      "end": 6.74,
+      "speaker": "Speaker",
+      "text": "I just did. I found a good price, actually."
+    },
+    {
+      "id": "s003",
+      "start": 8.13,
+      "end": 9.88,
+      "speaker": "Speaker",
+      "text": "Oh really? I haven't booked yet."
+    },
+    {
+      "id": "s004",
+      "start": 11.46,
+      "end": 17.1,
+      "speaker": "Speaker",
+      "text": "I found mine using flight comparison websites. They show you the best prices across different airlines."
+    },
+    {
+      "id": "s005",
+      "start": 18.65,
+      "end": 20.96,
+      "speaker": "Speaker",
+      "text": "That's a good idea. I'll check a few of those."
+    },
+    {
+      "id": "s006",
+      "start": 22.6,
+      "end": 35.54,
+      "speaker": "Speaker",
+      "text": "I also booked an early morning flight, which was cheaper. You should check a few of those, too."
+    },
+    {
+      "id": "s007",
+      "start": 52.55,
+      "end": 54.35,
+      "speaker": "Speaker",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s008",
+      "start": 56.57,
+      "end": 59.33,
+      "speaker": "Speaker",
+      "text": "Hey, what did you think of the concert you went to last weekend?"
+    },
+    {
+      "id": "s009",
+      "start": 60.15,
+      "end": 64.0,
+      "speaker": "Speaker",
+      "text": "Oh, it was okay. The band didn't play my favorite songs."
+    },
+    {
+      "id": "s010",
+      "start": 64.0,
+      "end": 69.0,
+      "speaker": "Speaker",
+      "text": "Were they mostly focusing on music from their new album? Yeah, which makes sense, I guess."
+    },
+    {
+      "id": "s011",
+      "start": 69.0,
+      "end": 74.0,
+      "speaker": "Speaker",
+      "text": "I've heard they're great performers. They definitely are. That was the best part."
+    },
+    {
+      "id": "s012",
+      "start": 74.0,
+      "end": 77.83,
+      "speaker": "Speaker",
+      "text": "And the ticket price wasn't horrible, but I don't know."
+    },
+    {
+      "id": "s013",
+      "start": 95.36,
+      "end": 97.99,
+      "speaker": "Speaker",
+      "text": "Listen to an announcement at a university gym."
+    },
+    {
+      "id": "s014",
+      "start": 100.35,
+      "end": 107.03,
+      "speaker": "Speaker",
+      "text": "Attention students. Starting next week, the gym will be open from 6 AM to 10 PM daily."
+    },
+    {
+      "id": "s015",
+      "start": 108.09,
+      "end": 119.15,
+      "speaker": "Speaker",
+      "text": "Please ensure that you wear appropriate athletic attire and footwear while using the equipment. This helps us maintain a safe and hygienic environment and prevents damage to the machinery."
+    },
+    {
+      "id": "s016",
+      "start": 136.29,
+      "end": 138.33,
+      "speaker": "Speaker",
+      "text": "Listen to an announcement in a classroom."
+    },
+    {
+      "id": "s017",
+      "start": 140.48,
+      "end": 153.56,
+      "speaker": "Speaker",
+      "text": "Quick reminder, Saturday's International Club Political Debate on Global Aid is a must-attend for all of us. It ties directly into our readings on economically underdeveloped countries."
+    },
+    {
+      "id": "s018",
+      "start": 153.56,
+      "end": 162.72,
+      "speaker": "Speaker",
+      "text": "After attending, you'll need to partner up with a classmate and prepare an oral presentation analyzing both sides of one of the financial issues discussed."
+    },
+    {
+      "id": "s019",
+      "start": 162.72,
+      "end": 169.83,
+      "speaker": "Speaker",
+      "text": "I will email a list of available topics on Monday morning. For more details on the assignment, please check the syllabus."
+    },
+    {
+      "id": "s020",
+      "start": 184.11,
+      "end": 185.44,
+      "speaker": "Speaker",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s021",
+      "start": 187.71,
+      "end": 190.8,
+      "speaker": "Speaker",
+      "text": "I just heard that the art store in the mall is going out of business."
+    },
+    {
+      "id": "s022",
+      "start": 190.8,
+      "end": 195.4,
+      "speaker": "Speaker",
+      "text": "Oh no! I get painting supplies for my senior art project there."
+    },
+    {
+      "id": "s023",
+      "start": 195.4,
+      "end": 198.64,
+      "speaker": "Speaker",
+      "text": "I know. That's why I came looking for you."
+    },
+    {
+      "id": "s024",
+      "start": 198.64,
+      "end": 202.08,
+      "speaker": "Speaker",
+      "text": "What will you do now? Well, I have a couple of options."
+    },
+    {
+      "id": "s025",
+      "start": 202.08,
+      "end": 207.36,
+      "speaker": "Speaker",
+      "text": "I could get them online, or I can go to the store in Porterville 10 miles away."
+    },
+    {
+      "id": "s026",
+      "start": 207.36,
+      "end": 210.24,
+      "speaker": "Speaker",
+      "text": "Seems to me like you'd want to buy that kind of stuff in person."
+    },
+    {
+      "id": "s027",
+      "start": 210.24,
+      "end": 214.25,
+      "speaker": "Speaker",
+      "text": "I would. It looks like I'll be making regular trips to Porterville."
+    },
+    {
+      "id": "s028",
+      "start": 231.46,
+      "end": 233.09,
+      "speaker": "Speaker",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s029",
+      "start": 235.52,
+      "end": 239.36,
+      "speaker": "Speaker",
+      "text": "Did you go to the rock concert in the park yesterday afternoon?"
+    },
+    {
+      "id": "s030",
+      "start": 239.36,
+      "end": 243.36,
+      "speaker": "Speaker",
+      "text": "I went to a gardening workshop at the university center instead."
+    },
+    {
+      "id": "s031",
+      "start": 243.36,
+      "end": 251.32,
+      "speaker": "Speaker",
+      "text": "It's sad that I missed out on the concert, but I'm starting my own garden, and I need to know all the ins and outs of growing herbs and vegetables."
+    },
+    {
+      "id": "s032",
+      "start": 251.32,
+      "end": 256.2,
+      "speaker": "Speaker",
+      "text": "Nice, and to be honest, you didn't miss that much. No?"
+    },
+    {
+      "id": "s033",
+      "start": 256.2,
+      "end": 266.44,
+      "speaker": "Speaker",
+      "text": "Well, I love some of the songs they played, but the acoustics in the park aren't very good, so the sound quality was rather mediocre and didn't do justice to the songs."
+    }
+  ]
+}
