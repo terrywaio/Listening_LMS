@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-06-07",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -56,6 +56,14 @@
       "source": "3.18 讲座 8-11",
       "path": "./lessons/business-3-18-8-11.json",
       "segmentCount": 15
+    },
+    {
+      "id": "custom-1-1",
+      "title": "自定义精听 · 1(1)",
+      "category": "自定义",
+      "source": "1(1).m4a",
+      "path": "./lessons/custom-1-1.json",
+      "segmentCount": 33
     }
   ]
 }
