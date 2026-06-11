@@ -1,5 +1,6 @@
-const APP_VERSION = "20260603-lms-10";
+const APP_VERSION = "20260611-lms-audio-1";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
+const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;
 const ASSIGNMENT_INSERT_ATTEMPTS = 3;
 const ASSIGNMENT_RETRY_DELAY_MS = 900;
@@ -37,6 +38,11 @@ const state = {
   lesson: normalizeLesson({ title: "未选择任务", segments: [] }),
   lessonPath: "",
   lessonUrl: "",
+  audioSourceUrl: "",
+  audioObjectUrl: "",
+  pendingAudioObjectUrl: "",
+  audioLoadController: null,
+  audioLoadToken: 0,
   currentIndex: 0,
   answers: {},
   submitted: {},
@@ -163,7 +169,8 @@ function bindEvents() {
   on(els.waveform, "click", seekFromWaveform);
   on(els.audio, "loadedmetadata", () => {
     enforceNormalPlaybackRate();
-    setAudioStatus(`${formatTime(els.audio.duration)} 音频已就绪`);
+    const readyText = els.audio.src.startsWith("blob:") ? "本地缓存音频已就绪" : "音频已就绪";
+    setAudioStatus(`${formatTime(els.audio.duration)} ${readyText}`);
     drawWaveform();
   });
   on(els.audio, "ratechange", enforceNormalPlaybackRate);
@@ -173,7 +180,10 @@ function bindEvents() {
   });
   on(els.audio, "pause", () => {
     els.togglePlay.textContent = "▶";
+    usePendingCachedAudio();
   });
+  on(els.audio, "waiting", () => setAudioStatus("音频缓冲中，请稍等..."));
+  on(els.audio, "stalled", () => setAudioStatus("音频网络有点慢，正在继续缓冲...", "warning"));
   on(els.dictationInput, "input", () => {
     const segment = currentSegment();
     if (!segment) return;
@@ -788,11 +798,11 @@ async function selectStudentAssignment(assignmentId) {
     state.lessonUrl = new URL(assignment.lesson_path, window.location.href).toString();
     if (state.lesson.audioSrc) {
       const audioUrl = new URL(state.lesson.audioSrc, state.lessonUrl).toString();
-      els.audio.src = audioUrl;
-      enforceNormalPlaybackRate();
-      state.waveform = null;
-      setAudioStatus("音频已关联");
+      prepareLessonAudio(audioUrl);
     } else {
+      cancelAudioPreload();
+      revokeCachedAudioUrl();
+      state.audioSourceUrl = "";
       els.audio.removeAttribute("src");
       setAudioStatus("此课包没有关联音频");
     }
@@ -1212,13 +1222,162 @@ function normalizeTaskType(value) {
 }
 
 function clearPracticeData() {
+  cancelAudioPreload();
+  revokeCachedAudioUrl();
   state.assignment = null;
   state.lesson = normalizeLesson({ title: "未选择任务", segments: [] });
   state.lessonPath = "";
   state.lessonUrl = "";
+  state.audioSourceUrl = "";
   clearProgressOnly();
   state.waveform = null;
   if (els.audio) els.audio.removeAttribute("src");
+}
+
+function prepareLessonAudio(audioUrl) {
+  cancelAudioPreload();
+  revokeCachedAudioUrl();
+  state.audioSourceUrl = audioUrl;
+  state.waveform = null;
+  els.audio.preload = "auto";
+  els.audio.src = audioUrl;
+  els.audio.load();
+  enforceNormalPlaybackRate();
+  setAudioStatus("音频已关联，正在预加载本地缓存...");
+
+  const token = state.audioLoadToken + 1;
+  state.audioLoadToken = token;
+  const controller = new AbortController();
+  state.audioLoadController = controller;
+  preloadAudioBlob(audioUrl, controller.signal, token).catch((error) => {
+    if (error?.name === "AbortError") return;
+    console.warn("Audio preload failed; using streaming source.", error);
+    if (state.audioLoadToken === token) {
+      state.audioLoadController = null;
+      setAudioStatus("本地缓存失败，已切回在线播放；若卡顿请刷新后重试。", "warning");
+    }
+  });
+}
+
+function cancelAudioPreload() {
+  if (state.audioLoadController) {
+    state.audioLoadController.abort();
+    state.audioLoadController = null;
+  }
+  state.audioLoadToken += 1;
+}
+
+function revokeCachedAudioUrl() {
+  if (state.audioObjectUrl) {
+    URL.revokeObjectURL(state.audioObjectUrl);
+    state.audioObjectUrl = "";
+  }
+  if (state.pendingAudioObjectUrl) {
+    URL.revokeObjectURL(state.pendingAudioObjectUrl);
+    state.pendingAudioObjectUrl = "";
+  }
+}
+
+async function preloadAudioBlob(audioUrl, signal, token) {
+  const cachedBlob = await getCachedAudioBlob(audioUrl);
+  if (cachedBlob) {
+    installCachedAudioBlob(audioUrl, cachedBlob, token, "本地缓存音频已就绪");
+    return;
+  }
+
+  const blob = await fetchAudioBlob(audioUrl, signal, token);
+  await storeAudioBlob(audioUrl, blob);
+  installCachedAudioBlob(audioUrl, blob, token, "音频已下载到本地缓存");
+}
+
+async function getCachedAudioBlob(audioUrl) {
+  if (!("caches" in window)) return null;
+  try {
+    const cache = await caches.open(AUDIO_CACHE_NAME);
+    const response = await cache.match(audioUrl);
+    if (!response) return null;
+    return response.blob();
+  } catch (error) {
+    console.warn("Audio cache read failed.", error);
+    return null;
+  }
+}
+
+async function fetchAudioBlob(audioUrl, signal, token) {
+  const response = await fetch(audioUrl, { cache: "force-cache", signal });
+  if (!response.ok) throw new Error(`音频下载失败：HTTP ${response.status}`);
+
+  const total = Number(response.headers.get("content-length") || 0);
+  if (!response.body || !total) return response.blob();
+
+  const reader = response.body.getReader();
+  const chunks = [];
+  let received = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    received += value.length;
+    if (state.audioLoadToken === token) {
+      const percent = Math.max(1, Math.min(99, Math.round((received / total) * 100)));
+      setAudioStatus(`正在缓存音频 ${percent}%...`);
+    }
+  }
+  const type = response.headers.get("content-type") || "audio/mpeg";
+  return new Blob(chunks, { type });
+}
+
+async function storeAudioBlob(audioUrl, blob) {
+  if (!("caches" in window)) return;
+  try {
+    const cache = await caches.open(AUDIO_CACHE_NAME);
+    await cache.put(audioUrl, new Response(blob, { headers: { "Content-Type": blob.type || "audio/mpeg" } }));
+  } catch (error) {
+    console.warn("Audio cache write failed.", error);
+  }
+}
+
+function installCachedAudioBlob(audioUrl, blob, token, statusText) {
+  if (state.audioLoadToken !== token || state.audioSourceUrl !== audioUrl) return;
+  state.audioLoadController = null;
+  const objectUrl = URL.createObjectURL(blob);
+  if (!els.audio.paused) {
+    if (state.pendingAudioObjectUrl) URL.revokeObjectURL(state.pendingAudioObjectUrl);
+    state.pendingAudioObjectUrl = objectUrl;
+    setAudioStatus(`${statusText}，本句暂停后自动切换`);
+    return;
+  }
+  if (state.audioObjectUrl) URL.revokeObjectURL(state.audioObjectUrl);
+  state.audioObjectUrl = objectUrl;
+  switchAudioToCachedUrl(objectUrl, statusText);
+}
+
+function usePendingCachedAudio() {
+  if (!state.pendingAudioObjectUrl || !els.audio.paused) return;
+  const objectUrl = state.pendingAudioObjectUrl;
+  state.pendingAudioObjectUrl = "";
+  if (state.audioObjectUrl && state.audioObjectUrl !== objectUrl) URL.revokeObjectURL(state.audioObjectUrl);
+  state.audioObjectUrl = objectUrl;
+  switchAudioToCachedUrl(objectUrl, "本地缓存音频已就绪");
+}
+
+function switchAudioToCachedUrl(objectUrl, statusText) {
+  const previousTime = Number.isFinite(els.audio.currentTime) ? els.audio.currentTime : 0;
+  els.audio.src = objectUrl;
+  els.audio.preload = "auto";
+  els.audio.load();
+  const restoreTime = () => {
+    if (previousTime > 0 && Number.isFinite(els.audio.duration)) {
+      els.audio.currentTime = Math.min(previousTime, Math.max(0, els.audio.duration - 0.05));
+    }
+    drawWaveform();
+  };
+  if (els.audio.readyState >= 1) {
+    restoreTime();
+  } else {
+    els.audio.addEventListener("loadedmetadata", restoreTime, { once: true });
+  }
+  setAudioStatus(statusText);
 }
 
 function clearProgressOnly() {
