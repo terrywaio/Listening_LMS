@@ -586,3 +586,486 @@ tr:last-child td {
     align-items: stretch;
   }
 }
+
+/* Portal-style visual preview */
+:root {
+  --bg: #f7f9fc;
+  --panel: #ffffff;
+  --soft: #f4f7fb;
+  --line: #e1e7f0;
+  --text: #1f2937;
+  --muted: #768195;
+  --teal: #28b8b3;
+  --teal-dark: #147b78;
+  --blue: #5361e8;
+  --blue-dark: #3047c7;
+  --portal-navy: #073a66;
+  --portal-cyan: #38d7df;
+  --portal-violet: #5b22f3;
+  --shadow: 0 18px 42px rgba(29, 44, 76, 0.08);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(245, 248, 252, 0.9), #f8fafc 340px),
+    var(--bg);
+}
+
+body::before,
+body::after {
+  pointer-events: none;
+}
+
+body:has(#authView:not(.is-hidden)) {
+  overflow-x: hidden;
+  background: var(--portal-navy);
+}
+
+body:has(#authView:not(.is-hidden))::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 2% 17%, transparent 0 118px, rgba(67, 211, 229, 0.88) 119px 170px, rgba(80, 34, 226, 0.74) 171px 206px, transparent 207px),
+    radial-gradient(circle at 82% 38%, transparent 0 240px, rgba(74, 215, 218, 0.86) 241px 304px, rgba(91, 34, 243, 0.68) 305px 366px, transparent 367px),
+    radial-gradient(circle at 63% 105%, transparent 0 112px, rgba(68, 215, 229, 0.9) 113px 154px, rgba(85, 95, 229, 0.75) 155px 190px, transparent 191px),
+    radial-gradient(circle at -1% 88%, transparent 0 125px, rgba(60, 213, 209, 0.78) 126px 184px, transparent 185px),
+    radial-gradient(circle at 36% 95%, transparent 0 226px, rgba(92, 31, 211, 0.52) 227px 288px, transparent 289px);
+  opacity: 0.98;
+  animation: portalRingDrift 18s ease-in-out infinite alternate;
+}
+
+body:has(#authView:not(.is-hidden))::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(69, 225, 233, 0.95), rgba(20, 134, 237, 0.95)) 0 54% / 250px 64px no-repeat,
+    linear-gradient(90deg, rgba(52, 205, 190, 0.9), rgba(91, 34, 243, 0.95)) 73% 22% / 360px 54px no-repeat,
+    linear-gradient(180deg, rgba(56, 209, 201, 0.9), rgba(91, 34, 243, 0.95)) 52% 0 / 64px 184px no-repeat;
+  opacity: 0.85;
+  animation: portalBarsFloat 13s ease-in-out infinite alternate;
+}
+
+.topbar {
+  position: relative;
+  overflow: hidden;
+  min-height: 96px;
+  padding: 16px clamp(18px, 3vw, 36px);
+  border-bottom: 1px solid rgba(225, 231, 240, 0.72);
+  background:
+    radial-gradient(circle at 18% 92%, rgba(255, 239, 154, 0.62) 0 3px, transparent 4px),
+    radial-gradient(circle at 72% 22%, rgba(255, 255, 255, 0.32) 0 5px, transparent 6px),
+    linear-gradient(90deg, rgba(96, 138, 68, 0.98), rgba(128, 164, 81, 0.88) 42%, rgba(204, 224, 174, 0.68)),
+    #7ca551;
+  color: #ffffff;
+}
+
+.topbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 9% 120%, rgba(42, 88, 33, 0.28), transparent 42%),
+    radial-gradient(ellipse at 43% -20%, rgba(255, 255, 255, 0.26), transparent 36%),
+    radial-gradient(ellipse at 82% 104%, rgba(70, 117, 47, 0.26), transparent 42%);
+  filter: blur(1px);
+  animation: bannerBreathe 10s ease-in-out infinite alternate;
+}
+
+.topbar > * {
+  position: relative;
+  z-index: 1;
+}
+
+body:has(#authView:not(.is-hidden)) .topbar {
+  position: absolute;
+  inset: 0 0 auto;
+  min-height: 74px;
+  border-bottom: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body:has(#authView:not(.is-hidden)) .topbar::before {
+  display: none;
+}
+
+.brand h1 {
+  color: inherit;
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 800;
+}
+
+.brand p {
+  color: currentColor;
+  opacity: 0.82;
+}
+
+.auth-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 108px 24px 72px;
+}
+
+.auth-shell::after {
+  content: "Be true to education, be true to yourself.";
+  position: fixed;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  z-index: 0;
+  color: #ffffff;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: min(620px, calc(100vw - 80px));
+  min-height: 540px;
+  align-content: center;
+  justify-items: center;
+  gap: 20px;
+  padding: 42px 72px 46px;
+  border: 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.995);
+  box-shadow: 0 28px 70px rgba(0, 22, 55, 0.24);
+  animation: cardRise 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.auth-card > * {
+  width: min(100%, 450px);
+}
+
+.auth-card > div:first-child {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.auth-card h2 {
+  justify-self: center;
+  margin: 4px 0 0;
+  color: #111827;
+  font-size: clamp(34px, 3vw, 42px);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.auth-card .muted {
+  display: none;
+}
+
+.auth-card label {
+  color: #637083;
+  font-weight: 600;
+}
+
+.auth-mode-toggle {
+  gap: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.auth-mode-button {
+  min-height: 44px;
+  border: 2px solid #c8cbd4;
+  border-radius: 4px;
+  color: #9ca3af;
+  background: #ffffff;
+  font-size: 16px;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.auth-mode-button.is-active {
+  color: var(--blue);
+  border-color: var(--blue);
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(83, 97, 232, 0.12);
+}
+
+.auth-mode-panel {
+  gap: 15px;
+}
+
+.auth-card input,
+.auth-card select {
+  min-height: 52px;
+  border: 0;
+  border-radius: 4px;
+  background: #eaf1ff;
+  box-shadow: inset 0 0 0 1px rgba(83, 97, 232, 0.04);
+}
+
+.auth-card .primary-button,
+.auth-card .secondary-button {
+  min-height: 52px;
+  margin-top: 6px;
+  border-radius: 4px;
+  background: var(--blue);
+  box-shadow: 0 14px 28px rgba(83, 97, 232, 0.24);
+}
+
+.workspace {
+  gap: 18px;
+  padding: 22px clamp(18px, 3vw, 34px) 32px;
+  animation: workspaceIn 420ms ease both;
+}
+
+.panel {
+  border-color: rgba(225, 231, 240, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 14px 34px rgba(29, 44, 76, 0.06);
+  animation: panelIn 440ms ease both;
+}
+
+.panel:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.panel:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.panel-heading {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(225, 231, 240, 0.78);
+}
+
+.compact-heading {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.panel-heading h2,
+.teacher-card h3 {
+  color: #111827;
+  font-weight: 800;
+}
+
+.status-pill,
+.score-badge,
+.sentence-status {
+  border-radius: 999px;
+  background: #eefbf9;
+  color: var(--teal-dark);
+  font-weight: 700;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.primary-button,
+.secondary-button,
+.play-button {
+  background: var(--blue);
+  box-shadow: 0 10px 20px rgba(83, 97, 232, 0.18);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.play-button:hover {
+  background: var(--blue-dark);
+}
+
+.ghost-button,
+.icon-button {
+  border-color: #e1e7f0;
+  color: #657083;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button,
+.icon-button,
+.play-button,
+.assignment-row {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.assignment-row {
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(29, 44, 76, 0.04);
+}
+
+.assignment-row:hover {
+  border-color: rgba(83, 97, 232, 0.42);
+  box-shadow: 0 14px 28px rgba(83, 97, 232, 0.11);
+}
+
+.assignment-row.is-active {
+  border-color: rgba(83, 97, 232, 0.64);
+  background: linear-gradient(180deg, #f7f8ff, #ffffff);
+}
+
+.course-status,
+.focus-box,
+.summary-item,
+.wave-shell,
+.table-shell,
+.empty-state {
+  border-radius: 6px;
+}
+
+.wave-shell {
+  background:
+    linear-gradient(180deg, rgba(83, 97, 232, 0.05), rgba(40, 184, 179, 0.08)),
+    #f8fafc;
+}
+
+.focus-box {
+  box-shadow: inset 0 0 0 1px rgba(83, 97, 232, 0.02);
+}
+
+.answer-text,
+#dictationInput,
+#notesInput {
+  border-color: #dce4ef;
+  background: #fbfcff;
+}
+
+.summary-item {
+  background:
+    linear-gradient(135deg, rgba(83, 97, 232, 0.08), rgba(40, 184, 179, 0.08)),
+    #ffffff;
+}
+
+.summary-item strong {
+  color: var(--blue-dark);
+}
+
+.teacher-card {
+  padding: 16px;
+  border: 1px solid rgba(225, 231, 240, 0.9);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.teacher-card + .teacher-card {
+  margin-top: 0;
+}
+
+tr {
+  transition: background 140ms ease;
+}
+
+tbody tr:hover {
+  background: #f8faff;
+}
+
+@keyframes portalRingDrift {
+  from {
+    transform: translate3d(-10px, -4px, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(16px, 10px, 0) scale(1.015);
+  }
+}
+
+@keyframes portalBarsFloat {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-18px, 12px, 0);
+  }
+}
+
+@keyframes bannerBreathe {
+  from {
+    opacity: 0.88;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes workspaceIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .auth-shell::after {
+    bottom: 20px;
+    width: calc(100vw - 32px);
+    font-size: 17px;
+    white-space: normal;
+  }
+
+  .auth-mode-toggle {
+    gap: 10px;
+  }
+
+  .topbar {
+    min-height: 86px;
+  }
+}
