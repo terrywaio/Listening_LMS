@@ -564,7 +564,8 @@ values
   ('student-xumaoheng@students.listeninglab.app', 'xumaoheng', 'xumaoheng', '123456'),
   ('student-2@students.listeninglab.app', '学生2', 'student2', '123456'),
   ('student-3@students.listeninglab.app', '学生3', 'student3', '123456'),
-  ('student-4@students.listeninglab.app', '学生4', 'student4', '123456');
+  ('student-4@students.listeninglab.app', '学生4', 'student4', '123456'),
+  ('student-wukeshun-kevin@students.listeninglab.app', '吴可舜kevin', 'wukeshun-kevin', '123456');
 
 with doomed_students as (
   select p.id

@@ -1,4 +1,4 @@
-const APP_VERSION = "20260611-lms-audio-1";
+const APP_VERSION = "20260612-student-kevin-1";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;
@@ -16,6 +16,7 @@ const FIXED_STUDENTS = [
   { key: "student2", name: "学生2", email: `student-2@${STUDENT_AUTH_DOMAIN}` },
   { key: "student3", name: "学生3", email: `student-3@${STUDENT_AUTH_DOMAIN}` },
   { key: "student4", name: "学生4", email: `student-4@${STUDENT_AUTH_DOMAIN}` },
+  { key: "wukeshun-kevin", name: "吴可舜kevin", email: `student-wukeshun-kevin@${STUDENT_AUTH_DOMAIN}` },
 ];
 
 const state = {
