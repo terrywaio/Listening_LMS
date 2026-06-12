@@ -1,4 +1,4 @@
-const APP_VERSION = "20260612-student-kevin-1";
+const APP_VERSION = "20260612-auth-refresh-1";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;
@@ -24,6 +24,10 @@ const state = {
   supabase: null,
   session: null,
   profile: null,
+  authReady: false,
+  authLoading: true,
+  authLoadToken: 0,
+  authError: "",
   pendingProfileName: "",
   authMode: "student",
   library: [],
@@ -259,21 +263,33 @@ function setConfigStatus(text, tone) {
 }
 
 async function initializeAuth() {
+  state.authReady = false;
+  state.authLoading = true;
+  state.authError = "";
+  disableAuthControls(true);
+  renderShell();
+
   if (!state.supabase) {
+    state.authReady = true;
+    state.authLoading = false;
     setAuthStatus("Supabase 未配置，先按文档创建项目并填写 anon key。");
     disableAuthControls(true);
+    renderShell();
     return;
   }
 
-  const { data, error } = await state.supabase.auth.getSession();
-  if (error) setAuthStatus(error.message);
-  state.session = data?.session || null;
-
-  state.supabase.auth.onAuthStateChange((_event, session) => {
+  state.supabase.auth.onAuthStateChange((event, session) => {
+    if (event === "INITIAL_SESSION") return;
     state.session = session;
     handleSessionChanged();
   });
 
+  const { data, error } = await state.supabase.auth.getSession();
+  if (error) {
+    state.authError = error.message;
+    setAuthStatus(error.message);
+  }
+  state.session = data?.session || null;
   await handleSessionChanged();
 }
 
@@ -393,8 +409,16 @@ async function signOut() {
 }
 
 async function handleSessionChanged() {
+  const loadToken = ++state.authLoadToken;
+  state.authLoading = true;
+  state.authError = "";
+  renderShell();
+
   if (!state.session) {
     resetUserState();
+    if (loadToken !== state.authLoadToken) return;
+    state.authReady = true;
+    state.authLoading = false;
     disableAuthControls(false);
     setAuthStatus("等待登录");
     renderShell();
@@ -413,10 +437,16 @@ async function handleSessionChanged() {
       await loadStudentAssignments();
     }
   } catch (error) {
-    setAuthStatus(`账号数据加载失败：${error.message}`);
+    if (loadToken !== state.authLoadToken) return;
+    state.authError = `账号数据加载失败：${error.message}`;
+    setAuthStatus(state.authError);
     disableAuthControls(false);
+  } finally {
+    if (loadToken !== state.authLoadToken) return;
+    state.authReady = true;
+    state.authLoading = false;
+    renderShell();
   }
-  renderShell();
 }
 
 function resetUserState() {
@@ -864,14 +894,26 @@ function applyCloudProgress(progress, rows) {
 }
 
 function renderShell() {
+  const hasSession = Boolean(state.session);
   const loggedIn = Boolean(state.session && state.profile);
-  els.authView.classList.toggle("is-hidden", loggedIn);
+  const authPending = state.authLoading || (!state.authReady && state.configReady);
+  const showLogin = !loggedIn && !hasSession && !authPending;
+  els.authView.classList.toggle("is-hidden", !showLogin);
   els.appView.classList.toggle("is-hidden", !loggedIn);
-  els.signOutButton.classList.toggle("is-hidden", !loggedIn);
-  els.userBadge.classList.toggle("is-hidden", !loggedIn);
+  els.signOutButton.classList.toggle("is-hidden", !(loggedIn || hasSession));
+  els.userBadge.classList.toggle("is-hidden", !(loggedIn || hasSession || authPending));
 
   if (!loggedIn) {
-    els.appStatus.textContent = "登录后进入作业";
+    if (hasSession && state.authError) {
+      els.appStatus.textContent = state.authError;
+      els.userBadge.textContent = "登录状态待恢复";
+    } else if (hasSession || authPending) {
+      els.appStatus.textContent = "正在恢复登录状态...";
+      els.userBadge.textContent = "登录状态检查中";
+    } else {
+      els.appStatus.textContent = "登录后进入作业";
+      delete document.body.dataset.role;
+    }
     return;
   }
 

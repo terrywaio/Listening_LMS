@@ -4,17 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>精听 LMS</title>
-    <link rel="stylesheet" href="./styles.css?v=20260612-student-kevin-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260612-auth-refresh-1" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script defer src="./supabase-config.js?v=20260612-student-kevin-1"></script>
-    <script defer src="./app.js?v=20260612-student-kevin-1"></script>
+    <script defer src="./supabase-config.js?v=20260612-auth-refresh-1"></script>
+    <script defer src="./app.js?v=20260612-auth-refresh-1"></script>
     <script defer src="./teacher-delete.js?v=20260607-delete-1"></script>
   </head>
   <body>
     <header class="topbar">
       <div class="brand">
         <h1>精听 LMS</h1>
-        <p id="appStatus">登录后进入作业</p>
+        <p id="appStatus">正在恢复登录状态...</p>
       </div>
       <div class="top-actions">
         <span id="userBadge" class="status-pill is-hidden">未登录</span>
@@ -22,7 +22,7 @@
       </div>
     </header>
 
-    <section id="authView" class="auth-shell">
+    <section id="authView" class="auth-shell is-hidden">
       <div class="auth-card">
         <div>
           <p id="configStatus" class="status-pill">检查 Supabase 配置</p>
