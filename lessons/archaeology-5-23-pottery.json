@@ -1,0 +1,128 @@
+{
+  "id": "archaeology-5-23-pottery",
+  "title": "考古学 · 5.23 29-32",
+  "category": "考古学",
+  "source": "5.23 讲座 29-32",
+  "audioSrc": "./archaeology-5-23-pottery/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.2,
+      "end": 8.14,
+      "speaker": "Speaker",
+      "text": "Previously we discussed the significance of pottery to ancient cultures, including pottery as an art form and pottery's crucial role in trade."
+    },
+    {
+      "id": "s002",
+      "start": 8.44,
+      "end": 11.28,
+      "speaker": "Speaker",
+      "text": "Today we'll focus on the development of pottery over time."
+    },
+    {
+      "id": "s003",
+      "start": 11.46,
+      "end": 17.86,
+      "speaker": "Speaker",
+      "text": "One breakthrough was the invention of the potter's wheel, around 3,500 BCE in Mesopotamia."
+    },
+    {
+      "id": "s004",
+      "start": 18.72,
+      "end": 24.98,
+      "speaker": "Speaker",
+      "text": "Before this, pottery was shaped mostly by hand, which was slow and produced less uniform results."
+    },
+    {
+      "id": "s005",
+      "start": 25.32,
+      "end": 34.44,
+      "speaker": "Speaker",
+      "text": "The potter's wheel allowed artisans to spin and shape the clay more quickly and evenly, making it possible to create symmetrical vessels with greater precision and speed."
+    },
+    {
+      "id": "s006",
+      "start": 35.04,
+      "end": 36.76,
+      "speaker": "Speaker",
+      "text": "Firing technology also advanced."
+    },
+    {
+      "id": "s007",
+      "start": 37.22,
+      "end": 43.68,
+      "speaker": "Speaker",
+      "text": "Early pots were fired in open pits which limited temperature control, resulting in uneven or fragile pots."
+    },
+    {
+      "id": "s008",
+      "start": 44.7,
+      "end": 49.98,
+      "speaker": "Speaker",
+      "text": "So kilns were developed: enclosed ovens that could reach higher and more consistent temperatures."
+    },
+    {
+      "id": "s009",
+      "start": 50.68,
+      "end": 53.3,
+      "speaker": "Speaker",
+      "text": "These allowed for stronger, more durable pottery."
+    },
+    {
+      "id": "s010",
+      "start": 53.94,
+      "end": 58.86,
+      "speaker": "Speaker",
+      "text": "Another advance was the updraft kiln, which directed heat upward through the chamber."
+    },
+    {
+      "id": "s011",
+      "start": 59.42,
+      "end": 63.4,
+      "speaker": "Speaker",
+      "text": "By adjusting the airflow, potters could control how much oxygen reached the fire."
+    },
+    {
+      "id": "s012",
+      "start": 63.9,
+      "end": 70.6,
+      "speaker": "Speaker",
+      "text": "This helped them produce pottery with specific colors like red or black, depending on how the clay reacted to the firing atmosphere."
+    },
+    {
+      "id": "s013",
+      "start": 71.02,
+      "end": 76.82,
+      "speaker": "Speaker",
+      "text": "Then, in ancient China, potters developed kilns that could reach very high temperatures."
+    },
+    {
+      "id": "s014",
+      "start": 77.4,
+      "end": 80.98,
+      "speaker": "Speaker",
+      "text": "This allowed them to create stoneware and eventually porcelain."
+    },
+    {
+      "id": "s015",
+      "start": 81.46,
+      "end": 89.66,
+      "speaker": "Speaker",
+      "text": "Porcelain is made from a special mix of fine clay and minerals and must be fired at temperatures above 1,200 degrees Celsius."
+    },
+    {
+      "id": "s016",
+      "start": 90.02,
+      "end": 96.0,
+      "speaker": "Speaker",
+      "text": "The result is a smooth, white ceramic that is strong, lightweight, and slightly translucent."
+    },
+    {
+      "id": "s017",
+      "start": 96.64,
+      "end": 101.64,
+      "speaker": "Speaker",
+      "text": "Porcelain was a major breakthrough because it was more durable and versatile than earlier pottery."
+    }
+  ]
+}

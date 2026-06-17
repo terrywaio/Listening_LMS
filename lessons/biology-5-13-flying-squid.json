@@ -1,0 +1,121 @@
+{
+  "id": "biology-5-13-flying-squid",
+  "title": "生物学 · 5.13 25-28",
+  "category": "生物学",
+  "source": "5.13 M1 讲座 25-28",
+  "audioSrc": "./biology-5-13-flying-squid/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.82,
+      "speaker": "Speaker",
+      "text": "Listen to a talk on a marine biology podcast."
+    },
+    {
+      "id": "s002",
+      "start": 4.74,
+      "end": 8.86,
+      "speaker": "Speaker",
+      "text": "There are many species out there that we wouldn't expect to see flying."
+    },
+    {
+      "id": "s003",
+      "start": 9.32,
+      "end": 14.6,
+      "speaker": "Speaker",
+      "text": "Mammals, reptiles, one fascinating creature is the flying squid."
+    },
+    {
+      "id": "s004",
+      "start": 15.32,
+      "end": 20.48,
+      "speaker": "Speaker",
+      "text": "Now squid have fins, arms, tentacles and gills for breathing."
+    },
+    {
+      "id": "s005",
+      "start": 21.12,
+      "end": 28.16,
+      "speaker": "Speaker",
+      "text": "Their main body, the mantle, is basically a tube of muscle that water goes inside of while they swim."
+    },
+    {
+      "id": "s006",
+      "start": 28.64,
+      "end": 35.54,
+      "speaker": "Speaker",
+      "text": "When this mantle clamps shut, it pumps the water out, which propels the squid through water quite quickly."
+    },
+    {
+      "id": "s007",
+      "start": 36.08,
+      "end": 37.64,
+      "speaker": "Speaker",
+      "text": "It's like a little jetpack."
+    },
+    {
+      "id": "s008",
+      "start": 38.38,
+      "end": 45.5,
+      "speaker": "Speaker",
+      "text": "And a flying squid are able to propel themselves right up through the ocean's surface and into the air above."
+    },
+    {
+      "id": "s009",
+      "start": 46.58,
+      "end": 56.5,
+      "speaker": "Speaker",
+      "text": "Another unexpected flying creature is the flying squirrel, which can simply glide sometimes quickly and for long distances between tree branches."
+    },
+    {
+      "id": "s010",
+      "start": 57.04,
+      "end": 64.98,
+      "speaker": "Speaker",
+      "text": "However, unlike the flying squirrel, flying squid not only glide but can actually propel themselves upward."
+    },
+    {
+      "id": "s011",
+      "start": 65.5,
+      "end": 73.82,
+      "speaker": "Speaker",
+      "text": "And, well, a flying squid can accelerate as fast as a car, getting up to 100 kilometers per hour in about a second."
+    },
+    {
+      "id": "s012",
+      "start": 74.48,
+      "end": 83.34,
+      "speaker": "Speaker",
+      "text": "Then the squid extends its tentacles and arms, and it has membranes between them that spread out and help the squid glide for several seconds."
+    },
+    {
+      "id": "s013",
+      "start": 83.9,
+      "end": 85.66,
+      "speaker": "Speaker",
+      "text": "A bit like temporary wings."
+    },
+    {
+      "id": "s014",
+      "start": 86.34,
+      "end": 91.9,
+      "speaker": "Speaker",
+      "text": "A squid in flight is likely to be fleeing from an underwater predator or a ship."
+    },
+    {
+      "id": "s015",
+      "start": 92.56,
+      "end": 94.92,
+      "speaker": "Speaker",
+      "text": "There are some alternative theories though."
+    },
+    {
+      "id": "s016",
+      "start": 95.24,
+      "end": 103.06,
+      "speaker": "Speaker",
+      "text": "One is that it's a migration strategy, since moving through the air takes less energy and time than moving through water."
+    }
+  ]
+}

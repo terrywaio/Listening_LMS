@@ -1,0 +1,100 @@
+{
+  "id": "business-6-2-minimum-viable-product",
+  "title": "商业 · 6.2 29-32",
+  "category": "商业",
+  "source": "6.2 讲座 29-32",
+  "audioSrc": "./business-6-2-minimum-viable-product/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.2,
+      "end": 11.84,
+      "speaker": "Speaker",
+      "text": "When launching a new business, entrepreneurs face countless decisions from choosing a target market to deciding which features to include in their first product."
+    },
+    {
+      "id": "s002",
+      "start": 12.48,
+      "end": 18.74,
+      "speaker": "Speaker",
+      "text": "These choices can be overwhelming, especially when resources are limited and time is short."
+    },
+    {
+      "id": "s003",
+      "start": 18.74,
+      "end": 27.94,
+      "speaker": "Speaker",
+      "text": "To address these challenges, some startups adopt a strategy that emphasizes speed, experimentation, and customer feedback."
+    },
+    {
+      "id": "s004",
+      "start": 28.66,
+      "end": 38.38,
+      "speaker": "Speaker",
+      "text": "This approach, the lean startup methodology, was popularized by Eric Ries and has gained traction in the tech world and beyond."
+    },
+    {
+      "id": "s005",
+      "start": 39.1,
+      "end": 45.88,
+      "speaker": "Speaker",
+      "text": "One of its core practices is building a minimum viable product, or MVP."
+    },
+    {
+      "id": "s006",
+      "start": 45.88,
+      "end": 53.48,
+      "speaker": "Speaker",
+      "text": "This is a basic version of a new product that can be released quickly to gather feedback from early users."
+    },
+    {
+      "id": "s007",
+      "start": 54.1,
+      "end": 64.2,
+      "speaker": "Speaker",
+      "text": "The goal is to learn what works and what doesn't, so that future development is governed by actual user experience rather than assumptions."
+    },
+    {
+      "id": "s008",
+      "start": 64.94,
+      "end": 68.14,
+      "speaker": "Speaker",
+      "text": "Another key principle is validated learning."
+    },
+    {
+      "id": "s009",
+      "start": 68.14,
+      "end": 80.48,
+      "speaker": "Speaker",
+      "text": "Instead of doing traditional market research, like surveys or focus groups, entrepreneurs test their ideas by putting the product out in the real world."
+    },
+    {
+      "id": "s010",
+      "start": 80.68,
+      "end": 86.76,
+      "speaker": "Speaker",
+      "text": "This helps them figure out whether their product actually meets the needs of their customers."
+    },
+    {
+      "id": "s011",
+      "start": 86.76,
+      "end": 92.62,
+      "speaker": "Speaker",
+      "text": "In all fairness, I should point out that this approach isn't perfect."
+    },
+    {
+      "id": "s012",
+      "start": 93.52,
+      "end": 107.0,
+      "speaker": "Speaker",
+      "text": "Rapid iteration and constant feedback can sometimes lead to confusion or a lack of clear direction, and in the pursuit of efficiency some teams may cut corners, which could affect product quality."
+    },
+    {
+      "id": "s013",
+      "start": 107.0,
+      "end": 116.96,
+      "speaker": "Speaker",
+      "text": "Still, many entrepreneurs find the lean startup methodology helpful for navigating the uncertainties of launching a new business."
+    }
+  ]
+}

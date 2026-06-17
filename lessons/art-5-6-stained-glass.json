@@ -1,0 +1,114 @@
+{
+  "id": "art-5-6-stained-glass",
+  "title": "艺术 · 5.6 25-28",
+  "category": "艺术",
+  "source": "5.6 讲座 25-28",
+  "audioSrc": "./art-5-6-stained-glass/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.24,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in an art history class."
+    },
+    {
+      "id": "s002",
+      "start": 5.38,
+      "end": 9.86,
+      "speaker": "Speaker",
+      "text": "Today, we're exploring the luminous world of stained glass."
+    },
+    {
+      "id": "s003",
+      "start": 10.32,
+      "end": 17.78,
+      "speaker": "Speaker",
+      "text": "When you think of stained glass, you probably think of windows in churches, but it is found outside of churches as well."
+    },
+    {
+      "id": "s004",
+      "start": 17.98,
+      "end": 22.42,
+      "speaker": "Speaker",
+      "text": "In fact, it used to brighten many homes across the United States."
+    },
+    {
+      "id": "s005",
+      "start": 22.76,
+      "end": 34.46,
+      "speaker": "Speaker",
+      "text": "In the late 19th and early 20th centuries, stained glass windows became a beloved feature in domestic architecture, thanks to the Arts and Crafts movement."
+    },
+    {
+      "id": "s006",
+      "start": 34.98,
+      "end": 43.04,
+      "speaker": "Speaker",
+      "text": "The Arts and Crafts movement celebrated craftsmanship and natural beauty, and stained glass fit the bill perfectly."
+    },
+    {
+      "id": "s007",
+      "start": 43.9,
+      "end": 47.44,
+      "speaker": "Speaker",
+      "text": "Artists use several techniques to bring their visions to life."
+    },
+    {
+      "id": "s008",
+      "start": 47.66,
+      "end": 57.74,
+      "speaker": "Speaker",
+      "text": "The lead method involved joining pieces of glass with strips of lead, ideal for bold geometric designs."
+    },
+    {
+      "id": "s009",
+      "start": 58.4,
+      "end": 65.94,
+      "speaker": "Speaker",
+      "text": "Then came the copper foil technique, popularised by Louis Comfort Tiffany."
+    },
+    {
+      "id": "s010",
+      "start": 67.0,
+      "end": 74.86,
+      "speaker": "Speaker",
+      "text": "This method wrapped each glass piece in thin copper foil, which allowed for more intricate designs like florals and landscapes."
+    },
+    {
+      "id": "s011",
+      "start": 75.76,
+      "end": 78.86,
+      "speaker": "Speaker",
+      "text": "But these beautiful windows weren't without drawbacks."
+    },
+    {
+      "id": "s012",
+      "start": 79.66,
+      "end": 85.02,
+      "speaker": "Speaker",
+      "text": "They often lack proper insulation, leading to heat loss in cold climates."
+    },
+    {
+      "id": "s013",
+      "start": 85.86,
+      "end": 94.54,
+      "speaker": "Speaker",
+      "text": "Homeowners had to weigh aesthetics against practicality, sometimes adding storm windows or heavy drapes to compensate."
+    },
+    {
+      "id": "s014",
+      "start": 95.16,
+      "end": 105.86,
+      "speaker": "Speaker",
+      "text": "Stained glass windows eventually faded from popularity in domestic architecture, but they're enjoying a quiet renaissance in contemporary art."
+    },
+    {
+      "id": "s015",
+      "start": 106.44,
+      "end": 121.96,
+      "speaker": "Speaker",
+      "text": "Modern artists blend old techniques with new technologies, like laser cutting, digital design, and fused glass methods, to create contemporary pieces for homes, galleries and public spaces."
+    }
+  ]
+}
