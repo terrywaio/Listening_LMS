@@ -1,7 +1,10 @@
-const APP_VERSION = "20260612-auth-refresh-1";
+const APP_VERSION = "20260627-audio-count-fix-1";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;
+const LISTEN_COUNT_CONFIRM_SECONDS = 0.4;
+const AUDIO_PRELOAD_ATTEMPTS = 3;
+const AUDIO_PRELOAD_RETRY_DELAY_MS = 900;
 const ASSIGNMENT_INSERT_ATTEMPTS = 3;
 const ASSIGNMENT_RETRY_DELAY_MS = 900;
 const STUDENT_AUTH_DOMAIN = "students.listeninglab.app";
@@ -48,6 +51,7 @@ const state = {
   pendingAudioObjectUrl: "",
   audioLoadController: null,
   audioLoadToken: 0,
+  audioIsBuffering: false,
   currentIndex: 0,
   answers: {},
   submitted: {},
@@ -59,6 +63,7 @@ const state = {
   notes: "",
   waveform: null,
   activeListenSegmentId: "",
+  pendingListenAttempt: null,
   saving: false,
   pendingSaveSegmentId: "",
   pendingSaveRequested: false,
@@ -183,12 +188,27 @@ function bindEvents() {
   on(els.audio, "play", () => {
     els.togglePlay.textContent = "Ⅱ";
   });
+  on(els.audio, "playing", () => {
+    state.audioIsBuffering = false;
+    confirmPendingListenAttempt();
+  });
   on(els.audio, "pause", () => {
     els.togglePlay.textContent = "▶";
     usePendingCachedAudio();
   });
-  on(els.audio, "waiting", () => setAudioStatus("音频缓冲中，请稍等..."));
-  on(els.audio, "stalled", () => setAudioStatus("音频网络有点慢，正在继续缓冲...", "warning"));
+  on(els.audio, "waiting", () => {
+    state.audioIsBuffering = true;
+    setAudioStatus("音频缓冲中；未真正播出的尝试不会扣次数。", "warning");
+  });
+  on(els.audio, "stalled", () => {
+    state.audioIsBuffering = true;
+    setAudioStatus("音频网络中断，正在等待恢复；未真正播出的尝试不会扣次数。", "warning");
+  });
+  on(els.audio, "error", () => {
+    cancelPendingListenAttempt();
+    setAudioStatus("音频加载失败，本次不扣次数。请重新点击播放或刷新页面。", "danger");
+    renderPractice();
+  });
   on(els.dictationInput, "input", () => {
     const segment = currentSegment();
     if (!segment) return;
@@ -1278,10 +1298,12 @@ function clearPracticeData() {
 }
 
 function prepareLessonAudio(audioUrl) {
+  cancelPendingListenAttempt();
   cancelAudioPreload();
   revokeCachedAudioUrl();
   state.audioSourceUrl = audioUrl;
   state.waveform = null;
+  state.audioIsBuffering = false;
   els.audio.preload = "auto";
   els.audio.src = audioUrl;
   els.audio.load();
@@ -1328,7 +1350,7 @@ async function preloadAudioBlob(audioUrl, signal, token) {
     return;
   }
 
-  const blob = await fetchAudioBlob(audioUrl, signal, token);
+  const blob = await fetchAudioBlobWithRetry(audioUrl, signal, token);
   await storeAudioBlob(audioUrl, blob);
   installCachedAudioBlob(audioUrl, blob, token, "音频已下载到本地缓存");
 }
@@ -1370,6 +1392,25 @@ async function fetchAudioBlob(audioUrl, signal, token) {
   return new Blob(chunks, { type });
 }
 
+async function fetchAudioBlobWithRetry(audioUrl, signal, token) {
+  let lastError = null;
+  for (let attempt = 1; attempt <= AUDIO_PRELOAD_ATTEMPTS; attempt += 1) {
+    try {
+      return await fetchAudioBlob(audioUrl, signal, token);
+    } catch (error) {
+      if (error?.name === "AbortError" || signal.aborted) throw error;
+      lastError = error;
+      console.warn(`Audio preload attempt ${attempt} failed.`, error);
+      if (attempt >= AUDIO_PRELOAD_ATTEMPTS) break;
+      if (state.audioLoadToken === token) {
+        setAudioStatus(`音频缓存中断，正在重试 ${attempt + 1}/${AUDIO_PRELOAD_ATTEMPTS}...`, "warning");
+      }
+      await delay(AUDIO_PRELOAD_RETRY_DELAY_MS * attempt);
+    }
+  }
+  throw lastError || new Error("音频缓存失败");
+}
+
 async function storeAudioBlob(audioUrl, blob) {
   if (!("caches" in window)) return;
   try {
@@ -1384,7 +1425,8 @@ function installCachedAudioBlob(audioUrl, blob, token, statusText) {
   if (state.audioLoadToken !== token || state.audioSourceUrl !== audioUrl) return;
   state.audioLoadController = null;
   const objectUrl = URL.createObjectURL(blob);
-  if (!els.audio.paused) {
+  const shouldResumeAfterSwitch = !els.audio.paused && state.audioIsBuffering;
+  if (!els.audio.paused && !shouldResumeAfterSwitch) {
     if (state.pendingAudioObjectUrl) URL.revokeObjectURL(state.pendingAudioObjectUrl);
     state.pendingAudioObjectUrl = objectUrl;
     setAudioStatus(`${statusText}，本句暂停后自动切换`);
@@ -1392,7 +1434,7 @@ function installCachedAudioBlob(audioUrl, blob, token, statusText) {
   }
   if (state.audioObjectUrl) URL.revokeObjectURL(state.audioObjectUrl);
   state.audioObjectUrl = objectUrl;
-  switchAudioToCachedUrl(objectUrl, statusText);
+  switchAudioToCachedUrl(objectUrl, statusText, shouldResumeAfterSwitch);
 }
 
 function usePendingCachedAudio() {
@@ -1404,7 +1446,7 @@ function usePendingCachedAudio() {
   switchAudioToCachedUrl(objectUrl, "本地缓存音频已就绪");
 }
 
-function switchAudioToCachedUrl(objectUrl, statusText) {
+function switchAudioToCachedUrl(objectUrl, statusText, resumeAfterSwitch = false) {
   const previousTime = Number.isFinite(els.audio.currentTime) ? els.audio.currentTime : 0;
   els.audio.src = objectUrl;
   els.audio.preload = "auto";
@@ -1414,6 +1456,7 @@ function switchAudioToCachedUrl(objectUrl, statusText) {
       els.audio.currentTime = Math.min(previousTime, Math.max(0, els.audio.duration - 0.05));
     }
     drawWaveform();
+    if (resumeAfterSwitch) safePlay(currentSegment());
   };
   if (els.audio.readyState >= 1) {
     restoreTime();
@@ -1434,6 +1477,7 @@ function clearProgressOnly() {
   state.unlockedIndex = 0;
   state.notes = "";
   state.activeListenSegmentId = "";
+  state.pendingListenAttempt = null;
 }
 
 function moveSegment(delta) {
@@ -1449,6 +1493,7 @@ function selectSegment(index) {
   }
   state.currentIndex = index;
   state.unlockedIndex = Math.max(state.unlockedIndex, index);
+  cancelPendingListenAttempt();
   setAudioToSegmentStart();
   els.audio.pause();
   saveLocalProgress();
@@ -1475,10 +1520,10 @@ async function playCurrentSegment(restart) {
   if (shouldRestart) els.audio.currentTime = start;
 
   if (shouldCount) {
-    recordListenAttempt(segment);
+    beginPendingListenAttempt(segment, start);
   }
   state.activeListenSegmentId = segment.id;
-  await safePlay();
+  await safePlay(segment);
 }
 
 function shouldCountListen(segment, restarted) {
@@ -1495,6 +1540,47 @@ function recordListenAttempt(segment) {
   updateListenCountBadge(segment);
 }
 
+function beginPendingListenAttempt(segment, start) {
+  if (state.pendingListenAttempt?.segmentId === segment.id) return;
+  state.pendingListenAttempt = {
+    segmentId: segment.id,
+    start,
+  };
+  setAudioStatus("正在加载本句音频；真正播放后才会计入次数。");
+  updateListenCountBadge(segment);
+}
+
+function cancelPendingListenAttempt() {
+  state.pendingListenAttempt = null;
+}
+
+function confirmPendingListenAttempt() {
+  const pending = state.pendingListenAttempt;
+  if (!pending || els.audio.paused) return;
+  const segment = currentSegment();
+  if (!segment || segment.id !== pending.segmentId) {
+    cancelPendingListenAttempt();
+    return;
+  }
+  const end = segmentEnd(segment);
+  const requiredProgress = isFiniteNumber(end)
+    ? Math.min(LISTEN_COUNT_CONFIRM_SECONDS, Math.max(0.12, (Number(end) - pending.start) * 0.12))
+    : LISTEN_COUNT_CONFIRM_SECONDS;
+  if (
+    els.audio.currentTime < pending.start + requiredProgress &&
+    (!isFiniteNumber(end) || els.audio.currentTime < Number(end) - 0.05)
+  ) {
+    return;
+  }
+  cancelPendingListenAttempt();
+  if (!isSubmitted(segment) && getListenCount(segment) >= MAX_PRE_SUBMIT_LISTENS) {
+    setAudioStatus(`本句提交前最多听 ${MAX_PRE_SUBMIT_LISTENS} 次。请先提交答案。`);
+    renderPractice();
+    return;
+  }
+  recordListenAttempt(segment);
+}
+
 async function togglePlay() {
   if (!els.audio.src) return;
   if (els.audio.paused) {
@@ -1504,17 +1590,23 @@ async function togglePlay() {
   }
 }
 
-async function safePlay() {
+async function safePlay(segment) {
   try {
     await els.audio.play();
+    confirmPendingListenAttempt();
   } catch (error) {
-    setAudioStatus("浏览器阻止了自动播放，请再点一次播放。");
+    cancelPendingListenAttempt();
+    console.error("Audio play failed", error);
+    setAudioStatus("音频还没有成功播放，本次不扣次数。请再点一次播放。", "warning");
+    if (segment) updateListenCountBadge(segment);
   }
 }
 
 function onAudioTimeUpdate() {
   const segment = currentSegment();
   const end = segmentEnd(segment);
+  state.audioIsBuffering = false;
+  confirmPendingListenAttempt();
   if (!segment || !isFiniteNumber(end)) {
     drawWaveform();
     return;
@@ -1917,7 +2009,10 @@ function updateListenCountBadge(segment) {
     return;
   }
   const count = getListenCount(segment);
-  els.listenCountBadge.textContent = isSubmitted(segment) ? `听 ${count} 次` : `听 ${count}/${MAX_PRE_SUBMIT_LISTENS}`;
+  const pending = state.pendingListenAttempt?.segmentId === segment.id;
+  els.listenCountBadge.textContent = isSubmitted(segment)
+    ? `听 ${count} 次`
+    : `听 ${count}/${MAX_PRE_SUBMIT_LISTENS}${pending ? " · 加载中" : ""}`;
   els.listenCountBadge.className = "status-pill";
   if (!isSubmitted(segment) && count >= MAX_PRE_SUBMIT_LISTENS) els.listenCountBadge.classList.add("is-danger");
 }
