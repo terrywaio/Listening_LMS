@@ -162,25 +162,32 @@
           </section>
         </div>
 
-        <section class="teacher-card">
-          <div class="panel-heading small-heading">
+        <details class="teacher-card collapsible-card">
+          <summary class="collapsible-summary">
             <h3>学生课包进度</h3>
-          </div>
+            <span class="collapse-indicator" aria-hidden="true"></span>
+          </summary>
           <div id="teacherCompletionMatrix" class="table-shell"></div>
-        </section>
+        </details>
 
-        <section class="teacher-card">
-          <div class="panel-heading small-heading">
+        <details class="teacher-card collapsible-card">
+          <summary class="collapsible-summary">
             <h3>任务与完成情况</h3>
+            <span class="collapse-indicator" aria-hidden="true"></span>
+          </summary>
+          <div class="collapsible-toolbar">
             <button class="ghost-button small-button" id="refreshTeacherData" type="button">刷新</button>
           </div>
           <div id="teacherAssignments" class="table-shell"></div>
-        </section>
+        </details>
 
-        <section class="teacher-card">
-          <h3>句子明细</h3>
+        <details class="teacher-card collapsible-card">
+          <summary class="collapsible-summary">
+            <h3>句子明细</h3>
+            <span class="collapse-indicator" aria-hidden="true"></span>
+          </summary>
           <div id="teacherProgress" class="table-shell"></div>
-        </section>
+        </details>
       </section>
     </main>
   </body>

@@ -1160,10 +1160,6 @@ function renderTeacherCompletionMatrix() {
     els.teacherCompletionMatrix.innerHTML = '<div class="empty-state">暂无学生</div>';
     return;
   }
-  if (!state.teacherAssignments.length) {
-    els.teacherCompletionMatrix.innerHTML = '<div class="empty-state">还没有分配任务</div>';
-    return;
-  }
 
   const lessons = teacherAssignedLessons();
   if (!lessons.length) {
@@ -1173,8 +1169,8 @@ function renderTeacherCompletionMatrix() {
 
   const rowsByAssignment = groupProgressByAssignment(state.teacherProgressRows);
   const progressByAssignment = groupAssignmentProgressByAssignment();
-  const stats = teacherCompletionStats(rowsByAssignment, progressByAssignment);
   const assignmentsByStudentLesson = groupAssignmentsByStudentLesson();
+  const stats = teacherCompletionStats(lessons, assignmentsByStudentLesson, rowsByAssignment, progressByAssignment);
   const headerCells = lessons
     .map((lesson) => {
       const displayTitle = lesson.displayTitle || lesson.title;
@@ -1222,6 +1218,7 @@ function renderTeacherCompletionMatrix() {
       <span><strong>${stats.inProgress}</strong> 进行中</span>
       <span><strong>${stats.notStarted}</strong> 未开始</span>
       <span><strong>${stats.overdue}</strong> 已逾期</span>
+      <span><strong>${stats.unassigned}</strong> 未布置</span>
     </div>
     <table class="teacher-completion-table">
       <thead>
@@ -1249,6 +1246,14 @@ function bindTeacherAssignmentViewButtons(root) {
 
 function teacherAssignedLessons() {
   const byPath = new Map();
+  state.library.forEach((lesson) => {
+    const path = lesson.path || lesson.id || lesson.title;
+    if (!path || byPath.has(path)) return;
+    byPath.set(path, {
+      path,
+      title: lesson.title || path,
+    });
+  });
   state.teacherAssignments.forEach((assignment) => {
     const path = assignment.lesson_path || assignment.content_ref?.path || assignment.lesson_title;
     if (!path || byPath.has(path)) return;
@@ -1331,18 +1336,23 @@ function teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssign
   };
 }
 
-function teacherCompletionStats(rowsByAssignment, progressByAssignment) {
-  return state.teacherAssignments.reduce(
-    (stats, assignment) => {
-      const metrics = teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssignment);
+function teacherCompletionStats(lessons, assignmentsByStudentLesson, rowsByAssignment, progressByAssignment) {
+  const stats = { completed: 0, inProgress: 0, notStarted: 0, overdue: 0, unassigned: 0 };
+  state.students.forEach((student) => {
+    lessons.forEach((lesson) => {
+      const assignments = assignmentsByStudentLesson.get(studentLessonKey(student.id, lesson.path)) || [];
+      if (!assignments.length) {
+        stats.unassigned += 1;
+        return;
+      }
+      const metrics = teacherAssignmentMetrics(latestAssignment(assignments), rowsByAssignment, progressByAssignment);
       if (metrics.completed) stats.completed += 1;
       else if (metrics.overdue) stats.overdue += 1;
       else if (metrics.started) stats.inProgress += 1;
       else stats.notStarted += 1;
-      return stats;
-    },
-    { completed: 0, inProgress: 0, notStarted: 0, overdue: 0 },
-  );
+    });
+  });
+  return stats;
 }
 
 function shortLessonTitle(title) {

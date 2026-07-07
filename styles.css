@@ -1099,6 +1099,69 @@ body:has(#authView:not(.is-hidden)) .topbar::before {
   margin-top: 0;
 }
 
+.collapsible-card {
+  align-content: start;
+}
+
+.collapsible-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 42px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.collapsible-summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-summary h3 {
+  margin: 0;
+}
+
+.collapse-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #657083;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.collapse-indicator::before {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 180ms ease;
+}
+
+.collapse-indicator::after {
+  content: "展开";
+}
+
+.collapsible-card[open] .collapse-indicator::before {
+  transform: rotate(225deg) translate(-2px, -1px);
+}
+
+.collapsible-card[open] .collapse-indicator::after {
+  content: "收起";
+}
+
+.collapsible-card[open] > .table-shell,
+.collapsible-card[open] > .collapsible-toolbar {
+  animation: collapsibleReveal 220ms ease both;
+}
+
+.collapsible-toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
 tr {
   transition: background 140ms ease;
 }
@@ -1165,6 +1228,18 @@ tbody tr:hover {
   from {
     opacity: 0;
     transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes collapsibleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
   }
 
   to {
