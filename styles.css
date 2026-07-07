@@ -513,6 +513,137 @@ table {
   min-width: 1120px;
 }
 
+.completion-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfcff;
+}
+
+.completion-summary span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 30px;
+  padding: 4px 10px;
+  border: 1px solid #e1e7f0;
+  border-radius: 999px;
+  color: var(--muted);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.completion-summary strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.teacher-completion-table {
+  min-width: 980px;
+}
+
+.teacher-completion-table th,
+.teacher-completion-table td {
+  min-width: 150px;
+}
+
+.teacher-completion-table .student-axis {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 150px;
+  max-width: 180px;
+  background: #f8fafc;
+}
+
+.matrix-cell {
+  padding: 6px;
+  background: #ffffff;
+}
+
+.matrix-cell > button,
+.matrix-cell > span {
+  display: grid;
+  width: 100%;
+  min-height: 82px;
+  gap: 5px;
+  align-content: center;
+  padding: 10px;
+  border: 1px solid #e1e7f0;
+  border-radius: 6px;
+  color: var(--muted);
+  background: #ffffff;
+  text-align: left;
+  font: inherit;
+}
+
+.matrix-cell > button {
+  cursor: pointer;
+}
+
+.matrix-cell > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(29, 44, 76, 0.08);
+}
+
+.matrix-cell strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.matrix-cell span {
+  font-size: 12px;
+}
+
+.progress-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.matrix-cell.is-complete > button,
+.progress-status.is-complete {
+  border-color: #bce8df;
+  color: #0f766e;
+  background: #ecfdf8;
+}
+
+.matrix-cell.is-in-progress > button,
+.progress-status.is-in-progress {
+  border-color: #cfd8ff;
+  color: #4253d6;
+  background: #f2f5ff;
+}
+
+.matrix-cell.is-not-started > button,
+.progress-status.is-not-started {
+  border-color: #e1e7f0;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+.matrix-cell.is-overdue > button,
+.progress-status.is-overdue {
+  border-color: #fecaca;
+  color: #b91c1c;
+  background: #fff1f2;
+}
+
+.matrix-cell.is-unassigned > span {
+  min-height: 82px;
+  justify-items: center;
+  color: #94a3b8;
+  background: #f8fafc;
+}
+
 .question-cell,
 .answer-cell {
   max-width: 420px;

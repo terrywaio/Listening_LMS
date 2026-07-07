@@ -157,6 +157,7 @@ function bindElements() {
     "assignTaskButton",
     "studentsList",
     "refreshTeacherData",
+    "teacherCompletionMatrix",
     "teacherAssignments",
     "teacherProgress",
   ].forEach((id) => {
@@ -1059,6 +1060,7 @@ function renderProgressSummary() {
 function renderTeacherDashboard() {
   renderTeacherLessonOptions();
   renderStudents();
+  renderTeacherCompletionMatrix();
   renderTeacherAssignments();
   renderTeacherProgressDetails();
   if (els.teacherStatus) els.teacherStatus.textContent = `${state.students.length} 名学生 · ${state.teacherAssignments.length} 个任务`;
@@ -1111,16 +1113,10 @@ function renderTeacherAssignments() {
 
   const studentById = new Map(state.students.map((student) => [student.id, student]));
   const rowsByAssignment = groupProgressByAssignment(state.teacherProgressRows);
+  const progressByAssignment = groupAssignmentProgressByAssignment();
   const rows = state.teacherAssignments
     .map((assignment) => {
-      const progressRows = rowsByAssignment.get(assignment.id) || [];
-      const submittedCount = progressRows.filter((row) => row.submitted).length;
-      const listenTotal = progressRows.reduce((sum, row) => sum + Number(row.listen_count || 0), 0);
-      const scored = progressRows.filter((row) => row.submitted && row.score !== null && row.score !== undefined);
-      const avgScore = scored.length ? Math.round(scored.reduce((sum, row) => sum + Number(row.score || 0), 0) / scored.length) : "--";
-      const latest = latestSubmittedAt(progressRows);
-      const total = assignment.lesson_segment_count || 0;
-      const completion = total ? Math.round((submittedCount / total) * 100) : 0;
+      const metrics = teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssignment);
       const student = studentById.get(assignment.student_id);
       const active = state.selectedTeacherAssignmentId === assignment.id;
       return `
@@ -1128,10 +1124,11 @@ function renderTeacherAssignments() {
           <td><button class="ghost-button small-button" data-view-assignment="${assignment.id}" type="button">${active ? "查看中" : "查看"}</button></td>
           <td>${escapeHtml(student?.full_name || student?.email || "未知学生")}</td>
           <td>${escapeHtml(assignment.lesson_title)}</td>
-          <td>${completion}% (${submittedCount}/${total})</td>
-          <td>${listenTotal}</td>
-          <td>${avgScore}</td>
-          <td>${latest ? escapeHtml(formatDateTime(latest)) : "--"}</td>
+          <td><span class="progress-status ${metrics.className}">${metrics.label}</span></td>
+          <td>${metrics.completion}% (${metrics.submittedCount}/${metrics.total})</td>
+          <td>${metrics.listenTotal}</td>
+          <td>${metrics.avgScore}</td>
+          <td>${metrics.latest ? escapeHtml(formatDateTime(metrics.latest)) : "--"}</td>
         </tr>
       `;
     })
@@ -1144,6 +1141,7 @@ function renderTeacherAssignments() {
           <th>明细</th>
           <th>学生</th>
           <th>任务</th>
+          <th>状态</th>
           <th>完成率</th>
           <th>听了几次</th>
           <th>平均分</th>
@@ -1153,7 +1151,93 @@ function renderTeacherAssignments() {
       <tbody>${rows}</tbody>
     </table>
   `;
-  els.teacherAssignments.querySelectorAll("[data-view-assignment]").forEach((button) => {
+  bindTeacherAssignmentViewButtons(els.teacherAssignments);
+}
+
+function renderTeacherCompletionMatrix() {
+  if (!els.teacherCompletionMatrix) return;
+  if (!state.students.length) {
+    els.teacherCompletionMatrix.innerHTML = '<div class="empty-state">暂无学生</div>';
+    return;
+  }
+  if (!state.teacherAssignments.length) {
+    els.teacherCompletionMatrix.innerHTML = '<div class="empty-state">还没有分配任务</div>';
+    return;
+  }
+
+  const lessons = teacherAssignedLessons();
+  if (!lessons.length) {
+    els.teacherCompletionMatrix.innerHTML = '<div class="empty-state">还没有可统计的课包</div>';
+    return;
+  }
+
+  const rowsByAssignment = groupProgressByAssignment(state.teacherProgressRows);
+  const progressByAssignment = groupAssignmentProgressByAssignment();
+  const stats = teacherCompletionStats(rowsByAssignment, progressByAssignment);
+  const assignmentsByStudentLesson = groupAssignmentsByStudentLesson();
+  const headerCells = lessons
+    .map((lesson) => {
+      const displayTitle = lesson.displayTitle || lesson.title;
+      const fullTitle = lesson.path && lesson.path !== lesson.title ? `${displayTitle} (${lesson.path})` : displayTitle;
+      return `<th title="${escapeHtml(fullTitle)}">${escapeHtml(shortLessonTitle(displayTitle))}</th>`;
+    })
+    .join("");
+  const bodyRows = state.students
+    .map((student) => {
+      const cells = lessons
+        .map((lesson) => {
+          const key = studentLessonKey(student.id, lesson.path);
+          const assignments = assignmentsByStudentLesson.get(key) || [];
+          if (!assignments.length) {
+            return '<td class="matrix-cell is-unassigned"><span>未布置</span></td>';
+          }
+          const assignment = latestAssignment(assignments);
+          const metrics = teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssignment);
+          const duplicateText = assignments.length > 1 ? `<span>${assignments.length} 次布置</span>` : "";
+          const dueText = assignment.due_at && !metrics.completed ? `<span>截止 ${escapeHtml(formatDateTime(assignment.due_at))}</span>` : "";
+          return `
+            <td class="matrix-cell ${metrics.className}">
+              <button type="button" data-view-assignment="${assignment.id}">
+                <strong>${metrics.label}</strong>
+                <span>${metrics.submittedCount}/${metrics.total} · ${metrics.completion}%</span>
+                ${metrics.latest ? `<span>最近 ${escapeHtml(formatDateTime(metrics.latest))}</span>` : dueText}
+                ${duplicateText}
+              </button>
+            </td>
+          `;
+        })
+        .join("");
+      return `
+        <tr>
+          <th class="student-axis">${escapeHtml(student.full_name || student.email || "未命名")}</th>
+          ${cells}
+        </tr>
+      `;
+    })
+    .join("");
+
+  els.teacherCompletionMatrix.innerHTML = `
+    <div class="completion-summary">
+      <span><strong>${stats.completed}</strong> 已完成</span>
+      <span><strong>${stats.inProgress}</strong> 进行中</span>
+      <span><strong>${stats.notStarted}</strong> 未开始</span>
+      <span><strong>${stats.overdue}</strong> 已逾期</span>
+    </div>
+    <table class="teacher-completion-table">
+      <thead>
+        <tr>
+          <th class="student-axis">学生</th>
+          ${headerCells}
+        </tr>
+      </thead>
+      <tbody>${bodyRows}</tbody>
+    </table>
+  `;
+  bindTeacherAssignmentViewButtons(els.teacherCompletionMatrix);
+}
+
+function bindTeacherAssignmentViewButtons(root) {
+  root.querySelectorAll("[data-view-assignment]").forEach((button) => {
     button.addEventListener("click", async () => {
       state.selectedTeacherAssignmentId = button.dataset.viewAssignment;
       renderTeacherDashboard();
@@ -1161,6 +1245,109 @@ function renderTeacherAssignments() {
       renderTeacherDashboard();
     });
   });
+}
+
+function teacherAssignedLessons() {
+  const byPath = new Map();
+  state.teacherAssignments.forEach((assignment) => {
+    const path = assignment.lesson_path || assignment.content_ref?.path || assignment.lesson_title;
+    if (!path || byPath.has(path)) return;
+    byPath.set(path, {
+      path,
+      title: assignment.lesson_title || path,
+    });
+  });
+  const lessons = [...byPath.values()].sort((a, b) => a.title.localeCompare(b.title, "zh-CN") || a.path.localeCompare(b.path, "zh-CN"));
+  const titleCounts = lessons.reduce((counts, lesson) => counts.set(lesson.title, (counts.get(lesson.title) || 0) + 1), new Map());
+  const titleIndexes = new Map();
+  return lessons.map((lesson) => {
+    const count = titleCounts.get(lesson.title) || 0;
+    if (count <= 1) return { ...lesson, displayTitle: lesson.title };
+    const index = (titleIndexes.get(lesson.title) || 0) + 1;
+    titleIndexes.set(lesson.title, index);
+    return { ...lesson, displayTitle: `${lesson.title} (${index})` };
+  });
+}
+
+function groupAssignmentsByStudentLesson() {
+  const grouped = new Map();
+  state.teacherAssignments.forEach((assignment) => {
+    const key = studentLessonKey(assignment.student_id, assignment.lesson_path || assignment.content_ref?.path || assignment.lesson_title);
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key).push(assignment);
+  });
+  return grouped;
+}
+
+function studentLessonKey(studentId, lessonPath) {
+  return `${studentId || ""}::${lessonPath || ""}`;
+}
+
+function latestAssignment(assignments) {
+  return [...assignments].sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")))[0];
+}
+
+function groupAssignmentProgressByAssignment() {
+  return new Map(state.teacherAssignmentProgressRows.map((row) => [row.assignment_id, row]));
+}
+
+function teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssignment) {
+  const progressRows = rowsByAssignment.get(assignment.id) || [];
+  const assignmentProgress = progressByAssignment.get(assignment.id) || null;
+  const submittedCount = progressRows.filter((row) => row.submitted).length;
+  const total = Number(assignment.lesson_segment_count || 0);
+  const listenTotal = progressRows.reduce((sum, row) => sum + Number(row.listen_count || 0), 0);
+  const scored = progressRows.filter((row) => row.submitted && row.score !== null && row.score !== undefined);
+  const avgScore = scored.length ? Math.round(scored.reduce((sum, row) => sum + Number(row.score || 0), 0) / scored.length) : "--";
+  const latest = latestSubmittedAt(progressRows) || assignmentProgress?.completed_at || assignmentProgress?.updated_at || "";
+  const completed = Boolean(assignmentProgress?.completed) || (total > 0 && submittedCount >= total);
+  const completion = total ? Math.round((submittedCount / total) * 100) : completed ? 100 : 0;
+  const started = Boolean(assignmentProgress) || progressRows.length > 0;
+  const overdue = !completed && assignment.due_at && new Date(assignment.due_at).getTime() < Date.now();
+  let label = "进行中";
+  let className = "is-in-progress";
+  if (completed) {
+    label = "已完成";
+    className = "is-complete";
+  } else if (overdue) {
+    label = "已逾期";
+    className = "is-overdue";
+  } else if (!started) {
+    label = "未开始";
+    className = "is-not-started";
+  }
+  return {
+    submittedCount,
+    total,
+    listenTotal,
+    avgScore,
+    latest,
+    completed,
+    completion,
+    started,
+    overdue,
+    label,
+    className,
+  };
+}
+
+function teacherCompletionStats(rowsByAssignment, progressByAssignment) {
+  return state.teacherAssignments.reduce(
+    (stats, assignment) => {
+      const metrics = teacherAssignmentMetrics(assignment, rowsByAssignment, progressByAssignment);
+      if (metrics.completed) stats.completed += 1;
+      else if (metrics.overdue) stats.overdue += 1;
+      else if (metrics.started) stats.inProgress += 1;
+      else stats.notStarted += 1;
+      return stats;
+    },
+    { completed: 0, inProgress: 0, notStarted: 0, overdue: 0 },
+  );
+}
+
+function shortLessonTitle(title) {
+  const value = String(title || "");
+  return value.length > 18 ? `${value.slice(0, 17)}…` : value;
 }
 
 function renderTeacherProgressDetails() {
