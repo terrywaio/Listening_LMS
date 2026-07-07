@@ -1,0 +1,107 @@
+{
+  "id": "history-6-6-fire-escapes",
+  "title": "历史 · 6.6 29-32",
+  "category": "历史",
+  "source": "6.6 讲座 29-32",
+  "audioSrc": "./history-6-6-fire-escapes/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.03,
+      "end": 5.02,
+      "speaker": "Speaker",
+      "text": "Most fire-truck ladders only reached the fourth floor, which wasn't high enough."
+    },
+    {
+      "id": "s002",
+      "start": 5.56,
+      "end": 11.52,
+      "speaker": "Speaker",
+      "text": "Although laws were passed to require escape routes, many early ideas were impractical."
+    },
+    {
+      "id": "s003",
+      "start": 11.96,
+      "end": 16.56,
+      "speaker": "Speaker",
+      "text": "Like, one idea was to attach a parachute to your head."
+    },
+    {
+      "id": "s004",
+      "start": 17.22,
+      "end": 21.96,
+      "speaker": "Speaker",
+      "text": "The parachute idea, well, this wouldn't work too well, would it?"
+    },
+    {
+      "id": "s005",
+      "start": 22.34,
+      "end": 25.78,
+      "speaker": "Speaker",
+      "text": "Other such ideas were met with resistance, too."
+    },
+    {
+      "id": "s006",
+      "start": 25.81,
+      "end": 32.56,
+      "speaker": "Speaker",
+      "text": "Enter Anna Connolly, who received patents for fire escapes in the 19th century."
+    },
+    {
+      "id": "s007",
+      "start": 33.2,
+      "end": 45.72,
+      "speaker": "Speaker",
+      "text": "Anna Connolly's initial fire escape design was a bridge, so people could safely go up to the roof or upper floors of their own building, cross to the building next door, and go down the stairs there."
+    },
+    {
+      "id": "s008",
+      "start": 46.0,
+      "end": 50.6,
+      "speaker": "Speaker",
+      "text": "This made good sense, since most fires started on the lower floors of buildings."
+    },
+    {
+      "id": "s009",
+      "start": 51.12,
+      "end": 61.0,
+      "speaker": "Speaker",
+      "text": "After this design Connolly created another that was a series of platforms attached to the side of a building, with ladders connecting them."
+    },
+    {
+      "id": "s010",
+      "start": 61.5,
+      "end": 67.36,
+      "speaker": "Speaker",
+      "text": "She specified they'd be made of iron, since iron is fireproof and resists pressure."
+    },
+    {
+      "id": "s011",
+      "start": 68.14,
+      "end": 73.25,
+      "speaker": "Speaker",
+      "text": "Well, this design worked, was practical, and was adopted across the country."
+    },
+    {
+      "id": "s012",
+      "start": 73.8,
+      "end": 76.96,
+      "speaker": "Speaker",
+      "text": "Connolly's fire escapes saved lives."
+    },
+    {
+      "id": "s013",
+      "start": 77.42,
+      "end": 87.18,
+      "speaker": "Speaker",
+      "text": "These days buildings in the U.S. are built with interior stairwells that are fireproof for escape, and are not visible from the outside."
+    },
+    {
+      "id": "s014",
+      "start": 87.84,
+      "end": 91.76,
+      "speaker": "Speaker",
+      "text": "But you can still see Connolly's design on older buildings in cities."
+    }
+  ]
+}

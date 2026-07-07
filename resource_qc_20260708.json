@@ -1,0 +1,174 @@
+{
+  "generatedAt": "2026-07-08",
+  "accepted": 7,
+  "rejected": 0,
+  "results": [
+    {
+      "id": "art-6-6-renaissance-tapestries",
+      "status": "added",
+      "title": "艺术 · 6.6 25-28",
+      "category": "艺术",
+      "source": "6.6 讲座 25-28",
+      "segments": 12,
+      "sentences": 12,
+      "fullWindowScore": 0.997,
+      "wer": 0.019,
+      "duration": 139.8,
+      "meanVolumeDb": -21.0,
+      "minSentenceScore": 0.963,
+      "avgSentenceScore": 0.997,
+      "audioSource": "D:\\_toefl_harness_extract\\_src\\6.6\\6.6听力.m4a",
+      "textWordCount": 209,
+      "lessonStartInSource": 725.67,
+      "lessonEndInSource": 865.47
+    },
+    {
+      "id": "history-6-6-fire-escapes",
+      "status": "added",
+      "wer": 0.019,
+      "segments": 14,
+      "sentences": 14,
+      "duration": 93.05,
+      "meanVolumeDb": -16.1,
+      "minSentenceScore": 0.958,
+      "avgSentenceScore": 0.996,
+      "title": "历史 · 6.6 29-32",
+      "category": "历史",
+      "source": "6.6 讲座 29-32",
+      "audioSource": "D:\\_toefl_harness_extract\\_src\\6.6\\6.6听力.m4a",
+      "lessonStartInSource": 999.55,
+      "lessonEndInSource": 1092.6,
+      "textWordCount": 211
+    },
+    {
+      "id": "biology-6-6-scarlet-badis",
+      "status": "added",
+      "issues": [],
+      "wer": 0.059,
+      "segments": 20,
+      "sentences": 20,
+      "duration": 99.2,
+      "meanVolumeDb": -15.8,
+      "minSentenceScore": 0.958,
+      "avgSentenceScore": 0.99,
+      "failures": [],
+      "title": "生物学 · 6.6 8-11",
+      "category": "生物学",
+      "source": "6.6 讲座 8-11",
+      "audioSource": "D:\\_toefl_harness_extract\\_src\\6.6\\6.6听力.m4a",
+      "lessonStartInSource": 1465.55,
+      "lessonEndInSource": 1564.75,
+      "textWordCount": 254
+    },
+    {
+      "id": "business-6-6-viral-marketing",
+      "status": "added",
+      "title": "商业 · 6.6 12-15",
+      "category": "商业",
+      "source": "6.6 讲座 12-15",
+      "segments": 19,
+      "sentences": 19,
+      "fullWindowScore": 1.0,
+      "wer": 0.0,
+      "duration": 120.8,
+      "meanVolumeDb": -13.2,
+      "minSentenceScore": 1.0,
+      "avgSentenceScore": 1.0,
+      "audioSource": "D:\\_toefl_harness_extract\\_src\\6.6\\6.6听力.m4a",
+      "textWordCount": 257,
+      "lessonStartInSource": 1697.67,
+      "lessonEndInSource": 1818.47
+    },
+    {
+      "id": "science-6-15-soil-microbes",
+      "status": "added",
+      "title": "科学 · 6.15 12-15",
+      "category": "科学",
+      "source": "6.15 讲座 12-15",
+      "segments": 17,
+      "sentences": 17,
+      "fullWindowScore": 1.0,
+      "wer": 0.0,
+      "duration": 141.8,
+      "meanVolumeDb": -21.2,
+      "minSentenceScore": 1.0,
+      "avgSentenceScore": 1.0,
+      "audioSource": "D:\\_toefl_harness_extract\\_src\\6.15\\6.15听力.m4a",
+      "textWordCount": 259,
+      "lessonStartInSource": 1286.75,
+      "lessonEndInSource": 1428.55
+    },
+    {
+      "id": "social-science-6-2-multispecies-anthropology",
+      "status": "added",
+      "title": "社会科学 · 6.2 8-11",
+      "category": "社会科学",
+      "source": "6.2 讲座 8-11",
+      "segments": 14,
+      "sentences": 14,
+      "fullWindowScore": 0.973,
+      "wer": 0.06,
+      "duration": 161.25,
+      "meanVolumeDb": -15.6,
+      "minSentenceScore": 0.969,
+      "avgSentenceScore": 0.992,
+      "audioSource": "C:\\Users\\ok304\\Documents\\New project\\toefl_5-6.2_work\\source\\5-6.2题目\\6.2新版托福真题\\听力音频.m4a",
+      "textWordCount": 249,
+      "lessonStartInSource": 946.32,
+      "lessonEndInSource": 1107.57
+    },
+    {
+      "id": "psychology-5-13-pluralistic-ignorance",
+      "status": "added",
+      "title": "心理学 · 5.13 12-15",
+      "category": "心理学",
+      "source": "5.13 M2 讲座 12-15",
+      "segments": 16,
+      "sentences": 16,
+      "fullWindowScore": 0.998,
+      "wer": 0.0,
+      "duration": 118.54,
+      "meanVolumeDb": null,
+      "minSentenceScore": 1.0,
+      "avgSentenceScore": 1.0,
+      "audioSource": "C:\\Users\\ok304\\Documents\\New project\\toefl_5-6.2_work\\source\\5-6.2题目\\5.13\\2026.5.13 听力 module2.mp3",
+      "textWordCount": 236,
+      "lessonStartInSource": 237.91,
+      "lessonEndInSource": 356.45
+    }
+  ],
+  "method": {
+    "selection": "Balanced theme expansion from new 6.6/6.15 materials and previously verified 5.13/6.2 materials; candidates with fragmented text, cross-talk, or untrusted source audio were skipped.",
+    "sentencePolicy": "Strict sentence-level segmentation by terminal punctuation; the old 7-second split rule was not used.",
+    "qualityChecks": [
+      "full-audio transcript window match",
+      "clip ASR WER against cleaned text",
+      "per-sentence word timestamp alignment",
+      "audio duration bounds",
+      "mean volume check",
+      "bad marker search for uncertain/BLANK_AUDIO/ellipsis placeholders"
+    ]
+  },
+  "skippedCandidates": [
+    {
+      "id": "6.8-all-talks",
+      "reason": "Skipped: source m4a is 189 bytes and spreadsheet lecture rows contain ellipses/fragments rather than complete verified text."
+    },
+    {
+      "id": "6.15-art-surrealism",
+      "reason": "Skipped: text has leading cross-talk and an appended second prompt from the following physics item."
+    },
+    {
+      "id": "6.15-physics-ice-skating",
+      "reason": "Skipped: text has leading cross-talk; science slot was filled by cleaner 6.15 environmental science item."
+    },
+    {
+      "id": "5.13-pluralistic-ignorance-leading-tail",
+      "reason": "Accepted only after trimming a previous-item tail and [BLANK_AUDIO] marker from the source cell."
+    },
+    {
+      "id": "6.6-history-fire-escapes-prompt",
+      "reason": "Accepted after removing a source prompt sentence that was outside the selected audio window; the actual dictation text starts at the first spoken content sentence."
+    }
+  ]
+}

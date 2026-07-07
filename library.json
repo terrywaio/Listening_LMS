@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-07-08",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -192,6 +192,62 @@
       "source": "5.13 M2 讲座 8-11",
       "path": "./lessons/social-science-5-13-cultural-globalization.json",
       "segmentCount": 15
+    },
+    {
+      "id": "art-6-6-renaissance-tapestries",
+      "title": "艺术 · 6.6 25-28",
+      "category": "艺术",
+      "source": "6.6 讲座 25-28",
+      "path": "./lessons/art-6-6-renaissance-tapestries.json",
+      "segmentCount": 12
+    },
+    {
+      "id": "business-6-6-viral-marketing",
+      "title": "商业 · 6.6 12-15",
+      "category": "商业",
+      "source": "6.6 讲座 12-15",
+      "path": "./lessons/business-6-6-viral-marketing.json",
+      "segmentCount": 19
+    },
+    {
+      "id": "science-6-15-soil-microbes",
+      "title": "科学 · 6.15 12-15",
+      "category": "科学",
+      "source": "6.15 讲座 12-15",
+      "path": "./lessons/science-6-15-soil-microbes.json",
+      "segmentCount": 17
+    },
+    {
+      "id": "social-science-6-2-multispecies-anthropology",
+      "title": "社会科学 · 6.2 8-11",
+      "category": "社会科学",
+      "source": "6.2 讲座 8-11",
+      "path": "./lessons/social-science-6-2-multispecies-anthropology.json",
+      "segmentCount": 14
+    },
+    {
+      "id": "psychology-5-13-pluralistic-ignorance",
+      "title": "心理学 · 5.13 12-15",
+      "category": "心理学",
+      "source": "5.13 M2 讲座 12-15",
+      "path": "./lessons/psychology-5-13-pluralistic-ignorance.json",
+      "segmentCount": 16
+    },
+    {
+      "id": "biology-6-6-scarlet-badis",
+      "title": "生物学 · 6.6 8-11",
+      "category": "生物学",
+      "source": "6.6 讲座 8-11",
+      "path": "./lessons/biology-6-6-scarlet-badis.json",
+      "segmentCount": 20
+    },
+    {
+      "id": "history-6-6-fire-escapes",
+      "title": "历史 · 6.6 29-32",
+      "category": "历史",
+      "source": "6.6 讲座 29-32",
+      "path": "./lessons/history-6-6-fire-escapes.json",
+      "segmentCount": 14
     }
   ]
 }

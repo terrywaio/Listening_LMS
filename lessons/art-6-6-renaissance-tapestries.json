@@ -1,0 +1,93 @@
+{
+  "id": "art-6-6-renaissance-tapestries",
+  "title": "艺术 · 6.6 25-28",
+  "category": "艺术",
+  "source": "6.6 讲座 25-28",
+  "audioSrc": "./art-6-6-renaissance-tapestries/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 24.68,
+      "end": 27.78,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in an art history class."
+    },
+    {
+      "id": "s002",
+      "start": 28.74,
+      "end": 41.02,
+      "speaker": "Speaker",
+      "text": "When we think of the Renaissance, we often picture grand paintings and sculptures, but a lesser-known art form also flourished during this period: tapestry weaving."
+    },
+    {
+      "id": "s003",
+      "start": 41.66,
+      "end": 50.7,
+      "speaker": "Speaker",
+      "text": "Tapestries were not only decorative pieces, but also served practical purposes, such as insulating the cold stone walls of castles."
+    },
+    {
+      "id": "s004",
+      "start": 51.46,
+      "end": 63.4,
+      "speaker": "Speaker",
+      "text": "Artists of the era used tapestries to depict intricate scenes from mythology, religion, and daily life, often incorporating vibrant colors and rich textures."
+    },
+    {
+      "id": "s005",
+      "start": 63.86,
+      "end": 67.02,
+      "speaker": "Speaker",
+      "text": "An advantage of tapestries was their portability."
+    },
+    {
+      "id": "s006",
+      "start": 67.42,
+      "end": 79.52,
+      "speaker": "Speaker",
+      "text": "Unlike frescoes, which were fixed to walls, tapestries could be rolled up and transported from one location to another, allowing their owners to display their wealth wherever they went."
+    },
+    {
+      "id": "s007",
+      "start": 79.96,
+      "end": 83.57,
+      "speaker": "Speaker",
+      "text": "This portability also had a downside, however."
+    },
+    {
+      "id": "s008",
+      "start": 83.6,
+      "end": 97.38,
+      "speaker": "Speaker",
+      "text": "Tapestries were susceptible to damage during transit."
+    },
+    {
+      "id": "s009",
+      "start": 97.9,
+      "end": 105.42,
+      "speaker": "Speaker",
+      "text": "Even today, museums face challenges preserving these unique artworks due to their fragile nature."
+    },
+    {
+      "id": "s010",
+      "start": 105.88,
+      "end": 115.72,
+      "speaker": "Speaker",
+      "text": "The creation of a tapestry was a labor-intensive process, requiring collaboration between designers, weavers, and dyers."
+    },
+    {
+      "id": "s011",
+      "start": 116.02,
+      "end": 129.3,
+      "speaker": "Speaker",
+      "text": "Unlike paintings, which could be completed by a single artist, tapestries were team efforts, and it was common for a designer's sketches to be translated by skilled weavers into woven masterpieces."
+    },
+    {
+      "id": "s012",
+      "start": 129.98,
+      "end": 138.78,
+      "speaker": "Speaker",
+      "text": "The intricate craftsmanship required to produce these artworks offers a glimpse into the collaborative spirit of the Renaissance era."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "science-6-15-soil-microbes",
+  "title": "科学 · 6.15 12-15",
+  "category": "科学",
+  "source": "6.15 讲座 12-15",
+  "audioSrc": "./science-6-15-soil-microbes/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 6.88,
+      "end": 12.24,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in an environmental science class."
+    },
+    {
+      "id": "s002",
+      "start": 13.18,
+      "end": 17.04,
+      "speaker": "Speaker",
+      "text": "Soil isn't just dirt, it's alive."
+    },
+    {
+      "id": "s003",
+      "start": 17.76,
+      "end": 29.08,
+      "speaker": "Speaker",
+      "text": "In healthy soil, microorganisms like bacteria and fungi help break down organic matter and cycle nutrients like nitrogen and phosphorus, which plants need to thrive."
+    },
+    {
+      "id": "s004",
+      "start": 29.5,
+      "end": 39.3,
+      "speaker": "Speaker",
+      "text": "Not only that, but microbes create sticky substances called extracellular polymeric substances that bind soil particles together."
+    },
+    {
+      "id": "s005",
+      "start": 40.28,
+      "end": 50.12,
+      "speaker": "Speaker",
+      "text": "Extracellular polymeric substances are important for maintaining soil structure, which means proper water retention, aeration and root growth."
+    },
+    {
+      "id": "s006",
+      "start": 50.74,
+      "end": 56.94,
+      "speaker": "Speaker",
+      "text": "Without microbes, soil becomes compacted, dry and less able to support life."
+    },
+    {
+      "id": "s007",
+      "start": 57.6,
+      "end": 68.62,
+      "speaker": "Speaker",
+      "text": "Now, when we're trying to reverse damage to a degraded ecosystem, say a forest that's been logged or farmland that's been overused, microbes can be key players."
+    },
+    {
+      "id": "s008",
+      "start": 69.34,
+      "end": 74.28,
+      "speaker": "Speaker",
+      "text": "Scientists engaged in these efforts often begin by studying a reference site."
+    },
+    {
+      "id": "s009",
+      "start": 74.82,
+      "end": 81.4,
+      "speaker": "Speaker",
+      "text": "A reference site is a nearby area that shows what the ecosystem should look like in its healthy state."
+    },
+    {
+      "id": "s010",
+      "start": 81.43,
+      "end": 88.56,
+      "speaker": "Speaker",
+      "text": "For example, if they're restoring a grassland, they'll look at an untouched patch of native grassland."
+    },
+    {
+      "id": "s011",
+      "start": 88.8,
+      "end": 97.82,
+      "speaker": "Speaker",
+      "text": "They'll analyze the soil there, its nutrients, texture and microbial communities to determine what's missing in the damaged site."
+    },
+    {
+      "id": "s012",
+      "start": 98.42,
+      "end": 101.78,
+      "speaker": "Speaker",
+      "text": "After this research comes the intervention phase."
+    },
+    {
+      "id": "s013",
+      "start": 102.48,
+      "end": 110.32,
+      "speaker": "Speaker",
+      "text": "Scientists might introduce microbial inoculants, custom blends of helpful microbes to the degraded soil."
+    },
+    {
+      "id": "s014",
+      "start": 110.35,
+      "end": 116.64,
+      "speaker": "Speaker",
+      "text": "These microbes rebuild structure, cycle nutrients and support plant growth."
+    },
+    {
+      "id": "s015",
+      "start": 117.14,
+      "end": 127.16,
+      "speaker": "Speaker",
+      "text": "In one California vineyard, years of chemical use had depleted microbial diversity and compacted the soil, making it hard for vines to thrive."
+    },
+    {
+      "id": "s016",
+      "start": 127.94,
+      "end": 132.46,
+      "speaker": "Speaker",
+      "text": "Researchers introduced various fungi and other beneficial microbes."
+    },
+    {
+      "id": "s017",
+      "start": 133.02,
+      "end": 141.4,
+      "speaker": "Speaker",
+      "text": "Within a year, the soil structure improved, water retention increased and grape yield and quality noticeably rebounded."
+    }
+  ]
+}
