@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-07-23",
+  "accepted": 2,
+  "rejected": 4,
+  "beforeLessonCount": 39,
+  "afterLessonCount": 41,
+  "categoryBalanceAfter": {
+    "心理学": 5,
+    "生物学": 5,
+    "艺术": 5,
+    "历史": 5,
+    "考古学": 5,
+    "科学": 5,
+    "商业": 5,
+    "社会科学": 5,
+    "自定义": 1
+  },
+  "results": [
+    {
+      "id": "archaeology-pack3-petra",
+      "status": "added",
+      "title": "考古学 · Pack 3 Petra",
+      "category": "考古学",
+      "source": "Pack 3 历史讲座 · Petra",
+      "segments": 12,
+      "duration": 88.4,
+      "alignmentWer": 0.0234,
+      "exactAlignedTokenMatch": 1.0,
+      "independentSentenceMinSimilarity": 0.9904,
+      "independentSentenceAverageSimilarity": 0.9975,
+      "rmsDb": -18.1,
+      "peakDb": -2.2,
+      "clipPct": 0.0,
+      "dcOffset": -0.00051,
+      "maxSampleJump": 0.6291,
+      "longestSilence": 2.24,
+      "reviewedWarning": "The only silence longer than 1.8 seconds is the natural pause between the opening instruction and the lecture body.",
+      "issues": []
+    },
+    {
+      "id": "social-science-pack4-social-capital",
+      "status": "added",
+      "title": "社会科学 · Pack 4 社会资本",
+      "category": "社会科学",
+      "source": "Pack 4 社会学讲座 · Social Capital",
+      "segments": 18,
+      "duration": 105.22,
+      "alignmentWer": 0.0122,
+      "exactAlignedTokenMatch": 1.0,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "rmsDb": -21.89,
+      "peakDb": -1.52,
+      "clipPct": 0.0,
+      "dcOffset": -0.000448,
+      "maxSampleJump": 0.5733,
+      "longestSilence": 3.0,
+      "reviewedWarning": "The only silence longer than 1.8 seconds is the natural pause between the opening instruction and the lecture body.",
+      "issues": []
+    }
+  ],
+  "method": {
+    "selection": "Only two resources were accepted because they fill the two categories that had fewer lessons than the other main themes. Quantity was not used as a target.",
+    "sentencePolicy": "Strict sentence-level segmentation by terminal punctuation. Coordinated phrases and comma-linked clauses remain together; no duration cap was applied.",
+    "qualityChecks": [
+      "three independent full-window ASR passes",
+      "base.en word-timestamp alignment against corrected source text",
+      "independent tiny.en ASR on every final sentence segment",
+      "manual review of model disagreements at sentence boundaries",
+      "empty and out-of-range segment checks",
+      "RMS level, peak, clipping, DC offset, silence, and waveform-jump checks",
+      "explicit verification that long silence occurs only between the instruction and lecture body"
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "candidate": "Urbanization",
+      "reason": "Rejected: the source has hard clipping and full-scale sample jumps, creating an electronic-distortion risk."
+    },
+    {
+      "candidate": "Emotional contagion",
+      "reason": "Rejected: the source contains multiple abnormal silent gaps from about 4.7 to 10.3 seconds and is not continuous."
+    },
+    {
+      "candidate": "Roman concrete",
+      "reason": "Rejected: the spoken source contains an incomplete clause, so a trustworthy complete-sentence answer cannot be provided."
+    },
+    {
+      "candidate": "Environmental policy",
+      "reason": "Rejected: the indexed timestamp points to different audio and the correct complete lecture audio could not be confirmed."
+    }
+  ],
+  "remainingMaterial": {
+    "indexedUniqueCandidatesNotYetPublished": 37,
+    "additionalPack2To6TalksNotYetDeepAudited": 15,
+    "candidateSlotsBeforeCrossSourceDeduplication": 52,
+    "readyToPublishWithoutFurtherAudit": 0,
+    "notes": [
+      "The 37 indexed candidates come from the through-4.29 and 5.3-6.2 collections and remain after this round because the two accepted resources came from the separate Pack collection.",
+      "The 15 Pack candidates cover business, psychology, anthropology, history, art, music, sociology, biology, philosophy, and literature.",
+      "Some indexed candidates are known duplicates, contain transcript markers, or have already failed source-level quality checks, so 52 is an inventory count rather than a publishable count.",
+      "No additional unused archaeology talk remains in Pack 2-6; the older archaeology-like pottery material is highly duplicated."
+    ],
+    "newResourceRecommendation": "No immediate update is required for one more mixed-topic audit round. Request new clean archaeology lectures with verified transcripts before expanding every main category beyond five lessons."
+  }
+}

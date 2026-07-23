@@ -312,6 +312,22 @@
       "source": "4.29 讲座 12-15",
       "path": "./lessons/social-science-4-29-public-sphere.json",
       "segmentCount": 15
+    },
+    {
+      "id": "archaeology-pack3-petra",
+      "title": "考古学 · Pack 3 Petra",
+      "category": "考古学",
+      "source": "Pack 3 历史讲座 · Petra",
+      "path": "./lessons/archaeology-pack3-petra.json",
+      "segmentCount": 12
+    },
+    {
+      "id": "social-science-pack4-social-capital",
+      "title": "社会科学 · Pack 4 社会资本",
+      "category": "社会科学",
+      "source": "Pack 4 社会学讲座 · Social Capital",
+      "path": "./lessons/social-science-pack4-social-capital.json",
+      "segmentCount": 18
     }
   ]
 }

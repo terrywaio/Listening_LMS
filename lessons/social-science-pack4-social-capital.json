@@ -1,0 +1,135 @@
+{
+  "id": "social-science-pack4-social-capital",
+  "title": "社会科学 · Pack 4 社会资本",
+  "category": "社会科学",
+  "source": "Pack 4 社会学讲座 · Social Capital",
+  "audioSrc": "./social-science-pack4-social-capital/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.47,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in a sociology class."
+    },
+    {
+      "id": "s002",
+      "start": 4.47,
+      "end": 9.38,
+      "speaker": "Speaker",
+      "text": "Today, we'll explore the concept of social capital."
+    },
+    {
+      "id": "s003",
+      "start": 9.38,
+      "end": 15.96,
+      "speaker": "Speaker",
+      "text": "In business, capital refers to a financial resource or asset, something valuable that can be used."
+    },
+    {
+      "id": "s004",
+      "start": 15.96,
+      "end": 27.42,
+      "speaker": "Speaker",
+      "text": "In sociology, social capital refers to the human networks, relationships, and norms that facilitate collective action within a community, so they also act like a kind of asset."
+    },
+    {
+      "id": "s005",
+      "start": 27.42,
+      "end": 34.54,
+      "speaker": "Speaker",
+      "text": "Think about how trust and cooperation emerge among people, and how these bonds can enhance economic and social outcomes."
+    },
+    {
+      "id": "s006",
+      "start": 34.54,
+      "end": 39.18,
+      "speaker": "Speaker",
+      "text": "So let's talk about social capital, how relationships make communities stronger."
+    },
+    {
+      "id": "s007",
+      "start": 39.18,
+      "end": 41.91,
+      "speaker": "Speaker",
+      "text": "Take the city of Boston's community policing."
+    },
+    {
+      "id": "s008",
+      "start": 41.91,
+      "end": 48.7,
+      "speaker": "Speaker",
+      "text": "Officers don't just patrol; they engage with residents, earning trust and cooperation, reducing crime."
+    },
+    {
+      "id": "s009",
+      "start": 48.7,
+      "end": 53.46,
+      "speaker": "Speaker",
+      "text": "Now, think about disaster response, like recent hurricanes."
+    },
+    {
+      "id": "s010",
+      "start": 53.46,
+      "end": 62.49,
+      "speaker": "Speaker",
+      "text": "Mutual aid groups mobilized fast, organizing shelters, food, and medical aid, often reaching those in need before official relief arrived."
+    },
+    {
+      "id": "s011",
+      "start": 62.49,
+      "end": 68.41,
+      "speaker": "Speaker",
+      "text": "Social capital isn't abstract; it's action, resilience, and real-world impact."
+    },
+    {
+      "id": "s012",
+      "start": 68.41,
+      "end": 71.5,
+      "speaker": "Speaker",
+      "text": "And social capital isn't just about local communities."
+    },
+    {
+      "id": "s013",
+      "start": 71.5,
+      "end": 74.1,
+      "speaker": "Speaker",
+      "text": "It can extend to professional networks as well."
+    },
+    {
+      "id": "s014",
+      "start": 74.1,
+      "end": 80.23,
+      "speaker": "Speaker",
+      "text": "In the business world, social capital is vital for career advancement and organizational success."
+    },
+    {
+      "id": "s015",
+      "start": 80.23,
+      "end": 88.15,
+      "speaker": "Speaker",
+      "text": "Networking events and collaborative projects help individuals build relationships that can lead to new opportunities and innovations."
+    },
+    {
+      "id": "s016",
+      "start": 88.15,
+      "end": 91.91,
+      "speaker": "Speaker",
+      "text": "However, social capital can also have downsides."
+    },
+    {
+      "id": "s017",
+      "start": 91.91,
+      "end": 99.14,
+      "speaker": "Speaker",
+      "text": "Excessive bonding within a group can lead to exclusion of outsiders, a kind of us-and-them mentality."
+    },
+    {
+      "id": "s018",
+      "start": 99.14,
+      "end": 105.22,
+      "speaker": "Speaker",
+      "text": "It's important to balance strong internal networks with openness to external connections to avoid these pitfalls."
+    }
+  ]
+}

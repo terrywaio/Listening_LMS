@@ -1,0 +1,93 @@
+{
+  "id": "archaeology-pack3-petra",
+  "title": "考古学 · Pack 3 Petra",
+  "category": "考古学",
+  "source": "Pack 3 历史讲座 · Petra",
+  "audioSrc": "./archaeology-pack3-petra/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.89,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in a history class."
+    },
+    {
+      "id": "s002",
+      "start": 3.89,
+      "end": 8.55,
+      "speaker": "Speaker",
+      "text": "Petra is an ancient city located in present-day Jordan."
+    },
+    {
+      "id": "s003",
+      "start": 8.55,
+      "end": 14.54,
+      "speaker": "Speaker",
+      "text": "It was established as early as 312 BC as the capital city of the Nabataean Kingdom."
+    },
+    {
+      "id": "s004",
+      "start": 14.54,
+      "end": 25.14,
+      "speaker": "Speaker",
+      "text": "The Nabataeans were skilled traders, and Petra became a major trading hub because of its strategic location along caravan routes that linked the east and west."
+    },
+    {
+      "id": "s005",
+      "start": 25.14,
+      "end": 32.87,
+      "speaker": "Speaker",
+      "text": "Petra's architecture is unique because much of it was carved directly into the rose-red cliffs of the region."
+    },
+    {
+      "id": "s006",
+      "start": 32.87,
+      "end": 39.53,
+      "speaker": "Speaker",
+      "text": "The most famous structure in the city is known as the Treasury, but it is actually a tomb."
+    },
+    {
+      "id": "s007",
+      "start": 39.53,
+      "end": 49.49,
+      "speaker": "Speaker",
+      "text": "The city also featured a complex system to manage water, including dams, cisterns, and water channels that allowed it to thrive in the arid region."
+    },
+    {
+      "id": "s008",
+      "start": 49.49,
+      "end": 57.77,
+      "speaker": "Speaker",
+      "text": "These advanced water-engineering structures were crucial for the survival of its inhabitants, given the low amount of moisture that was available naturally."
+    },
+    {
+      "id": "s009",
+      "start": 57.77,
+      "end": 64.61,
+      "speaker": "Speaker",
+      "text": "In addition to its architectural and engineering feats, Petra is significant for its cultural exchanges."
+    },
+    {
+      "id": "s010",
+      "start": 64.61,
+      "end": 71.18,
+      "speaker": "Speaker",
+      "text": "As a trading center, it facilitated the exchange of goods, ideas, and customs between diverse peoples."
+    },
+    {
+      "id": "s011",
+      "start": 71.18,
+      "end": 82.42,
+      "speaker": "Speaker",
+      "text": "This blend of cultures is evident in the various architectural styles seen in the city, which include influences from Greek, Roman, and indigenous Nabataean designs."
+    },
+    {
+      "id": "s012",
+      "start": 82.42,
+      "end": 88.4,
+      "speaker": "Speaker",
+      "text": "Next, we will explore how archaeologists rediscovered Petra in the 19th century."
+    }
+  ]
+}
