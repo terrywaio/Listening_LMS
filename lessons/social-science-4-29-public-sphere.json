@@ -1,0 +1,114 @@
+{
+  "id": "social-science-4-29-public-sphere",
+  "title": "社会科学 · 4.29 12-15",
+  "category": "社会科学",
+  "source": "4.29 讲座 12-15",
+  "audioSrc": "./social-science-4-29-public-sphere/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.13,
+      "speaker": "Speaker",
+      "text": "Picture a bustling town square."
+    },
+    {
+      "id": "s002",
+      "start": 2.13,
+      "end": 3.84,
+      "speaker": "Speaker",
+      "text": "What makes it lively?"
+    },
+    {
+      "id": "s003",
+      "start": 3.84,
+      "end": 7.84,
+      "speaker": "Speaker",
+      "text": "Is it the buildings, the people, the signage?"
+    },
+    {
+      "id": "s004",
+      "start": 7.84,
+      "end": 14.42,
+      "speaker": "Speaker",
+      "text": "Sociologists argue that public spaces hold a mirror to a society's values."
+    },
+    {
+      "id": "s005",
+      "start": 14.42,
+      "end": 25.24,
+      "speaker": "Speaker",
+      "text": "This concept, known as public sphere theory, suggests that the way we design and use our public spaces reveals much about our cultural identity."
+    },
+    {
+      "id": "s006",
+      "start": 25.24,
+      "end": 38.79,
+      "speaker": "Speaker",
+      "text": "According to this theory, a city's parks, plazas, and streetscapes serve not just as physical locations, but also as stages for social interaction and cultural exchange."
+    },
+    {
+      "id": "s007",
+      "start": 38.79,
+      "end": 45.01,
+      "speaker": "Speaker",
+      "text": "The theory also examines how accessible these spaces are to the people who live near them."
+    },
+    {
+      "id": "s008",
+      "start": 45.01,
+      "end": 53.74,
+      "speaker": "Speaker",
+      "text": "A public space that is inclusive, one that welcomes people from all walks of life, is reflective of a progressive society."
+    },
+    {
+      "id": "s009",
+      "start": 53.74,
+      "end": 64.16,
+      "speaker": "Speaker",
+      "text": "On the flip side, spaces that are restrictive or that exclude certain people are often indicative of societal divisions and inequalities."
+    },
+    {
+      "id": "s010",
+      "start": 64.16,
+      "end": 78.23,
+      "speaker": "Speaker",
+      "text": "Another aspect of public sphere theory is the struggle faced by cities to balance the need for open, accessible areas with issues like overcrowding and other safety concerns."
+    },
+    {
+      "id": "s011",
+      "start": 78.23,
+      "end": 86.82,
+      "speaker": "Speaker",
+      "text": "In addition, city planners often face the dilemma of preserving cultural heritage while adapting to modern needs of a community."
+    },
+    {
+      "id": "s012",
+      "start": 86.82,
+      "end": 91.53,
+      "speaker": "Speaker",
+      "text": "I should note that technology is also reshaping public spaces."
+    },
+    {
+      "id": "s013",
+      "start": 91.53,
+      "end": 101.65,
+      "speaker": "Speaker",
+      "text": "Social media platforms offer new arenas for interaction, and these virtual public spaces are fundamentally altering the traditional public sphere."
+    },
+    {
+      "id": "s014",
+      "start": 101.65,
+      "end": 109.41,
+      "speaker": "Speaker",
+      "text": "However, just as traditional public spaces face challenges, so too do these digital spaces."
+    },
+    {
+      "id": "s015",
+      "start": 109.41,
+      "end": 118.12,
+      "speaker": "Speaker",
+      "text": "Most prominent are privacy concerns and the digital divide between those who have computer access and those who do not."
+    }
+  ]
+}

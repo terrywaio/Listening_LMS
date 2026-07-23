@@ -1,0 +1,114 @@
+{
+  "id": "business-2-1-2-opportunity-cost",
+  "title": "商业 · 2.1-2 M1 25-28",
+  "category": "商业",
+  "source": "2.1-2 M1 讲座 25-28",
+  "audioSrc": "./business-2-1-2-opportunity-cost/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.6,
+      "speaker": "Speaker",
+      "text": "Imagine that you have a full-time job, but you want to take a year off to go back to school."
+    },
+    {
+      "id": "s002",
+      "start": 4.6,
+      "end": 6.45,
+      "speaker": "Speaker",
+      "text": "What is it going to cost you?"
+    },
+    {
+      "id": "s003",
+      "start": 6.45,
+      "end": 14.78,
+      "speaker": "Speaker",
+      "text": "Of course, there's the cost of tuition for your classes plus living expenses, but what about the money you're no longer earning at your job because you're now a student?"
+    },
+    {
+      "id": "s004",
+      "start": 14.78,
+      "end": 16.91,
+      "speaker": "Speaker",
+      "text": "We call that the opportunity cost."
+    },
+    {
+      "id": "s005",
+      "start": 16.91,
+      "end": 22.81,
+      "speaker": "Speaker",
+      "text": "Opportunity cost refers to the value of the next best alternative that must be given up when making a choice."
+    },
+    {
+      "id": "s006",
+      "start": 22.81,
+      "end": 29.82,
+      "speaker": "Speaker",
+      "text": "It's a fundamental principle in economics that helps individuals and businesses understand the true cost of their decisions."
+    },
+    {
+      "id": "s007",
+      "start": 29.82,
+      "end": 36.95,
+      "speaker": "Speaker",
+      "text": "My exercise in imagination illustrates a personal decision, but businesses also face opportunity costs in their operations."
+    },
+    {
+      "id": "s008",
+      "start": 36.95,
+      "end": 43.35,
+      "speaker": "Speaker",
+      "text": "For instance, a company may choose to invest in new equipment rather than spend money to expand its product line."
+    },
+    {
+      "id": "s009",
+      "start": 43.35,
+      "end": 49.06,
+      "speaker": "Speaker",
+      "text": "The opportunity cost of this decision is the potential revenue that could have been generated from the new products."
+    },
+    {
+      "id": "s010",
+      "start": 49.06,
+      "end": 57.75,
+      "speaker": "Speaker",
+      "text": "Understanding opportunity cost helps individuals, as well as businesses, make informed decisions that maximize their benefits and minimize their losses."
+    },
+    {
+      "id": "s011",
+      "start": 57.75,
+      "end": 62.2,
+      "speaker": "Speaker",
+      "text": "It's important to note that opportunity cost is not always measured in financial terms."
+    },
+    {
+      "id": "s012",
+      "start": 62.2,
+      "end": 67.09,
+      "speaker": "Speaker",
+      "text": "It can also be related to factors like time, convenience, or personal satisfaction."
+    },
+    {
+      "id": "s013",
+      "start": 67.09,
+      "end": 73.65,
+      "speaker": "Speaker",
+      "text": "For that reason, opportunity cost can be difficult to quantify, especially when dealing with non-monetary factors."
+    },
+    {
+      "id": "s014",
+      "start": 73.65,
+      "end": 77.35,
+      "speaker": "Speaker",
+      "text": "Have you ever had to make a decision that included an opportunity cost?"
+    },
+    {
+      "id": "s015",
+      "start": 77.35,
+      "end": 81.06,
+      "speaker": "Speaker",
+      "text": "Take a few minutes now to think, and then I'll ask for volunteers to share."
+    }
+  ]
+}

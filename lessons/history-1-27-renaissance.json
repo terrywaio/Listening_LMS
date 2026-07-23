@@ -1,0 +1,121 @@
+{
+  "id": "history-1-27-renaissance",
+  "title": "历史 · 1.27 M2 8-11",
+  "category": "历史",
+  "source": "1.27 M2 讲座 8-11",
+  "audioSrc": "./history-1-27-renaissance/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.84,
+      "speaker": "Speaker",
+      "text": "Listen to a talk in a history class."
+    },
+    {
+      "id": "s002",
+      "start": 3.84,
+      "end": 11.78,
+      "speaker": "Speaker",
+      "text": "The Renaissance was a pivotal period in European history, spanning roughly the 14th to the 17th centuries."
+    },
+    {
+      "id": "s003",
+      "start": 11.78,
+      "end": 17.26,
+      "speaker": "Speaker",
+      "text": "The Renaissance is characterized by a renewed interest in art, science, and literature."
+    },
+    {
+      "id": "s004",
+      "start": 17.26,
+      "end": 23.19,
+      "speaker": "Speaker",
+      "text": "It marked a significant departure from the Middle Ages and laid the groundwork for the modern era."
+    },
+    {
+      "id": "s005",
+      "start": 23.19,
+      "end": 28.69,
+      "speaker": "Speaker",
+      "text": "One of the defining features of the Renaissance was the revival of classical learning."
+    },
+    {
+      "id": "s006",
+      "start": 28.69,
+      "end": 35.93,
+      "speaker": "Speaker",
+      "text": "Scholars and artists looked back to the texts and artistic achievements of ancient Greece and Rome for inspiration."
+    },
+    {
+      "id": "s007",
+      "start": 35.93,
+      "end": 46.77,
+      "speaker": "Speaker",
+      "text": "This led to a flourishing of ideas and creativity, evident in the works of figures like Leonardo da Vinci, Michelangelo, and Galileo Galilei."
+    },
+    {
+      "id": "s008",
+      "start": 46.77,
+      "end": 54.5,
+      "speaker": "Speaker",
+      "text": "The invention of the printing press by Johannes Gutenberg around 1440 was a crucial development during this time."
+    },
+    {
+      "id": "s009",
+      "start": 54.5,
+      "end": 62.07,
+      "speaker": "Speaker",
+      "text": "It allowed for the mass production of books, making literature and scholarly works more accessible to a broader audience."
+    },
+    {
+      "id": "s010",
+      "start": 62.07,
+      "end": 67.09,
+      "speaker": "Speaker",
+      "text": "This contributed to increased literacy and the spread of Renaissance ideas."
+    },
+    {
+      "id": "s011",
+      "start": 67.09,
+      "end": 72.81,
+      "speaker": "Speaker",
+      "text": "The Renaissance also saw major advancements in science, particularly in astronomy."
+    },
+    {
+      "id": "s012",
+      "start": 72.81,
+      "end": 81.24,
+      "speaker": "Speaker",
+      "text": "Nicolaus Copernicus proposed a heliocentric model of the solar system, placing the sun, not the earth, at the center."
+    },
+    {
+      "id": "s013",
+      "start": 81.24,
+      "end": 89.59,
+      "speaker": "Speaker",
+      "text": "Galileo Galilei later used a telescope to observe celestial bodies, providing evidence that supported Copernicus's theory."
+    },
+    {
+      "id": "s014",
+      "start": 89.59,
+      "end": 95.39,
+      "speaker": "Speaker",
+      "text": "These discoveries challenged long-held beliefs and laid the foundation for modern astronomy."
+    },
+    {
+      "id": "s015",
+      "start": 95.39,
+      "end": 102.58,
+      "speaker": "Speaker",
+      "text": "Despite political instability in some regions, the Renaissance left a lasting legacy on European society."
+    },
+    {
+      "id": "s016",
+      "start": 102.58,
+      "end": 107.48,
+      "speaker": "Speaker",
+      "text": "Its influence can still be seen today in art, science, and education."
+    }
+  ]
+}

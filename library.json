@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-07-23",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -248,6 +248,70 @@
       "source": "6.6 讲座 29-32",
       "path": "./lessons/history-6-6-fire-escapes.json",
       "segmentCount": 14
+    },
+    {
+      "id": "psychology-4-24-asch-conformity",
+      "title": "心理学 · 4.24 8-11",
+      "category": "心理学",
+      "source": "4.24 讲座 8-11",
+      "path": "./lessons/psychology-4-24-asch-conformity.json",
+      "segmentCount": 17
+    },
+    {
+      "id": "biology-4-13-galapagos-invasive-goats",
+      "title": "生物学 · 4.13 8-11",
+      "category": "生物学",
+      "source": "4.13 讲座 8-11",
+      "path": "./lessons/biology-4-13-galapagos-invasive-goats.json",
+      "segmentCount": 18
+    },
+    {
+      "id": "art-3-29-lois-mailou-jones",
+      "title": "艺术 · 3.29 29-32",
+      "category": "艺术",
+      "source": "3.29 讲座 29-32",
+      "path": "./lessons/art-3-29-lois-mailou-jones.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "history-1-27-renaissance",
+      "title": "历史 · 1.27 M2 8-11",
+      "category": "历史",
+      "source": "1.27 M2 讲座 8-11",
+      "path": "./lessons/history-1-27-renaissance.json",
+      "segmentCount": 16
+    },
+    {
+      "id": "archaeology-4-8-gobekli-tepe",
+      "title": "考古学 · 4.8 12-15",
+      "category": "考古学",
+      "source": "4.8 讲座 12-15",
+      "path": "./lessons/archaeology-4-8-gobekli-tepe.json",
+      "segmentCount": 14
+    },
+    {
+      "id": "science-5-10-pressure-melting",
+      "title": "科学 · 5.10 29-32",
+      "category": "科学",
+      "source": "5.10 M1 讲座 29-32",
+      "path": "./lessons/science-5-10-pressure-melting.json",
+      "segmentCount": 16
+    },
+    {
+      "id": "business-2-1-2-opportunity-cost",
+      "title": "商业 · 2.1-2 M1 25-28",
+      "category": "商业",
+      "source": "2.1-2 M1 讲座 25-28",
+      "path": "./lessons/business-2-1-2-opportunity-cost.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "social-science-4-29-public-sphere",
+      "title": "社会科学 · 4.29 12-15",
+      "category": "社会科学",
+      "source": "4.29 讲座 12-15",
+      "path": "./lessons/social-science-4-29-public-sphere.json",
+      "segmentCount": 15
     }
   ]
 }

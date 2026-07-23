@@ -1,0 +1,121 @@
+{
+  "id": "science-5-10-pressure-melting",
+  "title": "科学 · 5.10 29-32",
+  "category": "科学",
+  "source": "5.10 M1 讲座 29-32",
+  "audioSrc": "./science-5-10-pressure-melting/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 7.41,
+      "speaker": "Speaker",
+      "text": "Welcome to Science in Motion, the show where we explore the hidden physics behind everyday experiences."
+    },
+    {
+      "id": "s002",
+      "start": 7.41,
+      "end": 14.04,
+      "speaker": "Speaker",
+      "text": "Today, we're investigating why ice skating feels so smooth and fluid."
+    },
+    {
+      "id": "s003",
+      "start": 14.04,
+      "end": 20.17,
+      "speaker": "Speaker",
+      "text": "The answer lies in a fascinating physical phenomenon that's happening right beneath your feet."
+    },
+    {
+      "id": "s004",
+      "start": 20.17,
+      "end": 29.92,
+      "speaker": "Speaker",
+      "text": "When a skate blade moves across the ice, it's not just slicing through a frozen surface; it's actually causing a tiny bit of it to melt."
+    },
+    {
+      "id": "s005",
+      "start": 29.92,
+      "end": 36.6,
+      "speaker": "Speaker",
+      "text": "The pressure from the blade creates a thin layer of water between the skate and the ice."
+    },
+    {
+      "id": "s006",
+      "start": 36.6,
+      "end": 41.98,
+      "speaker": "Speaker",
+      "text": "This slippery film is what allows skaters to move so gracefully."
+    },
+    {
+      "id": "s007",
+      "start": 41.98,
+      "end": 52.32,
+      "speaker": "Speaker",
+      "text": "It's called the pressure melting point, and it means that ice can melt at temperatures below freezing simply because of the force being applied."
+    },
+    {
+      "id": "s008",
+      "start": 52.32,
+      "end": 61.6,
+      "speaker": "Speaker",
+      "text": "As the skater moves, the blade keeps applying pressure, maintaining this delicate balance between solid and liquid."
+    },
+    {
+      "id": "s009",
+      "start": 61.6,
+      "end": 67.44,
+      "speaker": "Speaker",
+      "text": "However, friction between the blade and the ice can also generate heat."
+    },
+    {
+      "id": "s010",
+      "start": 67.44,
+      "end": 75.66,
+      "speaker": "Speaker",
+      "text": "Too much heat, and the ice melts more than it should, slowing skaters down or even causing them to lose control."
+    },
+    {
+      "id": "s011",
+      "start": 75.66,
+      "end": 81.13,
+      "speaker": "Speaker",
+      "text": "That's why elite skaters develop techniques to minimize friction."
+    },
+    {
+      "id": "s012",
+      "start": 81.13,
+      "end": 90.22,
+      "speaker": "Speaker",
+      "text": "In addition, researchers are studying these dynamics to design skate blades that reduce friction and boost performance."
+    },
+    {
+      "id": "s013",
+      "start": 90.22,
+      "end": 92.92,
+      "speaker": "Speaker",
+      "text": "But the story doesn't end at the rink."
+    },
+    {
+      "id": "s014",
+      "start": 92.92,
+      "end": 98.01,
+      "speaker": "Speaker",
+      "text": "Similar principles are at play in nature, specifically in glaciers."
+    },
+    {
+      "id": "s015",
+      "start": 98.01,
+      "end": 104.47,
+      "speaker": "Speaker",
+      "text": "Pressure and melting help these massive ice sheets move across landscapes."
+    },
+    {
+      "id": "s016",
+      "start": 104.47,
+      "end": 115.16,
+      "speaker": "Speaker",
+      "text": "As scientists dig deeper into how these mechanisms work, they're learning how glaciers might respond to climate change, offering clues about our planet's future."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "archaeology-4-8-gobekli-tepe",
+  "title": "考古学 · 4.8 12-15",
+  "category": "考古学",
+  "source": "4.8 讲座 12-15",
+  "audioSrc": "./archaeology-4-8-gobekli-tepe/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 15.91,
+      "speaker": "Speaker",
+      "text": "For decades, archaeologists believed that complex societies and the monumental architecture, the large buildings signifying them, only emerged after agriculture, and that farming was essential for societal development."
+    },
+    {
+      "id": "s002",
+      "start": 15.91,
+      "end": 25.64,
+      "speaker": "Speaker",
+      "text": "After all, before agriculture developed, people tended not to settle in a single place, but moved from place to place in search of food."
+    },
+    {
+      "id": "s003",
+      "start": 25.64,
+      "end": 30.21,
+      "speaker": "Speaker",
+      "text": "We call such people nomadic hunter-gatherers."
+    },
+    {
+      "id": "s004",
+      "start": 30.21,
+      "end": 34.65,
+      "speaker": "Speaker",
+      "text": "They were continuously on the move to hunt and collect food."
+    },
+    {
+      "id": "s005",
+      "start": 34.65,
+      "end": 43.76,
+      "speaker": "Speaker",
+      "text": "And for people who aren't settled, it was more practical to live in small mobile groups rather than in complex societies."
+    },
+    {
+      "id": "s006",
+      "start": 43.76,
+      "end": 45.98,
+      "speaker": "Speaker",
+      "text": "Or so it was believed."
+    },
+    {
+      "id": "s007",
+      "start": 45.98,
+      "end": 53.77,
+      "speaker": "Speaker",
+      "text": "But the excavation of the ancient site of Göbekli Tepe threw a wrench in this whole story."
+    },
+    {
+      "id": "s008",
+      "start": 53.77,
+      "end": 67.9,
+      "speaker": "Speaker",
+      "text": "Göbekli Tepe, dating back about 11,000 years, consists of multiple massive pillars arranged in circles and is considered the world's oldest known temple."
+    },
+    {
+      "id": "s009",
+      "start": 67.9,
+      "end": 75.32,
+      "speaker": "Speaker",
+      "text": "Remarkably, it predates the earliest evidence of agriculture in the area by several thousand years."
+    },
+    {
+      "id": "s010",
+      "start": 75.32,
+      "end": 83.29,
+      "speaker": "Speaker",
+      "text": "This suggests spiritual practices, not agriculture, may have caused early communities to form."
+    },
+    {
+      "id": "s011",
+      "start": 83.29,
+      "end": 92.58,
+      "speaker": "Speaker",
+      "text": "Many scholars interpret the site as a ceremonial center, a periodic gathering place for nomadic hunter-gatherers."
+    },
+    {
+      "id": "s012",
+      "start": 92.58,
+      "end": 105.33,
+      "speaker": "Speaker",
+      "text": "More recently, archaeologists there did find traces of things like food-processing areas, stone tools for grinding grains, as well as actual plant residues."
+    },
+    {
+      "id": "s013",
+      "start": 105.33,
+      "end": 116.52,
+      "speaker": "Speaker",
+      "text": "Yet these residues come from local wild grains, not domesticated crops, and the structures may not indicate year-round habitation."
+    },
+    {
+      "id": "s014",
+      "start": 116.52,
+      "end": 129.1,
+      "speaker": "Speaker",
+      "text": "So while Göbekli Tepe might have hosted temporary gatherings, the evidence still supports the idea that spiritual practices played a central role in early societal development."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "psychology-4-24-asch-conformity",
+  "title": "心理学 · 4.24 8-11",
+  "category": "心理学",
+  "source": "4.24 讲座 8-11",
+  "audioSrc": "./psychology-4-24-asch-conformity/audio.mp3",
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.06,
+      "speaker": "Speaker",
+      "text": "There are many different factors that influence human behavior."
+    },
+    {
+      "id": "s002",
+      "start": 4.06,
+      "end": 11.36,
+      "speaker": "Speaker",
+      "text": "One is related to social influence, or the idea that our behavior can be shaped by group pressure."
+    },
+    {
+      "id": "s003",
+      "start": 11.36,
+      "end": 22.44,
+      "speaker": "Speaker",
+      "text": "To test this idea, a psychologist named Solomon Asch conducted a famous study in the 1950s, which has become hugely influential in the field."
+    },
+    {
+      "id": "s004",
+      "start": 22.44,
+      "end": 30.87,
+      "speaker": "Speaker",
+      "text": "In his experiment, Asch invited American university students to take part in a simple visual judgment task."
+    },
+    {
+      "id": "s005",
+      "start": 30.87,
+      "end": 38.95,
+      "speaker": "Speaker",
+      "text": "Each participant was placed in a group of seven to nine people, all but one of whom were working with the researcher."
+    },
+    {
+      "id": "s006",
+      "start": 38.95,
+      "end": 46.94,
+      "speaker": "Speaker",
+      "text": "The group members were shown a standard line on one card and three comparison lines on another card."
+    },
+    {
+      "id": "s007",
+      "start": 46.94,
+      "end": 53.76,
+      "speaker": "Speaker",
+      "text": "One comparison line matched the standard, while the other two were clearly different lengths."
+    },
+    {
+      "id": "s008",
+      "start": 53.76,
+      "end": 58.19,
+      "speaker": "Speaker",
+      "text": "Basically, the correct choice was totally obvious."
+    },
+    {
+      "id": "s009",
+      "start": 58.19,
+      "end": 67.49,
+      "speaker": "Speaker",
+      "text": "Each person announced aloud which line matched the standard, and those who were in on the study deliberately gave the wrong answer first."
+    },
+    {
+      "id": "s010",
+      "start": 67.49,
+      "end": 70.61,
+      "speaker": "Speaker",
+      "text": "The real participant answered last."
+    },
+    {
+      "id": "s011",
+      "start": 70.61,
+      "end": 82.08,
+      "speaker": "Speaker",
+      "text": "Across 12 trials, 75% of participants conformed with the incorrect answers that people in the group had given before them at least once."
+    },
+    {
+      "id": "s012",
+      "start": 82.08,
+      "end": 85.61,
+      "speaker": "Speaker",
+      "text": "So they chose the line that was clearly wrong."
+    },
+    {
+      "id": "s013",
+      "start": 85.61,
+      "end": 90.36,
+      "speaker": "Speaker",
+      "text": "This indicates the strong influence of group pressure."
+    },
+    {
+      "id": "s014",
+      "start": 90.36,
+      "end": 97.73,
+      "speaker": "Speaker",
+      "text": "This study was replicated in 1980, roughly 30 years after Asch conducted his experiment."
+    },
+    {
+      "id": "s015",
+      "start": 97.73,
+      "end": 102.25,
+      "speaker": "Speaker",
+      "text": "The subjects in this experiment were British university students."
+    },
+    {
+      "id": "s016",
+      "start": 102.25,
+      "end": 107.18,
+      "speaker": "Speaker",
+      "text": "Interestingly, conformity was much lower with these participants."
+    },
+    {
+      "id": "s017",
+      "start": 107.18,
+      "end": 114.86,
+      "speaker": "Speaker",
+      "text": "This suggests that conformity may be influenced by culture and the country people grow up in."
+    }
+  ]
+}
