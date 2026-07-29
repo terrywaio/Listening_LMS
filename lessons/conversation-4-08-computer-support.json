@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-08-computer-support",
+  "title": "对话 · 4.08 电脑过热客服",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.8 M2 对话 6-7 · Computer Support",
+  "language": "en",
+  "audioSrc": "./conversation-4-08-computer-support/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "support",
+      "label": "客服人员",
+      "role": "computer support representative"
+    },
+    {
+      "id": "customer",
+      "label": "来电者",
+      "role": "customer reporting an overheating computer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-08",
+    "sourceItem": "Listening M2 Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.27,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.27,
+      "end": 6.71,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t002",
+      "text": "Customer support, how may I help you?"
+    },
+    {
+      "id": "s003",
+      "start": 6.71,
+      "end": 10.55,
+      "speakerId": "customer",
+      "speaker": "来电者",
+      "turnId": "t003",
+      "text": "Well, my computer keeps overheating and shutting down."
+    },
+    {
+      "id": "s004",
+      "start": 10.55,
+      "end": 13.33,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t004",
+      "text": "Have you checked if the fans are working properly?"
+    },
+    {
+      "id": "s005",
+      "start": 13.33,
+      "end": 15.88,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t004",
+      "text": "Dust can accumulate and block airflow."
+    },
+    {
+      "id": "s006",
+      "start": 15.88,
+      "end": 17.98,
+      "speakerId": "customer",
+      "speaker": "来电者",
+      "turnId": "t005",
+      "text": "I haven't looked at that."
+    },
+    {
+      "id": "s007",
+      "start": 17.98,
+      "end": 23.72,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t006",
+      "text": "You can get a can of compressed air and spray it into the vents and the fans to blow out the dust."
+    },
+    {
+      "id": "s008",
+      "start": 23.72,
+      "end": 25.97,
+      "speakerId": "customer",
+      "speaker": "来电者",
+      "turnId": "t007",
+      "text": "Okay, I'll try that."
+    },
+    {
+      "id": "s009",
+      "start": 25.97,
+      "end": 28.33,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t008",
+      "text": "Hopefully that'll take care of the problem."
+    },
+    {
+      "id": "s010",
+      "start": 28.33,
+      "end": 32.07,
+      "speakerId": "support",
+      "speaker": "客服人员",
+      "turnId": "t008",
+      "text": "If not, you'll probably need to ship it to us so we can take a look."
+    }
+  ]
+}

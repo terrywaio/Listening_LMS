@@ -388,6 +388,56 @@
       "path": "./lessons/conversation-7-05-fitness-app.json",
       "segmentCount": 12,
       "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-05-book-club",
+      "title": "对话 · 4.05 校园读书会",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.5 套一 M1 对话 13-14 · Book Club",
+      "path": "./lessons/conversation-4-05-book-club.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-27-parking-ticket",
+      "title": "对话 · 4.27 停车罚单",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.27 M1 对话 15-16 · Parking Ticket",
+      "path": "./lessons/conversation-4-27-parking-ticket.json",
+      "segmentCount": 10,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-29-biology-tutoring",
+      "title": "对话 · 4.29 生物课辅导",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.29 M1 对话 15-16 · Biology Tutoring",
+      "path": "./lessons/conversation-4-29-biology-tutoring.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-29-business-competition",
+      "title": "对话 · 4.29 商业竞赛",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.29 M1 对话 17-18 · Business Competition",
+      "path": "./lessons/conversation-4-29-business-competition.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-08-computer-support",
+      "title": "对话 · 4.08 电脑过热客服",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.8 M2 对话 6-7 · Computer Support",
+      "path": "./lessons/conversation-4-08-computer-support.json",
+      "segmentCount": 10,
+      "speakerCount": 3
     }
   ]
 }

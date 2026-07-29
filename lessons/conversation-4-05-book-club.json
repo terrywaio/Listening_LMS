@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-05-book-club",
+  "title": "对话 · 4.05 校园读书会",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.5 套一 M1 对话 13-14 · Book Club",
+  "language": "en",
+  "audioSrc": "./conversation-4-05-book-club/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "student interested in the book club"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "student familiar with the announcement"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-05",
+    "sourceItem": "Listening M1 Q13-Q14"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.62,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.62,
+      "end": 7.72,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Did you see the announcement for the new book club on campus?"
+    },
+    {
+      "id": "s003",
+      "start": 7.72,
+      "end": 8.61,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I did."
+    },
+    {
+      "id": "s004",
+      "start": 8.61,
+      "end": 10.07,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "It sounds interesting."
+    },
+    {
+      "id": "s005",
+      "start": 10.07,
+      "end": 13.12,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "They're reading a mix of poetry and modern fiction."
+    },
+    {
+      "id": "s006",
+      "start": 13.12,
+      "end": 16.81,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "And once a month, they're going to invite authors to discuss their works."
+    },
+    {
+      "id": "s007",
+      "start": 16.81,
+      "end": 20.56,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "I've always wanted to hear authors talk about their writing process."
+    },
+    {
+      "id": "s008",
+      "start": 20.56,
+      "end": 21.87,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Same here."
+    },
+    {
+      "id": "s009",
+      "start": 21.87,
+      "end": 23.87,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Are you thinking what I'm thinking?"
+    },
+    {
+      "id": "s010",
+      "start": 23.87,
+      "end": 24.85,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "I am."
+    },
+    {
+      "id": "s011",
+      "start": 24.85,
+      "end": 26.15,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Let's do it."
+    }
+  ]
+}

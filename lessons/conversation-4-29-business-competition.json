@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-29-business-competition",
+  "title": "对话 · 4.29 商业竞赛",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.29 M1 对话 17-18 · Business Competition",
+  "language": "en",
+  "audioSrc": "./conversation-4-29-business-competition/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "student developing a resale business plan"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "student with marketing experience"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-29",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.65,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.65,
+      "end": 7.8,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Have you heard about the new business competition?"
+    },
+    {
+      "id": "s003",
+      "start": 7.8,
+      "end": 15.97,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Students have the chance to present business plans to a committee, and the winner will get some funding to actually start their business."
+    },
+    {
+      "id": "s004",
+      "start": 15.97,
+      "end": 17.56,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "Oh, cool."
+    },
+    {
+      "id": "s005",
+      "start": 17.56,
+      "end": 19.73,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "Do you have any good ideas?"
+    },
+    {
+      "id": "s006",
+      "start": 19.73,
+      "end": 25.02,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Yeah, I was thinking about a business reselling secondhand clothing."
+    },
+    {
+      "id": "s007",
+      "start": 25.02,
+      "end": 31.36,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "I could collect clothes from students who want to sell them and set up an online store with photos."
+    },
+    {
+      "id": "s008",
+      "start": 31.36,
+      "end": 35.98,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "And when something sold, we'd share the profits."
+    },
+    {
+      "id": "s009",
+      "start": 35.98,
+      "end": 37.27,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Interesting."
+    },
+    {
+      "id": "s010",
+      "start": 37.27,
+      "end": 39.72,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "I've heard about things like that."
+    },
+    {
+      "id": "s011",
+      "start": 39.72,
+      "end": 43.22,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "I'd need strong promotion and advertising, though."
+    },
+    {
+      "id": "s012",
+      "start": 43.22,
+      "end": 46.28,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "Well, that is my area of expertise."
+    },
+    {
+      "id": "s013",
+      "start": 46.28,
+      "end": 47.78,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "Let's discuss."
+    }
+  ]
+}
