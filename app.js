@@ -1,4 +1,4 @@
-const APP_VERSION = "20260723-resource-balance-2";
+const APP_VERSION = "20260729-dialogue-materials-2";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;
@@ -67,6 +67,10 @@ const state = {
   saving: false,
   pendingSaveSegmentId: "",
   pendingSaveRequested: false,
+  materialEditor: {
+    drafts: [],
+    activeIndex: -1,
+  },
 };
 
 const els = {};
@@ -137,6 +141,7 @@ function bindElements() {
     "nextSegment",
     "timeRange",
     "sentenceStatus",
+    "speakerBadge",
     "listenCountBadge",
     "scoreBadge",
     "answerText",
@@ -160,6 +165,25 @@ function bindElements() {
     "teacherCompletionMatrix",
     "teacherAssignments",
     "teacherProgress",
+    "materialSourceSelect",
+    "loadMaterialButton",
+    "newDialogueMaterialButton",
+    "materialImportInput",
+    "materialBatchSelect",
+    "removeMaterialDraftButton",
+    "materialEditorStatus",
+    "materialEditorEmpty",
+    "materialEditorForm",
+    "materialTypeInput",
+    "materialTitleInput",
+    "materialSourceInput",
+    "materialAudioInput",
+    "materialSpeakers",
+    "addMaterialSpeakerButton",
+    "materialSegments",
+    "addMaterialSegmentButton",
+    "exportMaterialButton",
+    "exportMaterialBatchButton",
   ].forEach((id) => {
     els[id] = document.getElementById(id);
   });
@@ -241,6 +265,27 @@ function bindEvents() {
     saveLocalProgress();
     scheduleCloudSave(null);
   });
+  on(els.loadMaterialButton, "click", loadSelectedMaterialForEditor);
+  on(els.newDialogueMaterialButton, "click", createDialogueMaterialDraft);
+  on(els.materialImportInput, "change", importMaterialFiles);
+  on(els.materialBatchSelect, "change", () => {
+    state.materialEditor.activeIndex = Number(els.materialBatchSelect.value);
+    renderMaterialEditor();
+  });
+  on(els.removeMaterialDraftButton, "click", removeCurrentMaterialDraft);
+  on(els.materialTypeInput, "change", updateMaterialMeta);
+  on(els.materialTitleInput, "input", updateMaterialMeta);
+  on(els.materialSourceInput, "input", updateMaterialMeta);
+  on(els.materialAudioInput, "input", updateMaterialMeta);
+  on(els.addMaterialSpeakerButton, "click", addMaterialSpeaker);
+  on(els.materialSpeakers, "input", updateMaterialSpeaker);
+  on(els.materialSpeakers, "click", handleMaterialSpeakerAction);
+  on(els.addMaterialSegmentButton, "click", addMaterialSegment);
+  on(els.materialSegments, "input", updateMaterialSegment);
+  on(els.materialSegments, "change", updateMaterialSegment);
+  on(els.materialSegments, "click", handleMaterialSegmentAction);
+  on(els.exportMaterialButton, "click", exportCurrentMaterial);
+  on(els.exportMaterialBatchButton, "click", exportMaterialBatch);
   window.addEventListener("keydown", handleKeyboard);
 }
 
@@ -486,6 +531,9 @@ function resetUserState() {
   state.saving = false;
   state.pendingSaveSegmentId = "";
   state.pendingSaveRequested = false;
+  state.materialEditor.drafts = [];
+  state.materialEditor.activeIndex = -1;
+  renderMaterialEditor();
   clearPracticeData();
 }
 
@@ -615,6 +663,7 @@ async function loadLibrary() {
     state.library = [];
   }
   renderTeacherLessonOptions();
+  renderMaterialSourceOptions();
 }
 
 async function loadTeacherDashboard() {
@@ -707,6 +756,7 @@ async function assignTask() {
       content_ref: {
         path: lessonPath,
         title: lessonTitle,
+        materialType: normalizeMaterialType(lessonMeta.materialType || lessonMeta.category),
         futureItemType: "sentence_item_set",
       },
     };
@@ -986,7 +1036,12 @@ function renderStudentAssignments() {
 function renderPractice() {
   const segment = currentSegment();
   const total = state.lesson.segments.length;
-  els.lessonMeta.textContent = state.assignment ? `${state.lesson.title} · ${total} 句` : "请选择任务";
+  const typeText = state.lesson.materialType === "conversation"
+    ? " · 对话"
+    : state.lesson.materialType === "announcement"
+      ? " · 通知"
+      : "";
+  els.lessonMeta.textContent = state.assignment ? `${state.lesson.title}${typeText} · ${total} 句` : "请选择任务";
   els.segmentCounter.textContent = total ? `${state.currentIndex + 1} / ${total}` : "0 / 0";
   els.notesInput.value = state.notes;
 
@@ -1001,6 +1056,7 @@ function renderPractice() {
     els.nextSegment.disabled = true;
     els.replaySegment.disabled = true;
     els.togglePlay.disabled = true;
+    renderSpeakerBadge(null);
     updateSentenceStatus(null);
     updateScoreBadge(null);
     renderProgressSummary();
@@ -1024,6 +1080,7 @@ function renderPractice() {
   els.replaySegment.disabled = !els.audio.src || blockedByListenCap;
   els.togglePlay.disabled = !els.audio.src || blockedByListenCap;
 
+  renderSpeakerBadge(segment);
   renderAnswerText(segment);
   updateSentenceStatus(segment);
   updateListenCountBadge(segment);
@@ -1059,11 +1116,27 @@ function renderProgressSummary() {
 
 function renderTeacherDashboard() {
   renderTeacherLessonOptions();
+  renderMaterialSourceOptions();
   renderStudents();
   renderTeacherCompletionMatrix();
   renderTeacherAssignments();
   renderTeacherProgressDetails();
   if (els.teacherStatus) els.teacherStatus.textContent = `${state.students.length} 名学生 · ${state.teacherAssignments.length} 个任务`;
+}
+
+function renderSpeakerBadge(segment) {
+  if (!els.speakerBadge) return;
+  const label = segment ? segmentSpeakerLabel(segment, state.lesson) : "";
+  const meaningful = Boolean(
+    label
+    && (
+      state.lesson.materialType === "conversation"
+      || state.lesson.materialType === "announcement"
+      || !/^speaker$/i.test(label)
+    )
+  );
+  els.speakerBadge.textContent = meaningful ? label : "";
+  els.speakerBadge.classList.toggle("is-hidden", !meaningful);
 }
 
 function renderTeacherLessonOptions() {
@@ -1077,8 +1150,694 @@ function renderTeacherLessonOptions() {
     const option = document.createElement("option");
     option.value = lesson.path;
     option.textContent = lesson.title || lesson.path;
+    option.dataset.materialType = normalizeMaterialType(lesson.materialType || lesson.category);
     els.teacherLessonSelect.appendChild(option);
   });
+}
+
+function renderMaterialSourceOptions() {
+  if (!els.materialSourceSelect) return;
+  const selectedPath = els.materialSourceSelect.value;
+  els.materialSourceSelect.innerHTML = "";
+  if (!state.library.length) {
+    els.materialSourceSelect.innerHTML = '<option value="">未找到课包</option>';
+    return;
+  }
+  state.library.forEach((lesson) => {
+    const option = document.createElement("option");
+    option.value = lesson.path;
+    option.textContent = lesson.title || lesson.path;
+    option.dataset.materialType = normalizeMaterialType(lesson.materialType || lesson.category);
+    els.materialSourceSelect.appendChild(option);
+  });
+  if (state.library.some((lesson) => lesson.path === selectedPath)) {
+    els.materialSourceSelect.value = selectedPath;
+  }
+}
+
+async function loadSelectedMaterialForEditor() {
+  const path = els.materialSourceSelect?.value || "";
+  if (!path) {
+    setMaterialEditorStatus("请选择课包", "warning");
+    return;
+  }
+
+  const existingIndex = state.materialEditor.drafts.findIndex((draft) => draft.sourcePath === path);
+  if (existingIndex >= 0) {
+    state.materialEditor.activeIndex = existingIndex;
+    renderMaterialEditor();
+    setMaterialEditorStatus("已切换到现有草稿");
+    return;
+  }
+
+  if (els.loadMaterialButton) els.loadMaterialButton.disabled = true;
+  setMaterialEditorStatus("正在载入...");
+  try {
+    const rawLesson = await lessonRepository.load(path);
+    const libraryItem = state.library.find((lesson) => lesson.path === path);
+    addMaterialEditorDraft(rawLesson, {
+      sourcePath: path,
+      fileName: path.split("/").at(-1) || "material.json",
+      originLabel: libraryItem?.title || path,
+    });
+    setMaterialEditorStatus("课包已载入");
+  } catch (error) {
+    console.error("Material editor load failed", error);
+    setMaterialEditorStatus(`载入失败：${error.message || String(error)}`, "danger");
+  } finally {
+    if (els.loadMaterialButton) els.loadMaterialButton.disabled = false;
+  }
+}
+
+function createDialogueMaterialDraft() {
+  const now = Date.now();
+  addMaterialEditorDraft(
+    {
+      schemaVersion: 2,
+      id: `conversation-draft-${now}`,
+      title: "未命名对话",
+      category: "对话",
+      materialType: "conversation",
+      source: "",
+      language: "en",
+      audioSrc: "",
+      speakers: [
+        { id: "narrator", label: "旁白", role: "narrator" },
+        { id: "speaker-a", label: "角色 A", role: "" },
+        { id: "speaker-b", label: "角色 B", role: "" },
+      ],
+      workflow: {
+        status: "draft",
+        editable: true,
+        reviewRequired: true,
+      },
+      segments: [],
+    },
+    {
+      fileName: `conversation-draft-${now}.json`,
+      originLabel: "新建对话",
+      dirty: true,
+    }
+  );
+  setMaterialEditorStatus("已新建对话草稿", "warning");
+}
+
+async function importMaterialFiles(event) {
+  const files = Array.from(event.target?.files || []);
+  if (!files.length) return;
+  let importedCount = 0;
+  const errors = [];
+
+  for (const file of files) {
+    try {
+      const parsed = JSON.parse(await file.text());
+      const materials = Array.isArray(parsed?.materials)
+        ? parsed.materials
+        : Array.isArray(parsed)
+          ? parsed
+          : [parsed];
+      materials.forEach((material, index) => {
+        addMaterialEditorDraft(
+          material,
+          {
+            fileName: materials.length > 1 ? `${file.name.replace(/\.json$/i, "")}-${index + 1}.json` : file.name,
+            originLabel: file.name,
+          },
+          false
+        );
+        importedCount += 1;
+      });
+    } catch (error) {
+      console.error("Material import failed", file.name, error);
+      errors.push(`${file.name}: ${error.message || String(error)}`);
+    }
+  }
+
+  event.target.value = "";
+  renderMaterialEditor();
+  if (errors.length) {
+    setMaterialEditorStatus(`已导入 ${importedCount} 篇；${errors.join("；")}`, "danger");
+  } else {
+    setMaterialEditorStatus(`已导入 ${importedCount} 篇材料`);
+  }
+}
+
+function addMaterialEditorDraft(rawMaterial, meta = {}, shouldRender = true) {
+  const data = normalizeMaterialDraft(rawMaterial);
+  state.materialEditor.drafts.push({
+    data,
+    sourcePath: meta.sourcePath || "",
+    fileName: meta.fileName || `${data.id || materialSlug(data.title) || "material"}.json`,
+    originLabel: meta.originLabel || data.title,
+    dirty: Boolean(meta.dirty),
+  });
+  state.materialEditor.activeIndex = state.materialEditor.drafts.length - 1;
+  if (shouldRender) renderMaterialEditor();
+}
+
+function normalizeMaterialDraft(rawMaterial) {
+  const draft = deepClone(rawMaterial && typeof rawMaterial === "object" ? rawMaterial : {});
+  const rawSegments = Array.isArray(draft.segments) ? draft.segments : [];
+  draft.schemaVersion = Math.max(2, Number(draft.schemaVersion || 1));
+  draft.id = String(draft.id || materialSlug(draft.title) || `material-${Date.now()}`);
+  draft.title = String(draft.title || "未命名材料");
+  draft.materialType = normalizeMaterialType(
+    draft.materialType
+    || draft.contentType
+    || draft.unitType
+    || draft.source?.unitType
+    || draft.category
+  );
+  draft.category = String(draft.category || materialTypeLabel(draft.materialType));
+  draft.language = String(draft.language || "en");
+  draft.audioSrc = String(draft.audioSrc || draft.audio || "");
+  draft.speakers = normalizeSpeakers(draft.speakers, rawSegments);
+
+  if (!draft.speakers.length) {
+    draft.speakers = draft.materialType === "conversation"
+      ? [
+        { id: "speaker-a", label: "角色 A", role: "" },
+        { id: "speaker-b", label: "角色 B", role: "" },
+      ]
+      : [{ id: "speaker", label: "Speaker", role: "" }];
+  }
+
+  draft.segments = rawSegments.map((rawSegment, index) => {
+    const segment = rawSegment && typeof rawSegment === "object" ? deepClone(rawSegment) : {};
+    const rawSpeaker = String(segment.speaker || segment.speakerLabel || "").trim();
+    const speakerId = String(
+      segment.speakerId
+      || findSpeakerId(draft.speakers, rawSpeaker)
+      || draft.speakers[0]?.id
+      || ""
+    );
+    const speaker = draft.speakers.find((item) => item.id === speakerId);
+    segment.id = String(segment.id || `s${String(index + 1).padStart(3, "0")}`);
+    segment.start = toNumberOrNull(segment.start);
+    segment.end = toNumberOrNull(segment.end);
+    segment.speakerId = speakerId;
+    segment.speaker = String(speaker?.label || rawSpeaker || speakerId);
+    segment.turnId = String(segment.turnId || segment.turn || `t${String(index + 1).padStart(3, "0")}`);
+    segment.text = String(segment.text || segment.transcript || "").trim();
+    return segment;
+  });
+  draft.workflow = draft.workflow && typeof draft.workflow === "object"
+    ? draft.workflow
+    : { status: "draft", editable: true, reviewRequired: true };
+  return draft;
+}
+
+function renderMaterialEditor() {
+  renderMaterialBatchOptions();
+  const draft = activeMaterialDraft();
+  if (!draft) {
+    els.materialEditorEmpty?.classList.remove("is-hidden");
+    els.materialEditorForm?.classList.add("is-hidden");
+    setMaterialEditorStatus("尚未载入");
+    return;
+  }
+
+  els.materialEditorEmpty?.classList.add("is-hidden");
+  els.materialEditorForm?.classList.remove("is-hidden");
+  els.materialTypeInput.value = draft.data.materialType;
+  els.materialTitleInput.value = draft.data.title;
+  els.materialSourceInput.value = materialSourceText(draft.data.source);
+  els.materialAudioInput.value = draft.data.audioSrc;
+  renderMaterialSpeakers();
+  renderMaterialSegments();
+  refreshMaterialEditorStatus();
+}
+
+function renderMaterialBatchOptions() {
+  if (!els.materialBatchSelect) return;
+  els.materialBatchSelect.innerHTML = "";
+  if (!state.materialEditor.drafts.length) {
+    els.materialBatchSelect.innerHTML = '<option value="">无草稿</option>';
+    els.materialBatchSelect.disabled = true;
+    return;
+  }
+  els.materialBatchSelect.disabled = false;
+  state.materialEditor.drafts.forEach((draft, index) => {
+    const option = document.createElement("option");
+    option.value = String(index);
+    option.textContent = `${draft.data.title || draft.originLabel || `材料 ${index + 1}`}${draft.dirty ? " *" : ""}`;
+    els.materialBatchSelect.appendChild(option);
+  });
+  if (state.materialEditor.activeIndex < 0 || state.materialEditor.activeIndex >= state.materialEditor.drafts.length) {
+    state.materialEditor.activeIndex = 0;
+  }
+  els.materialBatchSelect.value = String(state.materialEditor.activeIndex);
+}
+
+function renderMaterialSpeakers() {
+  const draft = activeMaterialDraft();
+  if (!draft || !els.materialSpeakers) return;
+  els.materialSpeakers.innerHTML = draft.data.speakers.map((speaker, index) => `
+    <div class="material-speaker-row" data-speaker-index="${index}">
+      <span class="material-row-index">${index + 1}</span>
+      <label>
+        角色 ID
+        <input type="text" data-field="id" value="${escapeHtml(speaker.id)}" />
+      </label>
+      <label>
+        显示名称
+        <input type="text" data-field="label" value="${escapeHtml(speaker.label)}" />
+      </label>
+      <label>
+        角色说明
+        <input type="text" data-field="role" value="${escapeHtml(speaker.role)}" />
+      </label>
+      <button class="icon-button compact-icon-button" type="button" data-action="remove-speaker" title="删除角色" aria-label="删除角色">×</button>
+    </div>
+  `).join("");
+}
+
+function renderMaterialSegments() {
+  const draft = activeMaterialDraft();
+  if (!draft || !els.materialSegments) return;
+  if (!draft.data.segments.length) {
+    els.materialSegments.innerHTML = '<div class="empty-state">还没有句子</div>';
+    return;
+  }
+
+  const speakerOptions = draft.data.speakers.map((speaker) => (
+    `<option value="${escapeHtml(speaker.id)}">${escapeHtml(speaker.label)}</option>`
+  )).join("");
+
+  els.materialSegments.innerHTML = draft.data.segments.map((segment, index) => `
+    <div class="material-segment-row" data-segment-index="${index}">
+      <div class="material-segment-order">
+        <strong>${index + 1}</strong>
+        <input type="text" data-field="id" value="${escapeHtml(segment.id)}" aria-label="句子 ID" />
+      </div>
+      <label>
+        角色
+        <select data-field="speakerId">${speakerOptions}</select>
+      </label>
+      <label>
+        轮次
+        <input type="text" data-field="turnId" value="${escapeHtml(segment.turnId)}" />
+      </label>
+      <label>
+        开始
+        <input type="number" data-field="start" min="0" step="0.01" value="${segment.start ?? ""}" />
+      </label>
+      <label>
+        结束
+        <input type="number" data-field="end" min="0" step="0.01" value="${segment.end ?? ""}" />
+      </label>
+      <label class="material-segment-text">
+        文本
+        <textarea rows="2" data-field="text">${escapeHtml(segment.text)}</textarea>
+      </label>
+      <div class="material-segment-actions">
+        <button class="icon-button compact-icon-button" type="button" data-action="move-up" title="上移" aria-label="上移" ${index === 0 ? "disabled" : ""}>↑</button>
+        <button class="icon-button compact-icon-button" type="button" data-action="move-down" title="下移" aria-label="下移" ${index === draft.data.segments.length - 1 ? "disabled" : ""}>↓</button>
+        <button class="icon-button compact-icon-button" type="button" data-action="remove-segment" title="删除句子" aria-label="删除句子">×</button>
+      </div>
+    </div>
+  `).join("");
+
+  draft.data.segments.forEach((segment, index) => {
+    const select = els.materialSegments.querySelector(`[data-segment-index="${index}"] select[data-field="speakerId"]`);
+    if (select) select.value = segment.speakerId;
+  });
+}
+
+function updateMaterialMeta(event) {
+  const draft = activeMaterialDraft();
+  if (!draft) return;
+  const target = event?.target;
+  if (target === els.materialTypeInput) {
+    draft.data.materialType = normalizeMaterialType(target.value);
+    if (!draft.data.category || ["讲座", "对话", "通知", "其他"].includes(draft.data.category)) {
+      draft.data.category = materialTypeLabel(draft.data.materialType);
+    }
+  } else if (target === els.materialTitleInput) {
+    draft.data.title = target.value;
+  } else if (target === els.materialSourceInput) {
+    draft.data.source = parseMaterialSourceValue(target.value, draft.data.source);
+  } else if (target === els.materialAudioInput) {
+    draft.data.audioSrc = target.value;
+  }
+  markMaterialDraftDirty();
+}
+
+function removeCurrentMaterialDraft() {
+  const index = state.materialEditor.activeIndex;
+  if (index < 0 || index >= state.materialEditor.drafts.length) return;
+  state.materialEditor.drafts.splice(index, 1);
+  state.materialEditor.activeIndex = Math.min(index, state.materialEditor.drafts.length - 1);
+  renderMaterialEditor();
+  setMaterialEditorStatus(state.materialEditor.drafts.length ? "已移除当前草稿" : "尚未载入");
+}
+
+function updateMaterialSpeaker(event) {
+  const draft = activeMaterialDraft();
+  const row = event.target.closest?.("[data-speaker-index]");
+  const field = event.target.dataset?.field;
+  if (!draft || !row || !field) return;
+  const index = Number(row.dataset.speakerIndex);
+  const speaker = draft.data.speakers[index];
+  if (!speaker) return;
+
+  const oldId = speaker.id;
+  speaker[field] = event.target.value;
+  if (field === "id") {
+    draft.data.segments.forEach((segment) => {
+      if (segment.speakerId === oldId) segment.speakerId = speaker.id;
+    });
+  }
+  if (field === "label") {
+    draft.data.segments.forEach((segment) => {
+      if (segment.speakerId === speaker.id) segment.speaker = speaker.label;
+    });
+  }
+  if (field === "id" || field === "label") renderMaterialSegments();
+  markMaterialDraftDirty();
+}
+
+function handleMaterialSpeakerAction(event) {
+  const button = event.target.closest?.("button[data-action]");
+  if (!button || button.dataset.action !== "remove-speaker") return;
+  const draft = activeMaterialDraft();
+  const row = button.closest("[data-speaker-index]");
+  if (!draft || !row) return;
+  const index = Number(row.dataset.speakerIndex);
+  const removed = draft.data.speakers[index];
+  if (!removed) return;
+
+  draft.data.speakers.splice(index, 1);
+  if (!draft.data.speakers.length) {
+    draft.data.speakers.push({ id: "speaker", label: "Speaker", role: "" });
+  }
+  const fallback = draft.data.speakers[0];
+  draft.data.segments.forEach((segment) => {
+    if (segment.speakerId === removed.id) {
+      segment.speakerId = fallback.id;
+      segment.speaker = fallback.label;
+    }
+  });
+  markMaterialDraftDirty();
+  renderMaterialSpeakers();
+  renderMaterialSegments();
+}
+
+function addMaterialSpeaker() {
+  const draft = activeMaterialDraft();
+  if (!draft) return;
+  const id = nextUniqueSpeakerId(draft.data.speakers);
+  draft.data.speakers.push({
+    id,
+    label: `角色 ${draft.data.speakers.length + 1}`,
+    role: "",
+  });
+  markMaterialDraftDirty();
+  renderMaterialSpeakers();
+  renderMaterialSegments();
+}
+
+function updateMaterialSegment(event) {
+  const draft = activeMaterialDraft();
+  const row = event.target.closest?.("[data-segment-index]");
+  const field = event.target.dataset?.field;
+  if (!draft || !row || !field) return;
+  const segment = draft.data.segments[Number(row.dataset.segmentIndex)];
+  if (!segment) return;
+
+  if (field === "start" || field === "end") {
+    segment[field] = event.target.value === "" ? null : Number(event.target.value);
+  } else {
+    segment[field] = event.target.value;
+  }
+  if (field === "speakerId") {
+    const speaker = draft.data.speakers.find((item) => item.id === segment.speakerId);
+    segment.speaker = speaker?.label || segment.speakerId;
+  }
+  markMaterialDraftDirty();
+}
+
+function handleMaterialSegmentAction(event) {
+  const button = event.target.closest?.("button[data-action]");
+  if (!button) return;
+  const draft = activeMaterialDraft();
+  const row = button.closest("[data-segment-index]");
+  if (!draft || !row) return;
+  const index = Number(row.dataset.segmentIndex);
+  const action = button.dataset.action;
+
+  if (action === "remove-segment") {
+    draft.data.segments.splice(index, 1);
+  } else if (action === "move-up" && index > 0) {
+    [draft.data.segments[index - 1], draft.data.segments[index]] = [
+      draft.data.segments[index],
+      draft.data.segments[index - 1],
+    ];
+  } else if (action === "move-down" && index < draft.data.segments.length - 1) {
+    [draft.data.segments[index + 1], draft.data.segments[index]] = [
+      draft.data.segments[index],
+      draft.data.segments[index + 1],
+    ];
+  } else {
+    return;
+  }
+  markMaterialDraftDirty();
+  renderMaterialSegments();
+}
+
+function addMaterialSegment() {
+  const draft = activeMaterialDraft();
+  if (!draft) return;
+  const previous = draft.data.segments.at(-1);
+  const start = isFiniteNumber(previous?.end) ? Number(previous.end) : 0;
+  const index = draft.data.segments.length + 1;
+  const speaker = draft.data.speakers[0] || { id: "speaker", label: "Speaker" };
+  draft.data.segments.push({
+    id: nextUniqueSegmentId(draft.data.segments),
+    start,
+    end: Number((start + 1).toFixed(2)),
+    speakerId: speaker.id,
+    speaker: speaker.label,
+    turnId: `t${String(index).padStart(3, "0")}`,
+    text: "",
+  });
+  markMaterialDraftDirty();
+  renderMaterialSegments();
+}
+
+function markMaterialDraftDirty() {
+  const draft = activeMaterialDraft();
+  if (!draft) return;
+  draft.dirty = true;
+  renderMaterialBatchOptions();
+  refreshMaterialEditorStatus();
+}
+
+function refreshMaterialEditorStatus() {
+  const draft = activeMaterialDraft();
+  if (!draft) {
+    setMaterialEditorStatus("尚未载入");
+    return;
+  }
+  const issues = validateMaterialDraft(draft.data);
+  const status = `${draft.data.segments.length} 句 · ${draft.data.speakers.length} 角色 · ${draft.dirty ? "已修改" : "未修改"}`;
+  setMaterialEditorStatus(issues.length ? `${status} · ${issues.length} 项待修正` : `${status} · 可导出`, issues.length ? "warning" : "");
+}
+
+function validateMaterialDraft(data) {
+  const issues = [];
+  if (!String(data.id || "").trim()) issues.push("缺少材料 ID");
+  if (!String(data.title || "").trim()) issues.push("缺少标题");
+  if (!String(data.audioSrc || "").trim()) issues.push("缺少音频路径");
+  if (!Array.isArray(data.segments) || !data.segments.length) issues.push("没有句子");
+
+  const speakerIds = (data.speakers || []).map((speaker) => String(speaker.id || "").trim());
+  const speakerLabels = (data.speakers || []).map((speaker) => String(speaker.label || "").trim());
+  if (speakerIds.some((id) => !id)) issues.push("角色 ID 不能为空");
+  if (speakerLabels.some((label) => !label)) issues.push("角色名称不能为空");
+  if (new Set(speakerIds).size !== speakerIds.length) issues.push("角色 ID 重复");
+
+  const segmentIds = (data.segments || []).map((segment) => String(segment.id || "").trim());
+  if (segmentIds.some((id) => !id)) issues.push("句子 ID 不能为空");
+  if (new Set(segmentIds).size !== segmentIds.length) issues.push("句子 ID 重复");
+
+  (data.segments || []).forEach((segment, index) => {
+    if (!String(segment.text || "").trim()) issues.push(`第 ${index + 1} 句缺少文本`);
+    if (!isFiniteNumber(segment.start) || !isFiniteNumber(segment.end) || Number(segment.end) <= Number(segment.start)) {
+      issues.push(`第 ${index + 1} 句时间无效`);
+    }
+    if (data.materialType === "conversation" && !speakerIds.includes(String(segment.speakerId || ""))) {
+      issues.push(`第 ${index + 1} 句角色无效`);
+    }
+    if (data.materialType === "conversation" && !String(segment.turnId || "").trim()) {
+      issues.push(`第 ${index + 1} 句缺少轮次`);
+    }
+  });
+  return issues;
+}
+
+function exportCurrentMaterial() {
+  const draft = activeMaterialDraft();
+  if (!draft) {
+    setMaterialEditorStatus("没有可导出的材料", "warning");
+    return;
+  }
+  const issues = validateMaterialDraft(draft.data);
+  if (issues.length) {
+    setMaterialEditorStatus(`无法导出：${issues.join("；")}`, "danger");
+    return;
+  }
+  const material = cleanMaterialForExport(draft.data);
+  downloadJson(material, safeMaterialFileName(draft.fileName, material));
+  draft.dirty = false;
+  renderMaterialEditor();
+  setMaterialEditorStatus("当前材料已导出");
+}
+
+function exportMaterialBatch() {
+  if (!state.materialEditor.drafts.length) {
+    setMaterialEditorStatus("没有可导出的材料", "warning");
+    return;
+  }
+  const invalid = state.materialEditor.drafts
+    .map((draft, index) => ({ index, issues: validateMaterialDraft(draft.data) }))
+    .filter((item) => item.issues.length);
+  if (invalid.length) {
+    setMaterialEditorStatus(`批量导出前请修正第 ${invalid.map((item) => item.index + 1).join("、")} 篇`, "danger");
+    return;
+  }
+  const payload = {
+    schemaVersion: 1,
+    exportType: "listening-lms-material-batch",
+    exportedAt: new Date().toISOString(),
+    materials: state.materialEditor.drafts.map((draft) => cleanMaterialForExport(draft.data)),
+  };
+  downloadJson(payload, `listening-materials-batch-${new Date().toISOString().slice(0, 10)}.json`);
+  state.materialEditor.drafts.forEach((draft) => {
+    draft.dirty = false;
+  });
+  renderMaterialEditor();
+  setMaterialEditorStatus(`已导出 ${payload.materials.length} 篇材料`);
+}
+
+function cleanMaterialForExport(data) {
+  const material = deepClone(data);
+  material.schemaVersion = Math.max(2, Number(material.schemaVersion || 1));
+  material.materialType = normalizeMaterialType(material.materialType);
+  material.speakers = (material.speakers || []).map((speaker) => ({
+    ...speaker,
+    id: String(speaker.id || "").trim(),
+    label: String(speaker.label || speaker.name || speaker.id || "").trim(),
+    role: String(speaker.role || "").trim(),
+  }));
+  material.segments = (material.segments || []).map((segment, index) => {
+    const speaker = material.speakers.find((item) => item.id === segment.speakerId);
+    return {
+      ...segment,
+      id: String(segment.id || `s${String(index + 1).padStart(3, "0")}`),
+      start: Number(segment.start),
+      end: Number(segment.end),
+      speakerId: String(segment.speakerId || speaker?.id || ""),
+      speaker: String(speaker?.label || segment.speaker || segment.speakerId || ""),
+      turnId: String(segment.turnId || segment.turn || `t${String(index + 1).padStart(3, "0")}`),
+      text: String(segment.text || "").trim(),
+    };
+  });
+  material.workflow = {
+    status: "draft",
+    editable: true,
+    reviewRequired: true,
+    ...(material.workflow || {}),
+  };
+  return material;
+}
+
+function setMaterialEditorStatus(text, tone = "") {
+  if (!els.materialEditorStatus) return;
+  els.materialEditorStatus.textContent = text;
+  els.materialEditorStatus.classList.toggle("is-warning", tone === "warning");
+  els.materialEditorStatus.classList.toggle("is-danger", tone === "danger");
+}
+
+function activeMaterialDraft() {
+  return state.materialEditor.drafts[state.materialEditor.activeIndex] || null;
+}
+
+function materialSourceText(source) {
+  if (typeof source === "string") return source;
+  if (!source) return "";
+  try {
+    return JSON.stringify(source);
+  } catch (error) {
+    return String(source);
+  }
+}
+
+function parseMaterialSourceValue(value, previousValue) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  if (!previousValue || typeof previousValue !== "object") return value;
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    return value;
+  }
+}
+
+function materialTypeLabel(type) {
+  if (type === "conversation") return "对话";
+  if (type === "announcement") return "通知";
+  if (type === "other") return "其他";
+  return "讲座";
+}
+
+function nextUniqueSpeakerId(speakers) {
+  const existing = new Set(speakers.map((speaker) => speaker.id));
+  let index = speakers.length + 1;
+  while (existing.has(`speaker-${index}`)) index += 1;
+  return `speaker-${index}`;
+}
+
+function nextUniqueSegmentId(segments) {
+  const existing = new Set(segments.map((segment) => segment.id));
+  let index = segments.length + 1;
+  let id = `s${String(index).padStart(3, "0")}`;
+  while (existing.has(id)) {
+    index += 1;
+    id = `s${String(index).padStart(3, "0")}`;
+  }
+  return id;
+}
+
+function safeMaterialFileName(fileName, material) {
+  const sourceName = String(fileName || "").replace(/\.json$/i, "");
+  const base = materialSlug(sourceName) || materialSlug(material.id) || materialSlug(material.title) || "material";
+  return `${base}.json`;
+}
+
+function materialSlug(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function downloadJson(value, fileName) {
+  const blob = new Blob([`${JSON.stringify(value, null, 2)}\n`], { type: "application/json;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
 }
 
 function renderStudents() {
@@ -1389,6 +2148,7 @@ function renderTeacherProgressDetails() {
       <tr>
         <td>${index + 1}</td>
         <td>${isTranslationSegment(segment) ? "听翻" : "听抄"}</td>
+        <td>${escapeHtml(segmentSpeakerLabel(segment, detail.lesson) || "--")}</td>
         <td class="question-cell">${escapeHtml(segment.text || "")}</td>
         <td class="question-cell">${escapeHtml(segmentAnswerText(segment) || "")}</td>
         <td class="answer-cell">${escapeHtml(row.answer || "")}</td>
@@ -1406,6 +2166,7 @@ function renderTeacherProgressDetails() {
         <tr>
           <th>#</th>
           <th>题型</th>
+          <th>角色</th>
           <th>题目原文</th>
           <th>标准答案</th>
           <th>学生答案</th>
@@ -1445,15 +2206,29 @@ function normalizeLesson(rawLesson) {
   const lesson = rawLesson && typeof rawLesson === "object" ? rawLesson : {};
   const rawSegments = Array.isArray(lesson.segments) ? lesson.segments : [];
   const defaultTaskType = normalizeTaskType(lesson.taskType || lesson.mode || lesson.practiceType || lesson.type || lesson.title);
+  const materialType = normalizeMaterialType(
+    lesson.materialType
+    || lesson.contentType
+    || lesson.unitType
+    || lesson.source?.unitType
+    || lesson.category
+  );
+  const speakers = normalizeSpeakers(lesson.speakers, rawSegments);
   const segments = rawSegments
     .map((segment, index) => {
       const taskType = normalizeTaskType(segment.taskType || segment.mode || segment.practiceType || segment.type || defaultTaskType);
       const text = String(segment.text || segment.transcript || "").trim();
+      const rawSpeaker = String(segment.speaker || segment.speakerLabel || "").trim();
+      const speakerId = String(segment.speakerId || findSpeakerId(speakers, rawSpeaker) || rawSpeaker).trim();
+      const speaker = speakers.find((item) => item.id === speakerId);
       return {
         id: String(segment.id || `s${String(index + 1).padStart(3, "0")}`),
         start: toNumberOrNull(segment.start),
         end: toNumberOrNull(segment.end),
-        speaker: segment.speaker || "",
+        speakerId,
+        speaker: speaker?.label || rawSpeaker,
+        speakerRole: String(segment.speakerRole || speaker?.role || "").trim(),
+        turnId: String(segment.turnId || segment.turn || "").trim(),
         module: segment.module || "",
         taskType,
         text,
@@ -1463,14 +2238,72 @@ function normalizeLesson(rawLesson) {
     .filter((segment) => segment.text || segment.start !== null || segment.end !== null);
 
   return {
+    id: String(lesson.id || ""),
+    schemaVersion: Number(lesson.schemaVersion || 1),
     title: lesson.title || "未命名课程",
+    category: lesson.category || "",
     source: lesson.source || "",
     language: lesson.language || "en",
+    materialType,
     taskType: defaultTaskType,
     audioSrc: lesson.audioSrc || lesson.audio || "",
     audioFileName: lesson.audioFileName || "",
+    speakers,
+    workflow: lesson.workflow && typeof lesson.workflow === "object" ? lesson.workflow : {},
     segments,
   };
+}
+
+function normalizeMaterialType(value) {
+  const text = String(value || "").trim().toLowerCase();
+  if (text.includes("conversation") || text.includes("dialogue") || text.includes("dialog") || text.includes("对话")) {
+    return "conversation";
+  }
+  if (text.includes("announcement") || text.includes("notice") || text.includes("通知") || text.includes("公告")) {
+    return "announcement";
+  }
+  if (text.includes("other") || text.includes("其他")) return "other";
+  return "lecture";
+}
+
+function normalizeSpeakers(rawSpeakers, rawSegments = []) {
+  const speakers = Array.isArray(rawSpeakers)
+    ? rawSpeakers.map((speaker, index) => {
+      const label = String(speaker?.label || speaker?.name || speaker?.speaker || `角色 ${index + 1}`).trim();
+      return {
+        id: String(speaker?.id || materialSlug(label) || `speaker-${index + 1}`).trim(),
+        label,
+        role: String(speaker?.role || "").trim(),
+      };
+    })
+    : [];
+
+  rawSegments.forEach((segment) => {
+    const label = String(segment?.speaker || segment?.speakerLabel || "").trim();
+    const id = String(segment?.speakerId || findSpeakerId(speakers, label) || materialSlug(label)).trim();
+    if (!id || speakers.some((speaker) => speaker.id === id)) return;
+    speakers.push({
+      id,
+      label: label || id,
+      role: String(segment?.speakerRole || "").trim(),
+    });
+  });
+  return speakers;
+}
+
+function findSpeakerId(speakers, label) {
+  const normalized = String(label || "").trim().toLowerCase();
+  if (!normalized) return "";
+  return speakers.find((speaker) => (
+    speaker.id.toLowerCase() === normalized
+    || speaker.label.toLowerCase() === normalized
+  ))?.id || "";
+}
+
+function segmentSpeakerLabel(segment, lesson = state.lesson) {
+  if (!segment) return "";
+  const speaker = (lesson?.speakers || []).find((item) => item.id === segment.speakerId);
+  return String(speaker?.label || segment.speaker || segment.speakerId || "").trim();
 }
 
 function normalizeTaskType(value) {

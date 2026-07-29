@@ -1162,6 +1162,163 @@ body:has(#authView:not(.is-hidden)) .topbar::before {
   justify-content: flex-end;
 }
 
+.material-editor-toolbar {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto auto auto;
+  align-items: end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.material-editor-toolbar label,
+.material-draft-bar label,
+.material-editor-form label {
+  display: grid;
+  gap: 6px;
+  color: #657083;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.material-import-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  cursor: pointer;
+}
+
+#materialImportInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.material-draft-bar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e7ecf4;
+}
+
+.material-draft-bar label {
+  width: min(560px, 100%);
+}
+
+.material-editor-form {
+  margin-top: 14px;
+  animation: collapsibleReveal 180ms ease both;
+}
+
+.material-meta-grid {
+  display: grid;
+  grid-template-columns: 160px minmax(220px, 1fr) minmax(220px, 1fr) minmax(260px, 1.2fr);
+  gap: 12px;
+}
+
+.material-editor-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e7ecf4;
+}
+
+.material-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.material-section-heading h4 {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 15px;
+}
+
+.material-speaker-list,
+.material-segment-list {
+  overflow-x: auto;
+  border-top: 1px solid #e7ecf4;
+}
+
+.material-speaker-row {
+  display: grid;
+  grid-template-columns: 32px minmax(150px, 0.8fr) minmax(180px, 1fr) minmax(220px, 1.4fr) 36px;
+  align-items: end;
+  gap: 10px;
+  min-width: 760px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.material-row-index {
+  align-self: center;
+  color: #7b8494;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.material-segment-row {
+  display: grid;
+  grid-template-columns: 76px 132px 100px 90px 90px minmax(300px, 1fr) 114px;
+  align-items: end;
+  gap: 10px;
+  min-width: 1050px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.material-segment-order {
+  display: grid;
+  gap: 6px;
+}
+
+.material-segment-order strong {
+  color: var(--blue-dark);
+  font-size: 12px;
+}
+
+.material-segment-text textarea {
+  min-height: 64px;
+  resize: vertical;
+}
+
+.material-segment-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  gap: 6px;
+}
+
+.compact-icon-button {
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  padding: 0;
+  font-size: 16px;
+}
+
+.material-export-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.collapsible-card[open] > .material-editor-toolbar,
+.collapsible-card[open] > .material-draft-bar,
+.collapsible-card[open] > .material-editor-form {
+  animation: collapsibleReveal 220ms ease both;
+}
+
 tr {
   transition: background 140ms ease;
 }

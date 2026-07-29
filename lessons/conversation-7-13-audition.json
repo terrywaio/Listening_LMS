@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-7-13-audition",
+  "title": "对话 · 7.13 试镜建议",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "7.13 M1 对话 13-14 · Audition",
+  "language": "en",
+  "audioSrc": "./conversation-7-13-audition/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "woman",
+      "label": "女学生",
+      "role": "experienced student"
+    },
+    {
+      "id": "man",
+      "label": "男学生",
+      "role": "auditioning student"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M1 Q13-Q14"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.52,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.52,
+      "end": 6.84,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t002",
+      "text": "I heard that you're auditioning for the university's spring play."
+    },
+    {
+      "id": "s003",
+      "start": 6.84,
+      "end": 8.87,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t002",
+      "text": "Are you excited?"
+    },
+    {
+      "id": "s004",
+      "start": 8.87,
+      "end": 11.92,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "Yeah, but I'm also nervous."
+    },
+    {
+      "id": "s005",
+      "start": 11.92,
+      "end": 15.97,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "It's my first audition and I don't want to mess it up."
+    },
+    {
+      "id": "s006",
+      "start": 15.97,
+      "end": 21.52,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "I think believing in yourself and your acting ability is the most important thing."
+    },
+    {
+      "id": "s007",
+      "start": 21.52,
+      "end": 24.3,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "Directors notice your attitude."
+    },
+    {
+      "id": "s008",
+      "start": 24.3,
+      "end": 28.01,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t005",
+      "text": "So making mistakes won't ruin my chances?"
+    },
+    {
+      "id": "s009",
+      "start": 28.01,
+      "end": 30.63,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t006",
+      "text": "Not necessarily."
+    },
+    {
+      "id": "s010",
+      "start": 30.63,
+      "end": 36.14,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t006",
+      "text": "I stumbled over some words last year during my audition, but I still got cast."
+    },
+    {
+      "id": "s011",
+      "start": 36.14,
+      "end": 39.29,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t006",
+      "text": "Mistakes show how you deal with pressure."
+    },
+    {
+      "id": "s012",
+      "start": 39.29,
+      "end": 41.81,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t007",
+      "text": "That makes me feel better."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-07-29",
+  "accepted": 1,
+  "rejected": 1,
+  "beforeLessonCount": 41,
+  "afterLessonCount": 42,
+  "results": [
+    {
+      "id": "conversation-7-13-audition",
+      "status": "added",
+      "title": "对话 · 7.13 试镜建议",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.13 M1 对话 13-14 · Audition",
+      "speakers": 3,
+      "turns": 7,
+      "segments": 12,
+      "duration": 43.12,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "independentSentenceExactMatches": "12/12",
+      "rmsDb": -20.87,
+      "peakDb": 0.0,
+      "clipPct": 0.00014,
+      "dcOffset": -0.000008,
+      "maxSampleJump": 0.7445,
+      "longestSilence": 1.9,
+      "reviewedWarning": "The longest silence is the natural pause between the opening instruction and the first dialogue turn.",
+      "issues": []
+    }
+  ],
+  "method": {
+    "selection": "Only one dialogue was selected for this test release. The chosen item has complete, continuous audio and unambiguous alternating speakers.",
+    "sentencePolicy": "Segments follow complete sentence boundaries. Multiple sentences spoken in one uninterrupted turn share the same turnId.",
+    "speakerPolicy": "Narrator, female student, and male student are stored as editable speaker records; each segment references a speakerId and turnId.",
+    "qualityChecks": [
+      "two independent full-audio ASR passes with identical normalized transcripts",
+      "manual transcript cleanup and speaker-turn review",
+      "independent tiny.en ASR on all 12 final sentence windows",
+      "empty and out-of-range segment checks",
+      "RMS level, peak, clipping, DC offset, silence, and waveform-jump checks",
+      "manual review of sentence boundaries and turn continuity"
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "candidate": "7.8 apartment-rental dialogue",
+      "reason": "Rejected: the two-minute source is effectively silent (about -83.3 dB RMS) and independent ASR produced only a placeholder-like hallucination."
+    }
+  ]
+}

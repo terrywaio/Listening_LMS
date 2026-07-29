@@ -7,3 +7,4 @@ Static intensive listening LMS package generated locally.
 - Audio and lesson JSON files are stored under `lessons/`.
 - Supabase setup instructions are in `docs/listening-lms-supabase-setup.md`.
 - SQL schema and RLS policies are in `supabase/listening_lms_schema.sql`.
+- Dialogue and batch material fields are documented in `docs/dialogue-material-format.md`.

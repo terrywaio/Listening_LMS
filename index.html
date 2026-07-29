@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>精听 LMS</title>
-    <link rel="stylesheet" href="./styles.css?v=20260612-ui-preview-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260729-dialogue-2" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script defer src="./supabase-config.js?v=20260612-auth-refresh-1"></script>
-    <script defer src="./app.js?v=20260627-audio-count-fix-1"></script>
+    <script defer src="./app.js?v=20260729-dialogue-2"></script>
     <script defer src="./teacher-delete.js?v=20260607-delete-1"></script>
   </head>
   <body>
@@ -101,6 +101,7 @@
           <div class="focus-meta">
             <span id="timeRange">--:-- - --:--</span>
             <span id="sentenceStatus" class="sentence-status">待开始</span>
+            <span id="speakerBadge" class="status-pill is-hidden"></span>
             <span id="listenCountBadge" class="status-pill">听 0/3</span>
             <span id="scoreBadge" class="score-badge">未作答</span>
           </div>
@@ -187,6 +188,84 @@
             <span class="collapse-indicator" aria-hidden="true"></span>
           </summary>
           <div id="teacherProgress" class="table-shell"></div>
+        </details>
+
+        <details class="teacher-card collapsible-card" id="materialEditorPanel">
+          <summary class="collapsible-summary">
+            <h3>材料校对与导出</h3>
+            <span class="collapse-indicator" aria-hidden="true"></span>
+          </summary>
+
+          <div class="material-editor-toolbar">
+            <label>
+              课包
+              <select id="materialSourceSelect"></select>
+            </label>
+            <button class="ghost-button" id="loadMaterialButton" type="button">载入课包</button>
+            <button class="ghost-button" id="newDialogueMaterialButton" type="button">新建对话</button>
+            <label class="ghost-button material-import-button" for="materialImportInput">
+              导入 JSON
+              <input id="materialImportInput" type="file" accept=".json,application/json" multiple />
+            </label>
+          </div>
+
+          <div class="material-draft-bar">
+            <label>
+              当前草稿
+              <select id="materialBatchSelect"></select>
+            </label>
+            <button class="ghost-button small-button" id="removeMaterialDraftButton" type="button">移除当前草稿</button>
+            <span id="materialEditorStatus" class="status-pill">尚未载入</span>
+          </div>
+
+          <div id="materialEditorEmpty" class="empty-state">选择课包或导入材料开始校对</div>
+
+          <div id="materialEditorForm" class="material-editor-form is-hidden">
+            <div class="material-meta-grid">
+              <label>
+                材料类型
+                <select id="materialTypeInput">
+                  <option value="lecture">讲座</option>
+                  <option value="conversation">对话</option>
+                  <option value="announcement">通知</option>
+                  <option value="other">其他</option>
+                </select>
+              </label>
+              <label>
+                标题
+                <input id="materialTitleInput" type="text" />
+              </label>
+              <label>
+                来源
+                <input id="materialSourceInput" type="text" />
+              </label>
+              <label>
+                音频路径
+                <input id="materialAudioInput" type="text" />
+              </label>
+            </div>
+
+            <section class="material-editor-section" aria-labelledby="materialSpeakersTitle">
+              <div class="material-section-heading">
+                <h4 id="materialSpeakersTitle">角色</h4>
+                <button class="ghost-button small-button" id="addMaterialSpeakerButton" type="button">添加角色</button>
+              </div>
+              <div id="materialSpeakers" class="material-speaker-list"></div>
+            </section>
+
+            <section class="material-editor-section" aria-labelledby="materialSegmentsTitle">
+              <div class="material-section-heading">
+                <h4 id="materialSegmentsTitle">句子与轮次</h4>
+                <button class="ghost-button small-button" id="addMaterialSegmentButton" type="button">添加句子</button>
+              </div>
+              <div id="materialSegments" class="material-segment-list"></div>
+            </section>
+
+            <div class="material-export-actions">
+              <button class="secondary-button" id="exportMaterialButton" type="button">导出当前 JSON</button>
+              <button class="ghost-button" id="exportMaterialBatchButton" type="button">导出批量 JSON</button>
+            </div>
+          </div>
         </details>
       </section>
     </main>
