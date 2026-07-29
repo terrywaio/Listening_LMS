@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-7-13-career-fair",
+  "title": "对话 · 7.13 招聘会场地",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "7.13 M2 对话 6-7 · Career Fair",
+  "language": "en",
+  "audioSrc": "./conversation-7-13-career-fair/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "woman",
+      "label": "女学生",
+      "role": "student considering a future career fair"
+    },
+    {
+      "id": "man",
+      "label": "男学生",
+      "role": "career fair attendee"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M2 Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.53,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.53,
+      "end": 6.4,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t002",
+      "text": "How was the career fair you went to yesterday?"
+    },
+    {
+      "id": "s003",
+      "start": 6.4,
+      "end": 8.53,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "It was good."
+    },
+    {
+      "id": "s004",
+      "start": 8.53,
+      "end": 18.4,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "I spoke with representatives from a few different advertising agencies that sounded cool, but it was in the Lawton Room in the Student Union, and they really had us packed in there."
+    },
+    {
+      "id": "s005",
+      "start": 18.4,
+      "end": 23.04,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "The conference room on the second floor might have made more sense."
+    },
+    {
+      "id": "s006",
+      "start": 23.04,
+      "end": 24.9,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "I see."
+    },
+    {
+      "id": "s007",
+      "start": 24.9,
+      "end": 31.35,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "Well, I just read on the university's website that there is going to be another career fair in the spring."
+    },
+    {
+      "id": "s008",
+      "start": 31.35,
+      "end": 36.26,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "If I manage to get my resume in better shape, I should check it out."
+    }
+  ]
+}

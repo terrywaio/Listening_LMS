@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-7-13-charity-event",
+  "title": "对话 · 7.13 慈善跑志愿者",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "7.13 M1 对话 15-16 · Charity Event",
+  "language": "en",
+  "audioSrc": "./conversation-7-13-charity-event/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "man",
+      "label": "男学生",
+      "role": "volunteer offering help"
+    },
+    {
+      "id": "woman",
+      "label": "女学生",
+      "role": "charity run organizer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M1 Q15-Q16"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 1.32,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 1.32,
+      "end": 6.51,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t002",
+      "text": "I heard you're organizing a charity run next month."
+    },
+    {
+      "id": "s003",
+      "start": 6.51,
+      "end": 9.29,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t002",
+      "text": "How are the preparations going?"
+    },
+    {
+      "id": "s004",
+      "start": 9.29,
+      "end": 15.25,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t003",
+      "text": "Pretty well, but we're still looking for more volunteers to help out on the day of the event."
+    },
+    {
+      "id": "s005",
+      "start": 15.25,
+      "end": 17.48,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t004",
+      "text": "That sounds challenging."
+    },
+    {
+      "id": "s006",
+      "start": 17.48,
+      "end": 21.43,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t004",
+      "text": "Have you reached out to local community groups?"
+    },
+    {
+      "id": "s007",
+      "start": 21.43,
+      "end": 27.13,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t005",
+      "text": "Yes, we've contacted several, but we only have a few recruits so far."
+    },
+    {
+      "id": "s008",
+      "start": 27.13,
+      "end": 30.57,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t006",
+      "text": "Maybe I'll put up some posters around town."
+    },
+    {
+      "id": "s009",
+      "start": 30.57,
+      "end": 37.21,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t006",
+      "text": "If you're interested, I've got plenty of markers and poster board, and I'm told I've got a good eye for design."
+    },
+    {
+      "id": "s010",
+      "start": 37.21,
+      "end": 39.92,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t007",
+      "text": "That would be a big help."
+    },
+    {
+      "id": "s011",
+      "start": 39.92,
+      "end": 41.46,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t007",
+      "text": "Thank you."
+    }
+  ]
+}

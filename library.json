@@ -338,6 +338,56 @@
       "path": "./lessons/conversation-7-13-audition.json",
       "segmentCount": 12,
       "speakerCount": 3
+    },
+    {
+      "id": "conversation-7-13-charity-event",
+      "title": "对话 · 7.13 慈善跑志愿者",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.13 M1 对话 15-16 · Charity Event",
+      "path": "./lessons/conversation-7-13-charity-event.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-7-13-new-store",
+      "title": "对话 · 7.13 健康食品商店",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.13 M1 对话 17-18 · New Store",
+      "path": "./lessons/conversation-7-13-new-store.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-7-13-airport",
+      "title": "对话 · 7.13 机场交通建议",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.13 M2 对话 4-5 · Airport",
+      "path": "./lessons/conversation-7-13-airport.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-7-13-career-fair",
+      "title": "对话 · 7.13 招聘会场地",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.13 M2 对话 6-7 · Career Fair",
+      "path": "./lessons/conversation-7-13-career-fair.json",
+      "segmentCount": 8,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-7-05-fitness-app",
+      "title": "对话 · 7.05 健身应用",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "7.05 Listening 3 · Fitness App",
+      "path": "./lessons/conversation-7-05-fitness-app.json",
+      "segmentCount": 12,
+      "speakerCount": 3
     }
   ]
 }

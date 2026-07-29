@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-07-29",
+  "accepted": 5,
+  "rejected": 4,
+  "beforeLessonCount": 42,
+  "afterLessonCount": 47,
+  "results": [
+    {
+      "id": "conversation-7-13-charity-event",
+      "status": "added-locally",
+      "title": "对话 · 7.13 慈善跑志愿者",
+      "segments": 11,
+      "speakers": 3,
+      "turns": 7,
+      "duration": 42.4,
+      "fullTranscriptAlignmentSimilarity": 1.0,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "rmsDb": -20.86,
+      "peakDb": 0.24,
+      "clipPct": 0.00177,
+      "dcOffset": -0.000014,
+      "maxSampleJump": 0.7366,
+      "longestSilence": 1.9,
+      "issues": []
+    },
+    {
+      "id": "conversation-7-13-new-store",
+      "status": "added-locally",
+      "title": "对话 · 7.13 健康食品商店",
+      "segments": 11,
+      "speakers": 3,
+      "turns": 8,
+      "duration": 41.037,
+      "fullTranscriptAlignmentSimilarity": 1.0,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "rmsDb": -20.92,
+      "peakDb": -0.79,
+      "clipPct": 0.0,
+      "dcOffset": -0.000025,
+      "maxSampleJump": 0.7366,
+      "longestSilence": 1.9,
+      "issues": []
+    },
+    {
+      "id": "conversation-7-13-airport",
+      "status": "added-locally",
+      "title": "对话 · 7.13 机场交通建议",
+      "segments": 13,
+      "speakers": 3,
+      "turns": 6,
+      "duration": 44.699,
+      "fullTranscriptAlignmentSimilarity": 0.9604,
+      "independentSentenceMinSimilarity": 0.9538,
+      "independentSentenceAverageSimilarity": 0.9941,
+      "rmsDb": -20.79,
+      "peakDb": -1.27,
+      "clipPct": 0.0,
+      "dcOffset": -0.000019,
+      "maxSampleJump": 0.7366,
+      "longestSilence": 1.9,
+      "reviewedWarning": "The lower minimum is caused by independent ASR rendering the name Anne as And/Ann; sentence audio is complete.",
+      "issues": []
+    },
+    {
+      "id": "conversation-7-13-career-fair",
+      "status": "added-locally",
+      "title": "对话 · 7.13 招聘会场地",
+      "segments": 8,
+      "speakers": 3,
+      "turns": 4,
+      "duration": 37.259,
+      "fullTranscriptAlignmentSimilarity": 0.9897,
+      "independentSentenceMinSimilarity": 0.9916,
+      "independentSentenceAverageSimilarity": 0.999,
+      "rmsDb": -20.85,
+      "peakDb": -1.62,
+      "clipPct": 0.0,
+      "dcOffset": -0.000023,
+      "maxSampleJump": 0.7366,
+      "longestSilence": 1.9,
+      "issues": []
+    },
+    {
+      "id": "conversation-7-05-fitness-app",
+      "status": "added-locally",
+      "title": "对话 · 7.05 健身应用",
+      "segments": 12,
+      "speakers": 3,
+      "turns": 7,
+      "duration": 34.754,
+      "fullTranscriptAlignmentSimilarity": 0.9898,
+      "independentSentenceMinSimilarity": 0.9541,
+      "independentSentenceAverageSimilarity": 0.9962,
+      "rmsDb": -16.11,
+      "peakDb": 0.34,
+      "clipPct": 0.00144,
+      "dcOffset": -0.000235,
+      "maxSampleJump": 0.7615,
+      "longestSilence": 2.3,
+      "reviewedWarning": "Independent ASR renders syncing as stinking/thinking; the question context and full utterance confirm syncing.",
+      "issues": []
+    }
+  ],
+  "method": {
+    "selection": "Five complete item-level dialogues were selected after rejecting silent and mislabeled files. No quantity-based substitution was accepted.",
+    "sentencePolicy": "Strict terminal-punctuation segmentation with no duration cap. Comma-linked clauses remain in the same sentence.",
+    "speakerPolicy": "Narrator and two dialogue participants are stored as editable speaker records. Consecutive sentences from one uninterrupted turn share a turnId.",
+    "qualityChecks": [
+      "full-audio ASR with small.en and base.en",
+      "third-model review for disputed wording",
+      "manual transcript cleanup against question context",
+      "independent tiny.en ASR on all 55 final sentence windows",
+      "empty and out-of-range segment checks",
+      "RMS level, peak, clipping, DC offset, silence, and waveform-jump checks"
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "candidate": "7.8 Holiday Party Food",
+      "reason": "Rejected: the 115-second source is effectively silent at about -84.26 dB RMS."
+    },
+    {
+      "candidate": "7.8 Computer Problem",
+      "reason": "Rejected: the 95-second source is effectively silent at about -84.19 dB RMS."
+    },
+    {
+      "candidate": "7.8 Architecture Forum",
+      "reason": "Rejected: the audio contains unrelated choose-a-response prompts instead of the named conversation."
+    },
+    {
+      "candidate": "7.8 Italian Dinner",
+      "reason": "Rejected: the audio contains unrelated prompts followed by a different apartment-rental conversation."
+    }
+  ],
+  "deployment": {
+    "githubUpdated": false,
+    "note": "All changes remain local pending explicit deployment permission."
+  }
+}

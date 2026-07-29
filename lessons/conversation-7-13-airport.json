@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-7-13-airport",
+  "title": "对话 · 7.13 机场交通建议",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "7.13 M2 对话 4-5 · Airport",
+  "language": "en",
+  "audioSrc": "./conversation-7-13-airport/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "man",
+      "label": "男学生",
+      "role": "student seeking airport advice"
+    },
+    {
+      "id": "woman",
+      "label": "Anne",
+      "role": "student familiar with the airport route"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M2 Q4-Q5"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.58,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.58,
+      "end": 5.77,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t002",
+      "text": "Anne, could you help my friend out?"
+    },
+    {
+      "id": "s003",
+      "start": 5.77,
+      "end": 10.82,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t002",
+      "text": "She's visiting from overseas and has a flight at five thirty tomorrow morning."
+    },
+    {
+      "id": "s004",
+      "start": 10.82,
+      "end": 14.53,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t002",
+      "text": "She's worried about getting to the airport on time."
+    },
+    {
+      "id": "s005",
+      "start": 14.53,
+      "end": 17.57,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t003",
+      "text": "Oh, you asked the right person."
+    },
+    {
+      "id": "s006",
+      "start": 17.57,
+      "end": 21.95,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t003",
+      "text": "My husband flies out of that airport to Denver every Monday at dawn."
+    },
+    {
+      "id": "s007",
+      "start": 21.95,
+      "end": 24.73,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t003",
+      "text": "He always takes the light rail there."
+    },
+    {
+      "id": "s008",
+      "start": 24.73,
+      "end": 28.27,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t003",
+      "text": "It is cheap, reliable, and it runs early."
+    },
+    {
+      "id": "s009",
+      "start": 28.27,
+      "end": 30.45,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t004",
+      "text": "Are you sure?"
+    },
+    {
+      "id": "s010",
+      "start": 30.45,
+      "end": 33.39,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t004",
+      "text": "I thought it didn't start until seven."
+    },
+    {
+      "id": "s011",
+      "start": 33.39,
+      "end": 37.47,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t005",
+      "text": "No, the first train is around four in the morning."
+    },
+    {
+      "id": "s012",
+      "start": 37.47,
+      "end": 41.22,
+      "speakerId": "woman",
+      "speaker": "Anne",
+      "turnId": "t005",
+      "text": "But go online and check the schedule to be safe."
+    },
+    {
+      "id": "s013",
+      "start": 41.22,
+      "end": 43.7,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t006",
+      "text": "Thanks a ton, Anne."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-7-13-new-store",
+  "title": "对话 · 7.13 健康食品商店",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "7.13 M1 对话 17-18 · New Store",
+  "language": "en",
+  "audioSrc": "./conversation-7-13-new-store/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "woman",
+      "label": "女学生",
+      "role": "student asking about the store"
+    },
+    {
+      "id": "man",
+      "label": "男学生",
+      "role": "recent store visitor"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.54,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.54,
+      "end": 7.41,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t002",
+      "text": "Have you visited that new health food store near the train station?"
+    },
+    {
+      "id": "s003",
+      "start": 7.41,
+      "end": 10.99,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "Yeah, I stopped by yesterday after work."
+    },
+    {
+      "id": "s004",
+      "start": 10.99,
+      "end": 13.57,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t003",
+      "text": "I was really impressed."
+    },
+    {
+      "id": "s005",
+      "start": 13.57,
+      "end": 16.32,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t004",
+      "text": "What did you like about it?"
+    },
+    {
+      "id": "s006",
+      "start": 16.32,
+      "end": 22.89,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t005",
+      "text": "They've got a huge range of organic and specialty items, even some things I've never seen before."
+    },
+    {
+      "id": "s007",
+      "start": 22.89,
+      "end": 25.31,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t006",
+      "text": "Did you buy anything?"
+    },
+    {
+      "id": "s008",
+      "start": 25.31,
+      "end": 27.34,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t007",
+      "text": "I did."
+    },
+    {
+      "id": "s009",
+      "start": 27.34,
+      "end": 31.21,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t007",
+      "text": "I picked up some organic berries and a mix of raw nuts."
+    },
+    {
+      "id": "s010",
+      "start": 31.21,
+      "end": 37.16,
+      "speakerId": "man",
+      "speaker": "男学生",
+      "turnId": "t007",
+      "text": "The bakery section looked really good too, but I did not get anything because I was in a hurry."
+    },
+    {
+      "id": "s011",
+      "start": 37.16,
+      "end": 40.08,
+      "speakerId": "woman",
+      "speaker": "女学生",
+      "turnId": "t008",
+      "text": "Maybe I'll join you next time."
+    }
+  ]
+}
