@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-06-new-cafe",
+  "title": "对话 · 4.06 新咖啡馆",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.6 M1 对话 17-18 · New Cafe",
+  "language": "en",
+  "audioSrc": "./conversation-4-06-new-cafe/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "student heading to the library"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "student visiting a new cafe"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-06",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.73,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.73,
+      "end": 5.74,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Where are you off to?"
+    },
+    {
+      "id": "s003",
+      "start": 5.74,
+      "end": 8.12,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "We're about to try the new cafe next to the bookstore."
+    },
+    {
+      "id": "s004",
+      "start": 8.12,
+      "end": 9.11,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "Have you been there yet?"
+    },
+    {
+      "id": "s005",
+      "start": 9.11,
+      "end": 9.57,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "No."
+    },
+    {
+      "id": "s006",
+      "start": 9.57,
+      "end": 10.38,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Is it any good?"
+    },
+    {
+      "id": "s007",
+      "start": 10.38,
+      "end": 13.05,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "They have the most amazing pastries."
+    },
+    {
+      "id": "s008",
+      "start": 13.05,
+      "end": 13.71,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Good coffee?"
+    },
+    {
+      "id": "s009",
+      "start": 13.71,
+      "end": 14.47,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "Of course."
+    },
+    {
+      "id": "s010",
+      "start": 14.47,
+      "end": 16.74,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "I was just on my way to the library."
+    },
+    {
+      "id": "s011",
+      "start": 16.74,
+      "end": 19.86,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "I have to review my notes before class."
+    }
+  ]
+}

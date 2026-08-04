@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-15-sweater-return",
+  "title": "对话 · 4.15 退换毛衣",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.15 套二 M1 对话 15-16 · Sweater Return",
+  "language": "en",
+  "audioSrc": "./conversation-4-15-sweater-return/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "customer",
+      "label": "顾客",
+      "role": "customer exchanging a sweater"
+    },
+    {
+      "id": "staff",
+      "label": "店员",
+      "role": "store employee processing the exchange"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-15",
+    "sourceItem": "Listening M1 Q15-Q16"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.97,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.97,
+      "end": 4.61,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t002",
+      "text": "Hi."
+    },
+    {
+      "id": "s003",
+      "start": 4.61,
+      "end": 6.41,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t002",
+      "text": "I need to return this sweater."
+    },
+    {
+      "id": "s004",
+      "start": 6.41,
+      "end": 9.8,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t002",
+      "text": "I bought it yesterday, but it's too small for me."
+    },
+    {
+      "id": "s005",
+      "start": 9.8,
+      "end": 10.49,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t003",
+      "text": "Sure."
+    },
+    {
+      "id": "s006",
+      "start": 10.49,
+      "end": 11.63,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t003",
+      "text": "Do you have the receipt?"
+    },
+    {
+      "id": "s007",
+      "start": 11.63,
+      "end": 12.39,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t004",
+      "text": "Yes."
+    },
+    {
+      "id": "s008",
+      "start": 12.39,
+      "end": 13.86,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t004",
+      "text": "I have it right here."
+    },
+    {
+      "id": "s009",
+      "start": 13.86,
+      "end": 14.45,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t005",
+      "text": "Great."
+    },
+    {
+      "id": "s010",
+      "start": 14.45,
+      "end": 16.04,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t005",
+      "text": "We can process the return."
+    },
+    {
+      "id": "s011",
+      "start": 16.04,
+      "end": 19.67,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t005",
+      "text": "Do you want to exchange it for a larger size or get a refund?"
+    },
+    {
+      "id": "s012",
+      "start": 19.67,
+      "end": 21.93,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t006",
+      "text": "I'd like to exchange it, please."
+    },
+    {
+      "id": "s013",
+      "start": 21.93,
+      "end": 23.07,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t007",
+      "text": "No problem."
+    },
+    {
+      "id": "s014",
+      "start": 23.07,
+      "end": 25.95,
+      "speakerId": "staff",
+      "speaker": "店员",
+      "turnId": "t007",
+      "text": "I'll get another in that color for you from our stock."
+    },
+    {
+      "id": "s015",
+      "start": 25.95,
+      "end": 27.38,
+      "speakerId": "customer",
+      "speaker": "顾客",
+      "turnId": "t008",
+      "text": "Thank you."
+    }
+  ]
+}

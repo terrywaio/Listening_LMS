@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-29-advertising-internship",
+  "title": "对话 · 4.29 广告实习",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.29 M2 对话 4-5 · Advertising Internship",
+  "language": "en",
+  "audioSrc": "./conversation-4-29-advertising-internship/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "student asking about internships"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "student choosing between advertising internships"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-29",
+    "sourceItem": "Listening M2 Q4-Q5"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.81,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.81,
+      "end": 8.53,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "I heard you got an internship at an advertising agency in town for the summer."
+    },
+    {
+      "id": "s003",
+      "start": 8.53,
+      "end": 9.96,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "That's so exciting."
+    },
+    {
+      "id": "s004",
+      "start": 9.96,
+      "end": 10.81,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I know."
+    },
+    {
+      "id": "s005",
+      "start": 10.81,
+      "end": 12.93,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I start the first week of June."
+    },
+    {
+      "id": "s006",
+      "start": 12.93,
+      "end": 18.66,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I actually just found out I also got offered an internship at an agency in Detroit."
+    },
+    {
+      "id": "s007",
+      "start": 18.66,
+      "end": 24.79,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "The company has a good reputation, but I'd have to move to another city, find an apartment."
+    },
+    {
+      "id": "s008",
+      "start": 24.79,
+      "end": 25.89,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "I see."
+    },
+    {
+      "id": "s009",
+      "start": 25.89,
+      "end": 29.13,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Well, I'm glad one of us is having luck with internships."
+    },
+    {
+      "id": "s010",
+      "start": 29.13,
+      "end": 31.82,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "You still haven't heard back from the architecture firm?"
+    },
+    {
+      "id": "s011",
+      "start": 31.82,
+      "end": 37.14,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "No, considering the semester's over in a couple weeks, I think I should make other plans."
+    }
+  ]
+}

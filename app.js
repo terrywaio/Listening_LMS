@@ -1,4 +1,4 @@
-const APP_VERSION = "20260729-dialogue-materials-4";
+const APP_VERSION = "20260804-dialogue-materials-5";
 const STORAGE_PREFIX = "listening-lab-lms:v1:";
 const AUDIO_CACHE_NAME = "listening-lab-audio-v1";
 const MAX_PRE_SUBMIT_LISTENS = 8;

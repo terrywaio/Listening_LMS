@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-27-conference-travel",
+  "title": "对话 · 4.27 会议交通",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.27 M1 对话 17-18 · Conference Travel",
+  "language": "en",
+  "audioSrc": "./conversation-4-27-conference-travel/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "traveler-a",
+      "label": "参会者 A",
+      "role": "conference attendee comparing travel options"
+    },
+    {
+      "id": "traveler-b",
+      "label": "参会者 B",
+      "role": "conference attendee planning the itinerary"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-27",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.37,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.37,
+      "end": 7.19,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t002",
+      "text": "Should we take the train or fly to the conference?"
+    },
+    {
+      "id": "s003",
+      "start": 7.19,
+      "end": 11.84,
+      "speakerId": "traveler-b",
+      "speaker": "参会者 B",
+      "turnId": "t003",
+      "text": "The train is slower, but the train station is a quick walk from the conference hotel."
+    },
+    {
+      "id": "s004",
+      "start": 11.84,
+      "end": 14.54,
+      "speakerId": "traveler-b",
+      "speaker": "参会者 B",
+      "turnId": "t003",
+      "text": "The airport is at least half an hour away."
+    },
+    {
+      "id": "s005",
+      "start": 14.54,
+      "end": 15.63,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t004",
+      "text": "Train it is, then."
+    },
+    {
+      "id": "s006",
+      "start": 15.63,
+      "end": 18.21,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t004",
+      "text": "I hope the hotel has nice views of the city."
+    },
+    {
+      "id": "s007",
+      "start": 18.21,
+      "end": 19.64,
+      "speakerId": "traveler-b",
+      "speaker": "参会者 B",
+      "turnId": "t005",
+      "text": "That I can't answer."
+    },
+    {
+      "id": "s008",
+      "start": 19.64,
+      "end": 21.96,
+      "speakerId": "traveler-b",
+      "speaker": "参会者 B",
+      "turnId": "t005",
+      "text": "Just be ready to leave at seven a.m."
+    },
+    {
+      "id": "s009",
+      "start": 21.96,
+      "end": 23.24,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t006",
+      "text": "Seven o'clock?"
+    },
+    {
+      "id": "s010",
+      "start": 23.24,
+      "end": 25.28,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t006",
+      "text": "That's awfully early."
+    },
+    {
+      "id": "s011",
+      "start": 25.28,
+      "end": 26.79,
+      "speakerId": "traveler-a",
+      "speaker": "参会者 A",
+      "turnId": "t006",
+      "text": "Is that the only option?"
+    },
+    {
+      "id": "s012",
+      "start": 26.79,
+      "end": 31.4,
+      "speakerId": "traveler-b",
+      "speaker": "参会者 B",
+      "turnId": "t007",
+      "text": "I thought we should take an early train so we have time to sightsee when we get there."
+    }
+  ]
+}

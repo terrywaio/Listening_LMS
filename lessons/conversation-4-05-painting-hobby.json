@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-05-painting-hobby",
+  "title": "对话 · 4.05 绘画入门",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.5 套一 M2 对话 6-7 · Painting Hobby",
+  "language": "en",
+  "audioSrc": "./conversation-4-05-painting-hobby/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "Sam",
+      "role": "student who recently took up painting"
+    },
+    {
+      "id": "student-b",
+      "label": "学生",
+      "role": "student interested in painting"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-05",
+    "sourceItem": "Listening M2 Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.33,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.33,
+      "end": 5.52,
+      "speakerId": "student-b",
+      "speaker": "学生",
+      "turnId": "t002",
+      "text": "Hey, Sam."
+    },
+    {
+      "id": "s003",
+      "start": 5.52,
+      "end": 7.63,
+      "speakerId": "student-b",
+      "speaker": "学生",
+      "turnId": "t002",
+      "text": "Rob was telling me you've taken up painting."
+    },
+    {
+      "id": "s004",
+      "start": 7.63,
+      "end": 10.98,
+      "speakerId": "student-b",
+      "speaker": "学生",
+      "turnId": "t002",
+      "text": "I've always thought about it, but I'm not sure I'm good enough."
+    },
+    {
+      "id": "s005",
+      "start": 10.98,
+      "end": 13.82,
+      "speakerId": "student-b",
+      "speaker": "学生",
+      "turnId": "t002",
+      "text": "You know, talented enough."
+    },
+    {
+      "id": "s006",
+      "start": 13.82,
+      "end": 16.11,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t003",
+      "text": "That was the same for me."
+    },
+    {
+      "id": "s007",
+      "start": 16.11,
+      "end": 19.02,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t003",
+      "text": "It's why it took me so long to get started."
+    },
+    {
+      "id": "s008",
+      "start": 19.02,
+      "end": 21.0,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t003",
+      "text": "But I'm glad I did."
+    },
+    {
+      "id": "s009",
+      "start": 21.0,
+      "end": 23.1,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t003",
+      "text": "You just take your time with it."
+    },
+    {
+      "id": "s010",
+      "start": 23.1,
+      "end": 24.73,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t003",
+      "text": "Go at your own pace."
+    },
+    {
+      "id": "s011",
+      "start": 24.73,
+      "end": 27.8,
+      "speakerId": "student-b",
+      "speaker": "学生",
+      "turnId": "t004",
+      "text": "Have you taken any classes in the art department?"
+    },
+    {
+      "id": "s012",
+      "start": 27.8,
+      "end": 33.56,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t005",
+      "text": "Honestly, I've just been watching some online tutorials, nothing formal."
+    },
+    {
+      "id": "s013",
+      "start": 33.56,
+      "end": 38.58,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t005",
+      "text": "Yesterday, I finished a landscape with mountains, a lake, and trees."
+    },
+    {
+      "id": "s014",
+      "start": 38.58,
+      "end": 42.22,
+      "speakerId": "student-a",
+      "speaker": "Sam",
+      "turnId": "t005",
+      "text": "I'm not a great artist yet, but maybe someday."
+    }
+  ]
+}

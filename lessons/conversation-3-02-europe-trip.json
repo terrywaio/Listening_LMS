@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-02-europe-trip",
+  "title": "对话 · 3.02 欧洲出行建议",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.2 Part 2 M1 对话 13-14 · Europe Trip",
+  "language": "en",
+  "audioSrc": "./conversation-3-02-europe-trip/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "traveler",
+      "label": "旅行者",
+      "role": "person planning a trip to Europe"
+    },
+    {
+      "id": "friend",
+      "label": "朋友",
+      "role": "person offering travel advice"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-02",
+    "sourceItem": "Listening M1 Q13-Q14"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.1,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.1,
+      "end": 6.46,
+      "speakerId": "traveler",
+      "speaker": "旅行者",
+      "turnId": "t002",
+      "text": "I'm planning a trip to Europe next month."
+    },
+    {
+      "id": "s003",
+      "start": 6.46,
+      "end": 7.25,
+      "speakerId": "friend",
+      "speaker": "朋友",
+      "turnId": "t003",
+      "text": "Great."
+    },
+    {
+      "id": "s004",
+      "start": 7.25,
+      "end": 12.27,
+      "speakerId": "friend",
+      "speaker": "朋友",
+      "turnId": "t003",
+      "text": "Make sure to book your accommodations in advance and check for any travel restrictions."
+    },
+    {
+      "id": "s005",
+      "start": 12.27,
+      "end": 13.65,
+      "speakerId": "traveler",
+      "speaker": "旅行者",
+      "turnId": "t004",
+      "text": "That's helpful."
+    },
+    {
+      "id": "s006",
+      "start": 13.65,
+      "end": 16.26,
+      "speakerId": "traveler",
+      "speaker": "旅行者",
+      "turnId": "t004",
+      "text": "What about transportation within cities?"
+    },
+    {
+      "id": "s007",
+      "start": 16.26,
+      "end": 22.18,
+      "speakerId": "traveler",
+      "speaker": "旅行者",
+      "turnId": "t004",
+      "text": "When I visited Los Angeles in the United States last year, I had a lot of trouble getting around."
+    },
+    {
+      "id": "s008",
+      "start": 22.18,
+      "end": 23.74,
+      "speakerId": "friend",
+      "speaker": "朋友",
+      "turnId": "t005",
+      "text": "Europe is different."
+    },
+    {
+      "id": "s009",
+      "start": 23.74,
+      "end": 28.0,
+      "speakerId": "friend",
+      "speaker": "朋友",
+      "turnId": "t005",
+      "text": "Public transportation in most cities there is plentiful and cheap."
+    }
+  ]
+}

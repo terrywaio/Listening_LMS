@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-15-astronomy-club",
+  "title": "对话 · 4.15 天文社团筹备",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.15 套二 M1 对话 17-18 · Astronomy Club",
+  "language": "en",
+  "audioSrc": "./conversation-4-15-astronomy-club/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "member-a",
+      "label": "社员 A",
+      "role": "astronomy club member organizing refreshments"
+    },
+    {
+      "id": "member-b",
+      "label": "社员 B",
+      "role": "astronomy club member setting up the outdoor space"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-15",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.82,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.82,
+      "end": 8.98,
+      "speakerId": "member-a",
+      "speaker": "社员 A",
+      "turnId": "t002",
+      "text": "Have you gone out to get the food and drinks we need for the astronomy club meeting tomorrow?"
+    },
+    {
+      "id": "s003",
+      "start": 8.98,
+      "end": 11.21,
+      "speakerId": "member-a",
+      "speaker": "社员 A",
+      "turnId": "t002",
+      "text": "It's our first meeting of the year."
+    },
+    {
+      "id": "s004",
+      "start": 11.21,
+      "end": 12.62,
+      "speakerId": "member-b",
+      "speaker": "社员 B",
+      "turnId": "t003",
+      "text": "Not yet."
+    },
+    {
+      "id": "s005",
+      "start": 12.62,
+      "end": 18.21,
+      "speakerId": "member-b",
+      "speaker": "社员 B",
+      "turnId": "t003",
+      "text": "I've been working on setting up the outdoor space behind the student center for our stargazing activities."
+    },
+    {
+      "id": "s006",
+      "start": 18.21,
+      "end": 20.83,
+      "speakerId": "member-b",
+      "speaker": "社员 B",
+      "turnId": "t003",
+      "text": "There was more to do than I thought."
+    },
+    {
+      "id": "s007",
+      "start": 20.83,
+      "end": 23.23,
+      "speakerId": "member-a",
+      "speaker": "社员 A",
+      "turnId": "t004",
+      "text": "That actually works out perfectly."
+    },
+    {
+      "id": "s008",
+      "start": 23.23,
+      "end": 25.96,
+      "speakerId": "member-a",
+      "speaker": "社员 A",
+      "turnId": "t004",
+      "text": "I've got a few more things to add to the list."
+    },
+    {
+      "id": "s009",
+      "start": 25.96,
+      "end": 30.03,
+      "speakerId": "member-b",
+      "speaker": "社员 B",
+      "turnId": "t005",
+      "text": "All right, jot them down, and I'll take care of that now."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-08-04",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -437,6 +437,106 @@
       "source": "4.8 M2 对话 6-7 · Computer Support",
       "path": "./lessons/conversation-4-08-computer-support.json",
       "segmentCount": 10,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-05-housing-costs",
+      "title": "对话 · 4.05 宿舍涨价",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.5 套一 M1 对话 17-18 · Housing Costs",
+      "path": "./lessons/conversation-4-05-housing-costs.json",
+      "segmentCount": 8,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-05-painting-hobby",
+      "title": "对话 · 4.05 绘画入门",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.5 套一 M2 对话 6-7 · Painting Hobby",
+      "path": "./lessons/conversation-4-05-painting-hobby.json",
+      "segmentCount": 14,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-06-gym-advice",
+      "title": "对话 · 4.06 健身房建议",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.6 M1 对话 15-16 · Gym Advice",
+      "path": "./lessons/conversation-4-06-gym-advice.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-06-new-cafe",
+      "title": "对话 · 4.06 新咖啡馆",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.6 M1 对话 17-18 · New Cafe",
+      "path": "./lessons/conversation-4-06-new-cafe.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-27-conference-travel",
+      "title": "对话 · 4.27 会议交通",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.27 M1 对话 17-18 · Conference Travel",
+      "path": "./lessons/conversation-4-27-conference-travel.json",
+      "segmentCount": 12,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-29-advertising-internship",
+      "title": "对话 · 4.29 广告实习",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.29 M2 对话 4-5 · Advertising Internship",
+      "path": "./lessons/conversation-4-29-advertising-internship.json",
+      "segmentCount": 11,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-27-art-class-placement",
+      "title": "对话 · 4.27 艺术课程选择",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.27 M2 对话 4-5 · Art Class Placement",
+      "path": "./lessons/conversation-4-27-art-class-placement.json",
+      "segmentCount": 9,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-15-sweater-return",
+      "title": "对话 · 4.15 退换毛衣",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.15 套二 M1 对话 15-16 · Sweater Return",
+      "path": "./lessons/conversation-4-15-sweater-return.json",
+      "segmentCount": 15,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-15-astronomy-club",
+      "title": "对话 · 4.15 天文社团筹备",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.15 套二 M1 对话 17-18 · Astronomy Club",
+      "path": "./lessons/conversation-4-15-astronomy-club.json",
+      "segmentCount": 9,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-3-02-europe-trip",
+      "title": "对话 · 3.02 欧洲出行建议",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.2 Part 2 M1 对话 13-14 · Europe Trip",
+      "path": "./lessons/conversation-3-02-europe-trip.json",
+      "segmentCount": 9,
       "speakerCount": 3
     }
   ]

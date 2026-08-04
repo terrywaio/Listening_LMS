@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-05-housing-costs",
+  "title": "对话 · 4.05 宿舍涨价",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.5 套一 M1 对话 17-18 · Housing Costs",
+  "language": "en",
+  "audioSrc": "./conversation-4-05-housing-costs/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "student newspaper interviewer"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "student considering off-campus housing"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-05",
+    "sourceItem": "Listening M1 Q17-Q18"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.46,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.46,
+      "end": 11.41,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "I just interviewed the director of campus housing for the university newspaper, and she confirmed the rumors."
+    },
+    {
+      "id": "s003",
+      "start": 11.41,
+      "end": 16.3,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "The cost to live in the dormitories will be about 10% higher next year."
+    },
+    {
+      "id": "s004",
+      "start": 16.3,
+      "end": 18.53,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "Oh wow, that's a lot."
+    },
+    {
+      "id": "s005",
+      "start": 18.53,
+      "end": 24.64,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I'm wondering if it'd make sense to start looking for an apartment or something that's not on campus."
+    },
+    {
+      "id": "s006",
+      "start": 24.64,
+      "end": 26.51,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "That's what I'm planning to do."
+    },
+    {
+      "id": "s007",
+      "start": 26.51,
+      "end": 30.88,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "If I come across any good ones I'm not taking, I'll pass them along to you."
+    },
+    {
+      "id": "s008",
+      "start": 30.88,
+      "end": 32.72,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Awesome, thanks."
+    }
+  ]
+}
