@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-15-website-testing",
+  "title": "对话 · 4.15 网站测试",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.15 Set 2 对话 6-7 · Website Testing",
+  "language": "en",
+  "audioSrc": "./conversation-4-15-website-testing/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "professor",
+      "label": "教授",
+      "role": "website project member"
+    },
+    {
+      "id": "caroline",
+      "label": "Caroline",
+      "role": "student tester"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-15",
+    "sourceItem": "Listening Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.12,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.12,
+      "end": 6.71,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t002",
+      "text": "Caroline, I've got a question for you."
+    },
+    {
+      "id": "s003",
+      "start": 6.71,
+      "end": 7.75,
+      "speakerId": "caroline",
+      "speaker": "Caroline",
+      "turnId": "t003",
+      "text": "Sure, Professor."
+    },
+    {
+      "id": "s004",
+      "start": 7.75,
+      "end": 15.77,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t004",
+      "text": "I'm not sure if you're aware, but the university is redesigning its website and I'm involved in the process for the academic pages."
+    },
+    {
+      "id": "s005",
+      "start": 15.77,
+      "end": 16.81,
+      "speakerId": "caroline",
+      "speaker": "Caroline",
+      "turnId": "t005",
+      "text": "That's great."
+    },
+    {
+      "id": "s006",
+      "start": 16.81,
+      "end": 18.98,
+      "speakerId": "caroline",
+      "speaker": "Caroline",
+      "turnId": "t005",
+      "text": "It's long overdue, if you ask me."
+    },
+    {
+      "id": "s007",
+      "start": 18.98,
+      "end": 20.14,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "I agree."
+    },
+    {
+      "id": "s008",
+      "start": 20.14,
+      "end": 23.41,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "We're looking for some students to be testers for us."
+    },
+    {
+      "id": "s009",
+      "start": 23.41,
+      "end": 28.42,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "Try out the new site, point out things you like and things that aren't working properly."
+    },
+    {
+      "id": "s010",
+      "start": 28.42,
+      "end": 30.2,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "Make suggestions."
+    },
+    {
+      "id": "s011",
+      "start": 30.2,
+      "end": 31.8,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "Those sorts of things."
+    },
+    {
+      "id": "s012",
+      "start": 31.8,
+      "end": 33.26,
+      "speakerId": "professor",
+      "speaker": "教授",
+      "turnId": "t006",
+      "text": "Would you be interested?"
+    },
+    {
+      "id": "s013",
+      "start": 33.26,
+      "end": 34.92,
+      "speakerId": "caroline",
+      "speaker": "Caroline",
+      "turnId": "t007",
+      "text": "I don't see why not."
+    }
+  ]
+}

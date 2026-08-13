@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-30-learning-to-bake",
+  "title": "对话 · 3.30 学习烘焙",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.30 对话 13-14 · Learning to Bake",
+  "language": "en",
+  "audioSrc": "./conversation-3-30-learning-to-bake/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "learning to bake"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "friend"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-30",
+    "sourceItem": "Listening Q13-Q14"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.02,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.02,
+      "end": 7.91,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "I bought a traditional recipe book and started learning how to bake."
+    },
+    {
+      "id": "s003",
+      "start": 7.91,
+      "end": 9.24,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "That sounds great."
+    },
+    {
+      "id": "s004",
+      "start": 9.24,
+      "end": 11.29,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "How has it been going so far?"
+    },
+    {
+      "id": "s005",
+      "start": 11.29,
+      "end": 13.42,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Well, with mixed success."
+    },
+    {
+      "id": "s006",
+      "start": 13.42,
+      "end": 16.09,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "My chocolate cake turned out fabulous."
+    },
+    {
+      "id": "s007",
+      "start": 16.09,
+      "end": 17.85,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "But my cookies?"
+    },
+    {
+      "id": "s008",
+      "start": 17.85,
+      "end": 20.92,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Well, let's say I'm not going to have anyone try them."
+    },
+    {
+      "id": "s009",
+      "start": 20.92,
+      "end": 24.67,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "I managed to eat a couple, but only because I have strong teeth."
+    },
+    {
+      "id": "s010",
+      "start": 24.67,
+      "end": 26.49,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "You'll do better next time."
+    },
+    {
+      "id": "s011",
+      "start": 26.49,
+      "end": 27.89,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "I hope so."
+    },
+    {
+      "id": "s012",
+      "start": 27.89,
+      "end": 30.23,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "In fact, I'm going to try again tonight."
+    },
+    {
+      "id": "s013",
+      "start": 30.23,
+      "end": 34.15,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "I'm headed to the store right now to get some extra flour and sugar."
+    }
+  ]
+}

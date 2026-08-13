@@ -1,0 +1,232 @@
+{
+  "generatedAt": "2026-08-13",
+  "accepted": 10,
+  "rejected": 3,
+  "beforeLessonCount": 62,
+  "afterLessonCount": 72,
+  "batchBalance": {
+    "lecture": 5,
+    "conversation": 5
+  },
+  "results": [
+    {
+      "id": "conversation-3-02-suit-shopping",
+      "status": "added",
+      "title": "对话 · 3.02 选购西装",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 10,
+      "duration": 28.3,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 1,
+      "independentSentenceAverageSimilarity": 1,
+      "rmsDb": -27.36,
+      "peakDb": -13.22,
+      "clipRatio": 0,
+      "longestSilence": 2.35,
+      "issues": []
+    },
+    {
+      "id": "conversation-3-04-paper-topic",
+      "status": "added",
+      "title": "对话 · 3.04 论文选题",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 9,
+      "duration": 38.64,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.8966,
+      "independentSentenceAverageSimilarity": 0.9827,
+      "rmsDb": -23.83,
+      "peakDb": -9,
+      "clipRatio": 0,
+      "longestSilence": 2.5,
+      "issues": []
+    },
+    {
+      "id": "conversation-3-30-learning-to-bake",
+      "status": "added",
+      "title": "对话 · 3.30 学习烘焙",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 13,
+      "duration": 34.15,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.9231,
+      "independentSentenceAverageSimilarity": 0.9941,
+      "rmsDb": -19.21,
+      "peakDb": -1.23,
+      "clipRatio": 0,
+      "longestSilence": 2.55,
+      "issues": []
+    },
+    {
+      "id": "conversation-4-01-dorm-kitchen",
+      "status": "added",
+      "title": "对话 · 4.01 宿舍厨房改造",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 13,
+      "duration": 30.01,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 1,
+      "independentSentenceAverageSimilarity": 1,
+      "rmsDb": -27.74,
+      "peakDb": -10.27,
+      "clipRatio": 0,
+      "longestSilence": 2.2,
+      "issues": []
+    },
+    {
+      "id": "conversation-4-15-website-testing",
+      "status": "added",
+      "title": "对话 · 4.15 网站测试",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 13,
+      "duration": 34.92,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.5,
+      "independentSentenceAverageSimilarity": 0.9615,
+      "rmsDb": -27.84,
+      "peakDb": -13.33,
+      "clipRatio": 0,
+      "longestSilence": 2.45,
+      "issues": []
+    },
+    {
+      "id": "biology-3-29-tardigrades",
+      "status": "added",
+      "title": "生物学 · 3.29 缓步动物",
+      "category": "生物学",
+      "materialType": "lecture",
+      "segments": 20,
+      "duration": 129.6,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.8387,
+      "independentSentenceAverageSimilarity": 0.9797,
+      "rmsDb": -14.86,
+      "peakDb": -0.53,
+      "clipRatio": 0,
+      "longestSilence": 2.3,
+      "issues": []
+    },
+    {
+      "id": "art-3-02-cubism",
+      "status": "added",
+      "title": "艺术 · 3.02 立体主义",
+      "category": "艺术",
+      "materialType": "lecture",
+      "segments": 15,
+      "duration": 95.22,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.8462,
+      "independentSentenceAverageSimilarity": 0.9705,
+      "rmsDb": -28.23,
+      "peakDb": -13.24,
+      "clipRatio": 0,
+      "longestSilence": 2.4,
+      "issues": []
+    },
+    {
+      "id": "social-science-7-13-social-entrepreneurship",
+      "status": "added",
+      "title": "社会科学 · 7.13 社会创业",
+      "category": "社会科学",
+      "materialType": "lecture",
+      "segments": 15,
+      "duration": 98.32,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 1,
+      "independentSentenceAverageSimilarity": 1,
+      "rmsDb": -19.99,
+      "peakDb": -0.67,
+      "clipRatio": 0,
+      "longestSilence": 1.3,
+      "issues": []
+    },
+    {
+      "id": "science-3-02-thin-film-interference",
+      "status": "added",
+      "title": "科学 · 3.02 薄膜干涉",
+      "category": "科学",
+      "materialType": "lecture",
+      "segments": 19,
+      "duration": 121.03,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.8889,
+      "independentSentenceAverageSimilarity": 0.9824,
+      "rmsDb": -27.31,
+      "peakDb": -12.87,
+      "clipRatio": 0,
+      "longestSilence": 2.4,
+      "issues": []
+    },
+    {
+      "id": "business-5-18-lean-manufacturing",
+      "status": "added",
+      "title": "商业 · 5.18 精益生产",
+      "category": "商业",
+      "materialType": "lecture",
+      "segments": 16,
+      "duration": 134.85,
+      "mappedExpectedTokenRatio": 1,
+      "independentSentenceMinSimilarity": 0.9333,
+      "independentSentenceAverageSimilarity": 0.9958,
+      "rmsDb": -25.26,
+      "peakDb": -12.9,
+      "clipRatio": 0,
+      "longestSilence": 2.4,
+      "issues": []
+    }
+  ],
+  "method": {
+    "selection": "Five lectures and five conversations were selected to balance material type. Lecture topics span biology, art, social science, physical science, and business; conversations span shopping, academic advising, daily-life skill, dormitory facilities, and campus work.",
+    "sentencePolicy": "Strict terminal-punctuation segmentation with no duration cap. Comma-linked clauses and coordinated phrases remain in the same sentence.",
+    "qualityChecks": [
+      "full-window small.en and base.en ASR comparison",
+      "focused third-model review for ambiguous candidate text and boundaries",
+      "human correction against calibrated source transcripts and question context",
+      "independent tiny.en ASR on all 143 final sentence windows",
+      "empty, out-of-range, contiguity, and trailing-next-item checks",
+      "RMS, peak, clipping, and longest-silence checks",
+      "cross-library semantic duplicate search before publication"
+    ]
+  },
+  "reviewNotes": [
+    {
+      "id": "conversation-3-04-paper-topic",
+      "note": "tiny.en substitutes the proper noun Piaget and omits child; small.en, the no-VAD third pass, and the calibrated source transcript confirm the published sentence and complete boundary."
+    },
+    {
+      "id": "conversation-4-15-website-testing",
+      "note": "tiny.en hears Sure as Short in a 1.04-second complete response; small.en and base.en confirm Sure, Professor, and the clip contains no adjacent speech."
+    },
+    {
+      "id": "biology-3-29-tardigrades",
+      "note": "tiny.en makes lexical substitutions in technical vocabulary; dual ASR and source text confirm the complete sentence windows. The phrase The secret to tardigrade survival? is followed by the complete answer sentence A process called cryptobiosis."
+    },
+    {
+      "id": "art-3-02-cubism",
+      "note": "tiny.en substitutes shook/proved/Cubism; two larger models and source context confirm the corrected terms. The next unrelated item was explicitly removed."
+    },
+    {
+      "id": "science-3-02-thin-film-interference",
+      "note": "tiny.en substitutes Thin with then; dual ASR and the source transcript confirm the technical term and complete sentence."
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "candidate": "Positive reinforcement",
+      "reason": "Rejected as a semantic duplicate of the existing 1.27 psychology lesson."
+    },
+    {
+      "candidate": "Roman concrete",
+      "reason": "Rejected after cross-checking the retained July QC record: one spoken clause is incomplete/ambiguous, so its answer text cannot be uniquely guaranteed."
+    },
+    {
+      "candidate": "Indigo trade",
+      "reason": "Rejected because several source expressions and proper terms could not be confirmed consistently across models."
+    }
+  ]
+}

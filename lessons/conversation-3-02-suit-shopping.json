@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-02-suit-shopping",
+  "title": "对话 · 3.02 选购西装",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.2 Part 2 对话 15-16 · Suit Shopping",
+  "language": "en",
+  "audioSrc": "./conversation-3-02-suit-shopping/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "recommending a boutique"
+    },
+    {
+      "id": "matt",
+      "label": "Matt",
+      "role": "shopping for a wedding suit"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-02",
+    "sourceItem": "Listening Q15-Q16"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.98,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.98,
+      "end": 6.1,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Any fun plans for the weekend, Matt?"
+    },
+    {
+      "id": "s003",
+      "start": 6.1,
+      "end": 8.94,
+      "speakerId": "matt",
+      "speaker": "Matt",
+      "turnId": "t003",
+      "text": "Yeah, my cousin's getting married this weekend, actually."
+    },
+    {
+      "id": "s004",
+      "start": 8.94,
+      "end": 13.1,
+      "speakerId": "matt",
+      "speaker": "Matt",
+      "turnId": "t003",
+      "text": "I need a new suit for the wedding, so I'm going to go look today after class."
+    },
+    {
+      "id": "s005",
+      "start": 13.1,
+      "end": 15.96,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "You should check out that new boutique on Elm Street."
+    },
+    {
+      "id": "s006",
+      "start": 15.96,
+      "end": 19.62,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "They have a great selection, and they offer custom tailoring."
+    },
+    {
+      "id": "s007",
+      "start": 19.62,
+      "end": 21.24,
+      "speakerId": "matt",
+      "speaker": "Matt",
+      "turnId": "t005",
+      "text": "That sounds perfect."
+    },
+    {
+      "id": "s008",
+      "start": 21.24,
+      "end": 22.57,
+      "speakerId": "matt",
+      "speaker": "Matt",
+      "turnId": "t005",
+      "text": "How are the prices?"
+    },
+    {
+      "id": "s009",
+      "start": 22.57,
+      "end": 24.62,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Pretty reasonable, I think."
+    },
+    {
+      "id": "s010",
+      "start": 24.62,
+      "end": 28.3,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "My brother needed a suit for job interviews, and that's where he went."
+    }
+  ]
+}

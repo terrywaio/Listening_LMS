@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "id": "biology-3-29-tardigrades",
+  "title": "生物学 · 3.29 缓步动物",
+  "category": "生物学",
+  "materialType": "lecture",
+  "source": "3.29 讲座 12-15 · Tardigrades",
+  "language": "en",
+  "audioSrc": "./biology-3-29-tardigrades/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-29",
+    "sourceItem": "Listening Q12-Q15"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.01,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a biology podcast."
+    },
+    {
+      "id": "s002",
+      "start": 4.01,
+      "end": 8.16,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Have you ever heard of tardigrades?"
+    },
+    {
+      "id": "s003",
+      "start": 8.16,
+      "end": 16.05,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "These are animals about half a millimeter in size, just about large enough to be visible to the naked eye."
+    },
+    {
+      "id": "s004",
+      "start": 16.05,
+      "end": 25.42,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Tardigrades are renowned for their ability to survive a variety of extreme conditions, an ability that is unique among animals."
+    },
+    {
+      "id": "s005",
+      "start": 25.42,
+      "end": 31.34,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They are found in diverse environments, ranging from the deep sea to high mountain tops."
+    },
+    {
+      "id": "s006",
+      "start": 31.34,
+      "end": 40.03,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They can also withstand temperatures from just above absolute zero to over 150 degrees Celsius."
+    },
+    {
+      "id": "s007",
+      "start": 40.03,
+      "end": 45.79,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They even survive intense radiation and the vacuum of space."
+    },
+    {
+      "id": "s008",
+      "start": 45.79,
+      "end": 48.92,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "The secret to tardigrade survival?"
+    },
+    {
+      "id": "s009",
+      "start": 48.92,
+      "end": 52.23,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "A process called cryptobiosis."
+    },
+    {
+      "id": "s010",
+      "start": 52.23,
+      "end": 61.51,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "During cryptobiosis, tardigrades lose almost all their water content and produce unique proteins that protect their cells from damage."
+    },
+    {
+      "id": "s011",
+      "start": 61.51,
+      "end": 70.01,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But remember, no metabolic activity, meaning no bodily process, can happen without water."
+    },
+    {
+      "id": "s012",
+      "start": 70.01,
+      "end": 74.1,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So, all metabolism essentially shuts down."
+    },
+    {
+      "id": "s013",
+      "start": 74.1,
+      "end": 81.36,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "When favorable conditions return, tardigrades rehydrate and resume normal functions."
+    },
+    {
+      "id": "s014",
+      "start": 81.36,
+      "end": 89.95,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Scientists are fascinated by tardigrades because understanding their survival mechanisms could have important implications."
+    },
+    {
+      "id": "s015",
+      "start": 89.95,
+      "end": 92.61,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Take health care, for example."
+    },
+    {
+      "id": "s016",
+      "start": 92.61,
+      "end": 101.91,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If we can figure out how tardigrades protect their cells from radiation, it might lead to breakthroughs in radiation therapy for cancer patients."
+    },
+    {
+      "id": "s017",
+      "start": 101.91,
+      "end": 108.83,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Astronomers are intrigued by tardigrades because of their ability to endure the vacuum of space."
+    },
+    {
+      "id": "s018",
+      "start": 108.83,
+      "end": 115.4,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "In a research study in 2007, tardigrades were sent to the harsh realms of space."
+    },
+    {
+      "id": "s019",
+      "start": 115.4,
+      "end": 121.67,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Some not only survived, but they successfully reproduced upon their return to Earth."
+    },
+    {
+      "id": "s020",
+      "start": 121.67,
+      "end": 129.6,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If tardigrades can survive in space, it suggests life might exist in the extreme environments of other planets."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-01-dorm-kitchen",
+  "title": "对话 · 4.01 宿舍厨房改造",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.1 Part 1 对话 4-5 · Dorm Kitchen",
+  "language": "en",
+  "audioSrc": "./conversation-4-01-dorm-kitchen/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "sharing renovation news"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "frequent kitchen user"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-01",
+    "sourceItem": "Listening Q4-Q5"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.93,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.93,
+      "end": 4.95,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Have you heard?"
+    },
+    {
+      "id": "s003",
+      "start": 4.95,
+      "end": 9.13,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "They're finally updating the kitchen in the student lounge of this dormitory."
+    },
+    {
+      "id": "s004",
+      "start": 9.13,
+      "end": 10.33,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "It's about time."
+    },
+    {
+      "id": "s005",
+      "start": 10.33,
+      "end": 11.53,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "What are they doing?"
+    },
+    {
+      "id": "s006",
+      "start": 11.53,
+      "end": 15.79,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Well, for one, all of the appliances are being replaced."
+    },
+    {
+      "id": "s007",
+      "start": 15.79,
+      "end": 17.0,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Oh, that's great."
+    },
+    {
+      "id": "s008",
+      "start": 17.0,
+      "end": 19.78,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "The microwave hasn't been working properly for a while."
+    },
+    {
+      "id": "s009",
+      "start": 19.78,
+      "end": 22.52,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "I heard they're replacing some of the cabinets, too."
+    },
+    {
+      "id": "s010",
+      "start": 22.52,
+      "end": 24.11,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "I hope it doesn't take too long."
+    },
+    {
+      "id": "s011",
+      "start": 24.11,
+      "end": 25.28,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "I cook there a lot."
+    },
+    {
+      "id": "s012",
+      "start": 25.28,
+      "end": 26.21,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "Me too."
+    },
+    {
+      "id": "s013",
+      "start": 26.21,
+      "end": 30.01,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "I think we'll have access to the place in the dorm next door, though."
+    }
+  ]
+}

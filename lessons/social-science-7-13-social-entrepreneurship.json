@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "social-science-7-13-social-entrepreneurship",
+  "title": "社会科学 · 7.13 社会创业",
+  "category": "社会科学",
+  "materialType": "lecture",
+  "source": "7.13 M2 讲座 12-15 · Social Entrepreneurship",
+  "language": "en",
+  "audioSrc": "./social-science-7-13-social-entrepreneurship/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M2 Q12-Q15"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.81,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk on a business podcast."
+    },
+    {
+      "id": "s002",
+      "start": 2.81,
+      "end": 9.92,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "You probably know what entrepreneurs are, people who identify a need in the market and create their own businesses."
+    },
+    {
+      "id": "s003",
+      "start": 9.92,
+      "end": 16.16,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Today we are going to focus on people who combine that entrepreneurial spirit with social impact."
+    },
+    {
+      "id": "s004",
+      "start": 16.16,
+      "end": 19.42,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "I am talking about social entrepreneurs."
+    },
+    {
+      "id": "s005",
+      "start": 19.42,
+      "end": 25.54,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "These are individuals who seek to solve societal problems through innovative and sustainable business solutions."
+    },
+    {
+      "id": "s006",
+      "start": 25.54,
+      "end": 35.65,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Unlike traditional entrepreneurs, their primary goal is not simply to make money; they also strive to create positive change in society."
+    },
+    {
+      "id": "s007",
+      "start": 35.65,
+      "end": 43.11,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "One key feature of social entrepreneurship is a focus on addressing gaps in the market that affect underserved communities."
+    },
+    {
+      "id": "s008",
+      "start": 43.11,
+      "end": 51.28,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This can include anything from providing affordable health care and education to developing environmentally friendly technologies."
+    },
+    {
+      "id": "s009",
+      "start": 51.28,
+      "end": 59.62,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Social entrepreneurs often work in sectors where social needs are most pressing, such as poverty, health, and the environment."
+    },
+    {
+      "id": "s010",
+      "start": 59.62,
+      "end": 65.89,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They do this by leveraging business strategies to create scalable and sustainable solutions."
+    },
+    {
+      "id": "s011",
+      "start": 65.89,
+      "end": 70.55,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "As you can imagine, social entrepreneurship can be challenging."
+    },
+    {
+      "id": "s012",
+      "start": 70.55,
+      "end": 75.56,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Balancing profitability with social goals can be complex and demanding."
+    },
+    {
+      "id": "s013",
+      "start": 75.56,
+      "end": 82.41,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Measuring the social impact of an initiative is also a difficult undertaking; what exactly should be measured?"
+    },
+    {
+      "id": "s014",
+      "start": 82.41,
+      "end": 88.24,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "These ventures often require significant resources and support to get off the ground."
+    },
+    {
+      "id": "s015",
+      "start": 88.24,
+      "end": 98.32,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Despite these obstacles, social entrepreneurship can lead to innovative solutions that traditional businesses might overlook and foster a more inclusive and equitable society."
+    }
+  ]
+}

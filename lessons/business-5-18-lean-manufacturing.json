@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "id": "business-5-18-lean-manufacturing",
+  "title": "商业 · 5.18 精益生产",
+  "category": "商业",
+  "materialType": "lecture",
+  "source": "5.18 M2 讲座 8-11 · Lean Manufacturing",
+  "language": "en",
+  "audioSrc": "./business-5-18-lean-manufacturing/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-05-18",
+    "sourceItem": "Listening M2 Q8-Q11"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.72,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a business class."
+    },
+    {
+      "id": "s002",
+      "start": 3.72,
+      "end": 10.84,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Let's talk about lean manufacturing and its impact on efficiency in production processes."
+    },
+    {
+      "id": "s003",
+      "start": 10.84,
+      "end": 20.12,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Lean manufacturing is a systematic approach to minimizing waste within a manufacturing system while maximizing productivity."
+    },
+    {
+      "id": "s004",
+      "start": 20.12,
+      "end": 29.45,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "While the methodology has been adopted by many companies worldwide, it was developed by a Japanese carmaker in the mid-20th century."
+    },
+    {
+      "id": "s005",
+      "start": 29.45,
+      "end": 33.57,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But its roots can actually be traced to the supermarket."
+    },
+    {
+      "id": "s006",
+      "start": 33.57,
+      "end": 47.51,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "In the 1950s, Japanese engineers observed that supermarkets in the United States only restocked items as customers purchased them, maintaining just enough inventory to meet demand."
+    },
+    {
+      "id": "s007",
+      "start": 47.51,
+      "end": 54.74,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This idea of just-in-time inventory management became a core principle of lean manufacturing."
+    },
+    {
+      "id": "s008",
+      "start": 54.74,
+      "end": 65.8,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "By identifying and removing excess inventory and eliminating other inefficiencies, companies could reduce costs and increase their overall productivity."
+    },
+    {
+      "id": "s009",
+      "start": 65.8,
+      "end": 74.2,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Another important aspect of lean manufacturing is continuous improvement, often referred to as Kaizen."
+    },
+    {
+      "id": "s010",
+      "start": 74.2,
+      "end": 80.36,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This involves constantly seeking ways to enhance processes, products, and services."
+    },
+    {
+      "id": "s011",
+      "start": 80.36,
+      "end": 90.38,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Employees at all levels are encouraged to contribute ideas for improvement, fostering a culture of innovation and teamwork."
+    },
+    {
+      "id": "s012",
+      "start": 90.38,
+      "end": 97.55,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Lean manufacturing also emphasizes the importance of value from the customer's perspective."
+    },
+    {
+      "id": "s013",
+      "start": 97.55,
+      "end": 110.83,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Companies focus on producing goods that meet customer needs and expectations, ensuring that each step in the production process adds value rather than unnecessary complexity."
+    },
+    {
+      "id": "s014",
+      "start": 110.83,
+      "end": 118.86,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "As you might imagine, implementing lean manufacturing requires a shift in organizational culture."
+    },
+    {
+      "id": "s015",
+      "start": 118.86,
+      "end": 124.68,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Resistance to change and difficulty in sustaining improvements can get in the way."
+    },
+    {
+      "id": "s016",
+      "start": 124.68,
+      "end": 134.85,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "That said, companies that successfully adopt lean practices experience increased efficiency, reduced costs, and higher customer satisfaction."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "id": "science-3-02-thin-film-interference",
+  "title": "科学 · 3.02 薄膜干涉",
+  "category": "科学",
+  "materialType": "lecture",
+  "source": "3.2 Part 2 讲座 8-11 · Thin-film Interference",
+  "language": "en",
+  "audioSrc": "./science-3-02-thin-film-interference/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-02",
+    "sourceItem": "Listening Q8-Q11"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.47,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a physics class."
+    },
+    {
+      "id": "s002",
+      "start": 3.47,
+      "end": 9.69,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Today we're going to explore a phenomenon called thin-film interference."
+    },
+    {
+      "id": "s003",
+      "start": 9.69,
+      "end": 16.73,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This is an optical effect that occurs when light interacts with very thin surfaces."
+    },
+    {
+      "id": "s004",
+      "start": 16.73,
+      "end": 20.59,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Imagine a soap bubble floating in the air."
+    },
+    {
+      "id": "s005",
+      "start": 20.59,
+      "end": 25.87,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Although it's made of clear liquid, it shines with shifting rainbow colors."
+    },
+    {
+      "id": "s006",
+      "start": 25.87,
+      "end": 31.63,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Thin-film interference explains how this shimmering display occurs."
+    },
+    {
+      "id": "s007",
+      "start": 31.63,
+      "end": 39.03,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "When light strikes a bubble, some reflects off the outer surface, and some reflects off the inner surface."
+    },
+    {
+      "id": "s008",
+      "start": 39.03,
+      "end": 44.51,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "As these waves meet, they can either work together or work against each other."
+    },
+    {
+      "id": "s009",
+      "start": 44.51,
+      "end": 48.07,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If they reinforce one another, the color looks brighter."
+    },
+    {
+      "id": "s010",
+      "start": 48.07,
+      "end": 56.3,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This is called constructive interference, because the waves are constructing or building the light."
+    },
+    {
+      "id": "s011",
+      "start": 56.3,
+      "end": 61.69,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If the waves hit each other and cancel each other out, the color fades."
+    },
+    {
+      "id": "s012",
+      "start": 61.69,
+      "end": 67.72,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This is destructive interference, because the waves are destroying each other's effect."
+    },
+    {
+      "id": "s013",
+      "start": 67.72,
+      "end": 76.51,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Which color appears depends on factors that keep changing, factors like the thickness of the film and the angle of the light."
+    },
+    {
+      "id": "s014",
+      "start": 76.51,
+      "end": 87.15,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "As these factors shift, some wavelengths are reinforced while others are cancelled, and that constant change is what produces the bubble's rainbow shimmer."
+    },
+    {
+      "id": "s015",
+      "start": 87.15,
+      "end": 92.97,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "The thin film that creates these dazzling colors also makes the bubble fragile."
+    },
+    {
+      "id": "s016",
+      "start": 92.97,
+      "end": 99.95,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Because the layer is so delicate, the bubble can burst with the slightest touch or breeze."
+    },
+    {
+      "id": "s017",
+      "start": 99.95,
+      "end": 105.45,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Scientists are interested in applying thin-film interference to technology."
+    },
+    {
+      "id": "s018",
+      "start": 105.45,
+      "end": 113.85,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Possible uses include paints that shine with bright colors without pigments and anti-reflective coatings for lenses."
+    },
+    {
+      "id": "s019",
+      "start": 113.85,
+      "end": 121.03,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Yet reproducing the bubble's natural balance of simplicity and efficiency remains a significant challenge."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "art-3-02-cubism",
+  "title": "艺术 · 3.02 立体主义",
+  "category": "艺术",
+  "materialType": "lecture",
+  "source": "3.2 Part 2 讲座 29-32 · Cubism",
+  "language": "en",
+  "audioSrc": "./art-3-02-cubism/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-02",
+    "sourceItem": "Listening Q29-Q32"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.82,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in an art history class."
+    },
+    {
+      "id": "s002",
+      "start": 3.82,
+      "end": 11.22,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If you've ever looked at a Picasso painting and thought, wait, is that a face or a guitar?"
+    },
+    {
+      "id": "s003",
+      "start": 11.22,
+      "end": 14.78,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "You've already encountered the magic of Cubism."
+    },
+    {
+      "id": "s004",
+      "start": 14.78,
+      "end": 20.25,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This revolutionary movement shook up the art scene in the early 20th century."
+    },
+    {
+      "id": "s005",
+      "start": 20.25,
+      "end": 22.52,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It wasn't just a new style."
+    },
+    {
+      "id": "s006",
+      "start": 22.52,
+      "end": 28.54,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It was a complete reimagining of how we see and represent reality."
+    },
+    {
+      "id": "s007",
+      "start": 28.54,
+      "end": 41.11,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Artists like Pablo Picasso and Georges Braque broke away from the traditional rules of perspective and instead chose to depict objects from multiple angles at once."
+    },
+    {
+      "id": "s008",
+      "start": 41.11,
+      "end": 48.86,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Imagine seeing every side of a coffee cup, top, bottom and side, all in a single image."
+    },
+    {
+      "id": "s009",
+      "start": 48.86,
+      "end": 55.89,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "How this coffee cup is depicted, that's the kind of visual remix Cubism brought to the canvas."
+    },
+    {
+      "id": "s010",
+      "start": 55.89,
+      "end": 59.86,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "At first, people didn't know what to make of it."
+    },
+    {
+      "id": "s011",
+      "start": 59.86,
+      "end": 63.56,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Critics called it chaotic, even nonsensical."
+    },
+    {
+      "id": "s012",
+      "start": 63.56,
+      "end": 73.95,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But over time, Cubism proved to be a game changer, influencing not just painting and sculpture, but also music, literature, and architecture."
+    },
+    {
+      "id": "s013",
+      "start": 73.95,
+      "end": 83.38,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It encouraged creators to rethink structure, narrative, and form, and to reconsider how we think about representation and abstraction."
+    },
+    {
+      "id": "s014",
+      "start": 83.38,
+      "end": 88.12,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "And it paved the way for other art movements, like modernism."
+    },
+    {
+      "id": "s015",
+      "start": 88.12,
+      "end": 95.22,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Modernism also embraced abstraction and conceptual depth, though in somewhat different ways."
+    }
+  ]
+}

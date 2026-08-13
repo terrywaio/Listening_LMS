@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-13",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -538,6 +538,101 @@
       "path": "./lessons/conversation-3-02-europe-trip.json",
       "segmentCount": 9,
       "speakerCount": 3
+    },
+    {
+      "id": "conversation-3-02-suit-shopping",
+      "title": "对话 · 3.02 选购西装",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.2 Part 2 对话 15-16 · Suit Shopping",
+      "path": "./lessons/conversation-3-02-suit-shopping.json",
+      "segmentCount": 10,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-3-04-paper-topic",
+      "title": "对话 · 3.04 论文选题",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.4 M1 对话 13-14 · Paper Topic",
+      "path": "./lessons/conversation-3-04-paper-topic.json",
+      "segmentCount": 9,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-3-30-learning-to-bake",
+      "title": "对话 · 3.30 学习烘焙",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.30 对话 13-14 · Learning to Bake",
+      "path": "./lessons/conversation-3-30-learning-to-bake.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-01-dorm-kitchen",
+      "title": "对话 · 4.01 宿舍厨房改造",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.1 Part 1 对话 4-5 · Dorm Kitchen",
+      "path": "./lessons/conversation-4-01-dorm-kitchen.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "conversation-4-15-website-testing",
+      "title": "对话 · 4.15 网站测试",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.15 Set 2 对话 6-7 · Website Testing",
+      "path": "./lessons/conversation-4-15-website-testing.json",
+      "segmentCount": 13,
+      "speakerCount": 3
+    },
+    {
+      "id": "biology-3-29-tardigrades",
+      "title": "生物学 · 3.29 缓步动物",
+      "category": "生物学",
+      "materialType": "lecture",
+      "source": "3.29 讲座 12-15 · Tardigrades",
+      "path": "./lessons/biology-3-29-tardigrades.json",
+      "segmentCount": 20
+    },
+    {
+      "id": "art-3-02-cubism",
+      "title": "艺术 · 3.02 立体主义",
+      "category": "艺术",
+      "materialType": "lecture",
+      "source": "3.2 Part 2 讲座 29-32 · Cubism",
+      "path": "./lessons/art-3-02-cubism.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "social-science-7-13-social-entrepreneurship",
+      "title": "社会科学 · 7.13 社会创业",
+      "category": "社会科学",
+      "materialType": "lecture",
+      "source": "7.13 M2 讲座 12-15 · Social Entrepreneurship",
+      "path": "./lessons/social-science-7-13-social-entrepreneurship.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "science-3-02-thin-film-interference",
+      "title": "科学 · 3.02 薄膜干涉",
+      "category": "科学",
+      "materialType": "lecture",
+      "source": "3.2 Part 2 讲座 8-11 · Thin-film Interference",
+      "path": "./lessons/science-3-02-thin-film-interference.json",
+      "segmentCount": 19
+    },
+    {
+      "id": "business-5-18-lean-manufacturing",
+      "title": "商业 · 5.18 精益生产",
+      "category": "商业",
+      "materialType": "lecture",
+      "source": "5.18 M2 讲座 8-11 · Lean Manufacturing",
+      "path": "./lessons/business-5-18-lean-manufacturing.json",
+      "segmentCount": 16
     }
   ]
 }
