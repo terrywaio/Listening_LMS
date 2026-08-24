@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "art-2-02-hero-journey",
+  "title": "艺术 · 2.02 英雄之旅",
+  "category": "艺术",
+  "materialType": "lecture",
+  "source": "2.2 Part 2 文学讲座 29-32 · Hero's Journey",
+  "language": "en",
+  "audioSrc": "./art-2-02-hero-journey/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-02-02",
+    "sourceItem": "Listening Q29-Q32"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.83,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a literature class."
+    },
+    {
+      "id": "s002",
+      "start": 3.83,
+      "end": 14.56,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So today, we're looking at the hero's journey, a storytelling pattern that shows up in myths, literature, and books from all over the world."
+    },
+    {
+      "id": "s003",
+      "start": 14.56,
+      "end": 20.2,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "This structure was brought into the spotlight by Joseph Campbell, an American mythologist."
+    },
+    {
+      "id": "s004",
+      "start": 20.2,
+      "end": 29.17,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "In his book, The Hero with a Thousand Faces, Campbell studied myths across cultures and noticed they shared a common structure."
+    },
+    {
+      "id": "s005",
+      "start": 29.17,
+      "end": 37.42,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Campbell called it the monomyth, and he believed it reflected something universal about the human experience."
+    },
+    {
+      "id": "s006",
+      "start": 37.42,
+      "end": 46.88,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "The journey usually kicks off with a call to adventure, some kind of invitation that pulls the hero out of their everyday life."
+    },
+    {
+      "id": "s007",
+      "start": 46.88,
+      "end": 53.57,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They might resist at first, but eventually they accept, often with a mentor's help."
+    },
+    {
+      "id": "s008",
+      "start": 53.57,
+      "end": 57.79,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Then come the trials, tests that push the hero to grow."
+    },
+    {
+      "id": "s009",
+      "start": 57.79,
+      "end": 66.89,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "At the center of it all is the abyss, the toughest part where the hero faces their greatest fear or enemy."
+    },
+    {
+      "id": "s010",
+      "start": 66.89,
+      "end": 70.54,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "If they make it through, they're transformed."
+    },
+    {
+      "id": "s011",
+      "start": 70.54,
+      "end": 79.89,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "And here's the key part: return with a gift, some kind of insight, wisdom, or ability that can help others."
+    },
+    {
+      "id": "s012",
+      "start": 79.89,
+      "end": 85.88,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "That gift is what makes the journey meaningful, not just for the hero, but for their community."
+    },
+    {
+      "id": "s013",
+      "start": 85.88,
+      "end": 92.39,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Now, some critics argue this model oversimplifies storytelling."
+    },
+    {
+      "id": "s014",
+      "start": 92.39,
+      "end": 98.57,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It can flatten out cultural differences and force diverse stories into a single mold."
+    },
+    {
+      "id": "s015",
+      "start": 98.57,
+      "end": 109.9,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Still, I'd argue it's influential because it taps into something deeply human: the idea that struggle leads to growth and that we come back changed."
+    }
+  ]
+}

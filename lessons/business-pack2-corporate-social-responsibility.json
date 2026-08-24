@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "id": "business-pack2-corporate-social-responsibility",
+  "title": "商业 · Pack 2 企业社会责任",
+  "category": "商业",
+  "materialType": "lecture",
+  "source": "Pack 2 商业讲座 · Corporate Social Responsibility",
+  "language": "en",
+  "audioSrc": "./business-pack2-corporate-social-responsibility/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-pack-2",
+    "sourceItem": "Listening CSR Talk"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.4,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a business class."
+    },
+    {
+      "id": "s002",
+      "start": 3.4,
+      "end": 11.61,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Today, we will discuss the concept of corporate social responsibility, often abbreviated as CSR."
+    },
+    {
+      "id": "s003",
+      "start": 11.61,
+      "end": 18.64,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "CSR is a business model in which companies integrate social and environmental concerns into how they operate."
+    },
+    {
+      "id": "s004",
+      "start": 18.64,
+      "end": 22.14,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It's more than just to comply with legal requirements."
+    },
+    {
+      "id": "s005",
+      "start": 22.14,
+      "end": 26.07,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It's about voluntary actions that benefit society."
+    },
+    {
+      "id": "s006",
+      "start": 26.07,
+      "end": 35.16,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Companies that embrace CSR often focus on things like sustainable practices, ethical labor standards, and community engagement."
+    },
+    {
+      "id": "s007",
+      "start": 35.16,
+      "end": 44.44,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "By doing so, they aim to enhance their reputation, build consumer trust, and so potentially increase profits."
+    },
+    {
+      "id": "s008",
+      "start": 44.44,
+      "end": 53.75,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "One example of CSR in action is a company that reduces its carbon gas emissions by adopting renewable energy sources, such as solar or wind power."
+    },
+    {
+      "id": "s009",
+      "start": 53.75,
+      "end": 61.44,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Another example is a corporation that ensures fair wages and safe working conditions for its employees."
+    },
+    {
+      "id": "s010",
+      "start": 61.44,
+      "end": 72.69,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "CSR can also involve charitable giving, such as donating a portion of profits to social causes or supporting local organizations."
+    },
+    {
+      "id": "s011",
+      "start": 72.69,
+      "end": 76.67,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "While CSR brings many benefits, it is not without challenges."
+    },
+    {
+      "id": "s012",
+      "start": 76.67,
+      "end": 85.95,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Companies may face higher operational costs when implementing sustainable practices, and measuring the impact of CSR initiatives can be complex."
+    },
+    {
+      "id": "s013",
+      "start": 85.95,
+      "end": 93.7,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Despite these challenges, many businesses believe that the long-term benefits of CSR outweigh the short-term costs."
+    },
+    {
+      "id": "s014",
+      "start": 93.7,
+      "end": 99.33,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Next, we will explore some case studies of companies that have successfully implemented CSR strategies."
+    }
+  ]
+}

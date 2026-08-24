@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-24",
   "lessons": [
     {
       "id": "psychology-1-27-m1-25-28",
@@ -633,6 +633,96 @@
       "source": "5.18 M2 讲座 8-11 · Lean Manufacturing",
       "path": "./lessons/business-5-18-lean-manufacturing.json",
       "segmentCount": 16
+    },
+    {
+      "id": "conversation-3-02-woodworking-class",
+      "title": "对话 · 3.02 木工课",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.2 Part 2 对话 6-7 · Woodworking Class",
+      "path": "./lessons/conversation-3-02-woodworking-class.json",
+      "segmentCount": 14
+    },
+    {
+      "id": "conversation-3-04-holiday-party-food",
+      "title": "对话 · 3.04 聚会餐饮",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.4 M1 对话 15-16 · Holiday Party Food",
+      "path": "./lessons/conversation-3-04-holiday-party-food.json",
+      "segmentCount": 12
+    },
+    {
+      "id": "conversation-3-04-book-reading",
+      "title": "对话 · 3.04 作家读书会",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.4 M1 对话 19-20 · Book Reading",
+      "path": "./lessons/conversation-3-04-book-reading.json",
+      "segmentCount": 11
+    },
+    {
+      "id": "conversation-3-29-art-program-funding",
+      "title": "对话 · 3.29 艺术项目经费",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "3.29 对话 13-14 · Art Program Funding",
+      "path": "./lessons/conversation-3-29-art-program-funding.json",
+      "segmentCount": 12
+    },
+    {
+      "id": "conversation-4-13-camping-vacation",
+      "title": "对话 · 4.13 露营旅行",
+      "category": "对话",
+      "materialType": "conversation",
+      "source": "4.13 Set 1 对话 6-7 · Camping Vacation",
+      "path": "./lessons/conversation-4-13-camping-vacation.json",
+      "segmentCount": 10
+    },
+    {
+      "id": "business-pack2-corporate-social-responsibility",
+      "title": "商业 · Pack 2 企业社会责任",
+      "category": "商业",
+      "materialType": "lecture",
+      "source": "Pack 2 商业讲座 · Corporate Social Responsibility",
+      "path": "./lessons/business-pack2-corporate-social-responsibility.json",
+      "segmentCount": 14
+    },
+    {
+      "id": "psychology-pack2-resilience",
+      "title": "心理学 · Pack 2 心理韧性",
+      "category": "心理学",
+      "materialType": "lecture",
+      "source": "Pack 2 心理学讲座 · Resilience",
+      "path": "./lessons/psychology-pack2-resilience.json",
+      "segmentCount": 11
+    },
+    {
+      "id": "art-2-02-hero-journey",
+      "title": "艺术 · 2.02 英雄之旅",
+      "category": "艺术",
+      "materialType": "lecture",
+      "source": "2.2 Part 2 文学讲座 29-32 · Hero's Journey",
+      "path": "./lessons/art-2-02-hero-journey.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "biology-7-11-ant-mandibles",
+      "title": "生物学 · 7.11 蚂蚁颚与仿生夹具",
+      "category": "生物学",
+      "materialType": "lecture",
+      "source": "7.11 M1 生物学讲座 25-28 · Ant Mandibles",
+      "path": "./lessons/biology-7-11-ant-mandibles.json",
+      "segmentCount": 15
+    },
+    {
+      "id": "science-7-13-led-lighting",
+      "title": "科学 · 7.13 LED 照明",
+      "category": "科学",
+      "materialType": "lecture",
+      "source": "7.13 M1 物理讲座 25-28 · LED Lighting",
+      "path": "./lessons/science-7-13-led-lighting.json",
+      "segmentCount": 15
     }
   ]
 }

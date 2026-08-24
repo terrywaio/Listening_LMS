@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-04-book-reading",
+  "title": "对话 · 3.04 作家读书会",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.4 M1 对话 19-20 · Book Reading",
+  "language": "en",
+  "audioSrc": "./conversation-3-04-book-reading/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "attended the book reading"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "missed the event"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-03-04",
+    "sourceItem": "Listening M1 Q19-Q20"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.96,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.96,
+      "end": 6.88,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Why weren't you at the book reading at the library yesterday?"
+    },
+    {
+      "id": "s003",
+      "start": 6.88,
+      "end": 11.02,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I wanted to go, but I got stuck helping out with a volunteer event."
+    },
+    {
+      "id": "s004",
+      "start": 11.02,
+      "end": 12.95,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "I didn't know you were still doing that."
+    },
+    {
+      "id": "s005",
+      "start": 12.95,
+      "end": 14.15,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Only sometimes."
+    },
+    {
+      "id": "s006",
+      "start": 14.15,
+      "end": 16.74,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "The animal shelter really needed help."
+    },
+    {
+      "id": "s007",
+      "start": 16.74,
+      "end": 20.11,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "I think I'm going to take myself off the volunteer list, though."
+    },
+    {
+      "id": "s008",
+      "start": 20.11,
+      "end": 26.11,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Well, the featured author yesterday was Courtney Reimer, and she mostly talked about her new book, The Breath of Life."
+    },
+    {
+      "id": "s009",
+      "start": 26.11,
+      "end": 27.54,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "I'm sorry I missed it."
+    },
+    {
+      "id": "s010",
+      "start": 27.54,
+      "end": 31.91,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "The only downside was that the question and answer session was so short."
+    },
+    {
+      "id": "s011",
+      "start": 31.91,
+      "end": 35.09,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t008",
+      "text": "Only two or three people had a chance to ask her anything."
+    }
+  ]
+}

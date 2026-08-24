@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-29-art-program-funding",
+  "title": "对话 · 3.29 艺术项目经费",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.29 对话 13-14 · Art Program Funding",
+  "language": "en",
+  "audioSrc": "./conversation-3-29-art-program-funding/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "colleague-a",
+      "label": "教师 A",
+      "role": "reporting new funding"
+    },
+    {
+      "id": "colleague-b",
+      "label": "教师 B",
+      "role": "asking about allocation"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-29",
+    "sourceItem": "Listening Q13-Q14"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.24,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.24,
+      "end": 6.12,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t002",
+      "text": "Our efforts have paid off."
+    },
+    {
+      "id": "s003",
+      "start": 6.12,
+      "end": 11.89,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t002",
+      "text": "We've received additional funding from the university, as well as several grants to support our art program."
+    },
+    {
+      "id": "s004",
+      "start": 11.89,
+      "end": 13.17,
+      "speakerId": "colleague-b",
+      "speaker": "教师 B",
+      "turnId": "t003",
+      "text": "Wonderful."
+    },
+    {
+      "id": "s005",
+      "start": 13.17,
+      "end": 15.68,
+      "speakerId": "colleague-b",
+      "speaker": "教师 B",
+      "turnId": "t003",
+      "text": "I know how hard you worked on this."
+    },
+    {
+      "id": "s006",
+      "start": 15.68,
+      "end": 18.17,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t004",
+      "text": "Everyone in the department contributed."
+    },
+    {
+      "id": "s007",
+      "start": 18.17,
+      "end": 23.45,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t004",
+      "text": "Anyway, at the staff meeting we have scheduled, we'll discuss how to allocate the funds."
+    },
+    {
+      "id": "s008",
+      "start": 23.45,
+      "end": 27.81,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t004",
+      "text": "The grants offer specific purposes, so we don't have much flexibility there."
+    },
+    {
+      "id": "s009",
+      "start": 27.81,
+      "end": 32.17,
+      "speakerId": "colleague-b",
+      "speaker": "教师 B",
+      "turnId": "t005",
+      "text": "Did we get the one to update our computers and design software?"
+    },
+    {
+      "id": "s010",
+      "start": 32.17,
+      "end": 33.33,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t006",
+      "text": "Partially."
+    },
+    {
+      "id": "s011",
+      "start": 33.33,
+      "end": 35.76,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t006",
+      "text": "So we'll need to upgrade in phases."
+    },
+    {
+      "id": "s012",
+      "start": 35.76,
+      "end": 41.47,
+      "speakerId": "colleague-a",
+      "speaker": "教师 A",
+      "turnId": "t006",
+      "text": "We'll start with the hardware first because without it, we can't run the software."
+    }
+  ]
+}

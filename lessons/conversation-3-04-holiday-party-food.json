@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-04-holiday-party-food",
+  "title": "对话 · 3.04 聚会餐饮",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.4 M1 对话 15-16 · Holiday Party Food",
+  "language": "en",
+  "audioSrc": "./conversation-3-04-holiday-party-food/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "organizer",
+      "label": "活动负责人",
+      "role": "planning party food"
+    },
+    {
+      "id": "advisor",
+      "label": "同事",
+      "role": "giving catering advice"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-04",
+    "sourceItem": "Listening M1 Q15-Q16"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.75,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 2.75,
+      "end": 11.72,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t002",
+      "text": "I've been put in charge of food for the city football team's holiday party next week, and I don't know where to start."
+    },
+    {
+      "id": "s003",
+      "start": 11.72,
+      "end": 13.59,
+      "speakerId": "advisor",
+      "speaker": "同事",
+      "turnId": "t003",
+      "text": "How many people will be there?"
+    },
+    {
+      "id": "s004",
+      "start": 13.59,
+      "end": 14.88,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t004",
+      "text": "Around 40."
+    },
+    {
+      "id": "s005",
+      "start": 14.88,
+      "end": 16.87,
+      "speakerId": "advisor",
+      "speaker": "同事",
+      "turnId": "t005",
+      "text": "That's a big group."
+    },
+    {
+      "id": "s006",
+      "start": 16.87,
+      "end": 24.13,
+      "speakerId": "advisor",
+      "speaker": "同事",
+      "turnId": "t005",
+      "text": "The first thing you need to do is find out people's likes and dislikes and see if anyone has any dietary restrictions."
+    },
+    {
+      "id": "s007",
+      "start": 24.13,
+      "end": 25.66,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t006",
+      "text": "That makes sense."
+    },
+    {
+      "id": "s008",
+      "start": 25.66,
+      "end": 27.48,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t006",
+      "text": "How do I go about it?"
+    },
+    {
+      "id": "s009",
+      "start": 27.48,
+      "end": 30.6,
+      "speakerId": "advisor",
+      "speaker": "同事",
+      "turnId": "t007",
+      "text": "Just write up a little questionnaire and send it to everyone."
+    },
+    {
+      "id": "s010",
+      "start": 30.6,
+      "end": 35.54,
+      "speakerId": "advisor",
+      "speaker": "同事",
+      "turnId": "t007",
+      "text": "Then, based on the responses, write up a menu and go shopping."
+    },
+    {
+      "id": "s011",
+      "start": 35.54,
+      "end": 36.37,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t008",
+      "text": "Nice."
+    },
+    {
+      "id": "s012",
+      "start": 36.37,
+      "end": 38.0,
+      "speakerId": "organizer",
+      "speaker": "活动负责人",
+      "turnId": "t008",
+      "text": "I'll work on that now."
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+{
+  "generatedAt": "2026-08-24",
+  "accepted": 10,
+  "beforeLessonCount": 72,
+  "afterLessonCount": 82,
+  "beforeDialogueCount": 26,
+  "afterDialogueCount": 31,
+  "totalNewSegments": 129,
+  "categoryBalanceAfter": {
+    "心理学": 6,
+    "生物学": 7,
+    "艺术": 7,
+    "历史": 5,
+    "考古学": 5,
+    "科学": 7,
+    "商业": 7,
+    "自定义": 1,
+    "社会科学": 6,
+    "对话": 31
+  },
+  "results": [
+    {
+      "id": "conversation-3-02-woodworking-class",
+      "status": "accepted",
+      "title": "对话 · 3.02 木工课",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 14,
+      "speakers": 3,
+      "turns": 7,
+      "audio": {
+        "duration": 42.85,
+        "bytes": 686751,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -20.59,
+        "peakDb": -6.29,
+        "clipPct": 0.0,
+        "dcOffset": -1.2e-05,
+        "maxSampleJump": 0.7382,
+        "longestSilence": 2.32
+      },
+      "dualAsrTranscriptSimilarity": 1.0,
+      "thirdModelReviewed": false,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "conversation-4-29-business-competition",
+        "similarity": 0.1659
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "conversation-3-04-holiday-party-food",
+      "status": "accepted",
+      "title": "对话 · 3.04 聚会餐饮",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 12,
+      "speakers": 3,
+      "turns": 8,
+      "audio": {
+        "duration": 38.0,
+        "bytes": 609010,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -23.51,
+        "peakDb": -4.68,
+        "clipPct": 0.0,
+        "dcOffset": -0.000229,
+        "maxSampleJump": 0.4732,
+        "longestSilence": 1.9
+      },
+      "dualAsrTranscriptSimilarity": 1.0,
+      "thirdModelReviewed": false,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "conversation-4-05-housing-costs",
+        "similarity": 0.1768
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "conversation-3-04-book-reading",
+      "status": "accepted",
+      "title": "对话 · 3.04 作家读书会",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 11,
+      "speakers": 3,
+      "turns": 8,
+      "audio": {
+        "duration": 35.09,
+        "bytes": 562617,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -20.43,
+        "peakDb": -4.88,
+        "clipPct": 0.0,
+        "dcOffset": -4.4e-05,
+        "maxSampleJump": 0.4894,
+        "longestSilence": 2.32
+      },
+      "dualAsrTranscriptSimilarity": 0.9907,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 1.0,
+      "independentSentenceAverageSimilarity": 1.0,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "conversation-4-01-dorm-kitchen",
+        "similarity": 0.1562
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "conversation-3-29-art-program-funding",
+      "status": "accepted",
+      "title": "对话 · 3.29 艺术项目经费",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 12,
+      "speakers": 3,
+      "turns": 6,
+      "audio": {
+        "duration": 41.47,
+        "bytes": 664599,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -15.83,
+        "peakDb": -1.92,
+        "clipPct": 0.0,
+        "dcOffset": 0.000115,
+        "maxSampleJump": 1.2218,
+        "longestSilence": 2.6
+      },
+      "dualAsrTranscriptSimilarity": 0.9852,
+      "thirdModelReviewed": false,
+      "independentSentenceMinSimilarity": 0.9655,
+      "independentSentenceAverageSimilarity": 0.9971,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "conversation-7-13-career-fair",
+        "similarity": 0.1414
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "conversation-4-13-camping-vacation",
+      "status": "accepted",
+      "title": "对话 · 4.13 露营旅行",
+      "category": "对话",
+      "materialType": "conversation",
+      "segments": 10,
+      "speakers": 3,
+      "turns": 7,
+      "audio": {
+        "duration": 36.61,
+        "bytes": 586858,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -20.06,
+        "peakDb": -1.95,
+        "clipPct": 0.0,
+        "dcOffset": 6e-06,
+        "maxSampleJump": 0.6415,
+        "longestSilence": 2.26
+      },
+      "dualAsrTranscriptSimilarity": 1.0,
+      "thirdModelReviewed": false,
+      "independentSentenceMinSimilarity": 0.9565,
+      "independentSentenceAverageSimilarity": 0.9957,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "conversation-4-29-business-competition",
+        "similarity": 0.1739
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "business-pack2-corporate-social-responsibility",
+      "status": "accepted",
+      "title": "商业 · Pack 2 企业社会责任",
+      "category": "商业",
+      "materialType": "lecture",
+      "segments": 14,
+      "speakers": 1,
+      "turns": 1,
+      "audio": {
+        "duration": 99.33,
+        "bytes": 1590378,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -20.15,
+        "peakDb": -1.93,
+        "clipPct": 0.0,
+        "dcOffset": -0.000405,
+        "maxSampleJump": 0.6068,
+        "longestSilence": 2.18
+      },
+      "dualAsrTranscriptSimilarity": 0.993,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 0.6667,
+      "independentSentenceAverageSimilarity": 0.9762,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "social-science-pack4-social-capital",
+        "similarity": 0.1549
+      },
+      "reviewedWarnings": [
+        "tiny.en rendered the standard opening 'a talk' as 'it talking'; small.en and the source transcript confirm the published wording."
+      ],
+      "issues": []
+    },
+    {
+      "id": "psychology-pack2-resilience",
+      "status": "accepted",
+      "title": "心理学 · Pack 2 心理韧性",
+      "category": "心理学",
+      "materialType": "lecture",
+      "segments": 11,
+      "speakers": 1,
+      "turns": 1,
+      "audio": {
+        "duration": 74.78,
+        "bytes": 1197497,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -19.9,
+        "peakDb": -4.21,
+        "clipPct": 0.0,
+        "dcOffset": -0.000537,
+        "maxSampleJump": 0.5325,
+        "longestSilence": 2.18
+      },
+      "dualAsrTranscriptSimilarity": 0.9971,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 0.875,
+      "independentSentenceAverageSimilarity": 0.9886,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "psychology-1-27-m1-25-28",
+        "similarity": 0.1182
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "art-2-02-hero-journey",
+      "status": "accepted",
+      "title": "艺术 · 2.02 英雄之旅",
+      "category": "艺术",
+      "materialType": "lecture",
+      "segments": 15,
+      "speakers": 1,
+      "turns": 1,
+      "audio": {
+        "duration": 109.9,
+        "bytes": 1759652,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -19.65,
+        "peakDb": -1.35,
+        "clipPct": 0.0,
+        "dcOffset": -2e-06,
+        "maxSampleJump": 0.7041,
+        "longestSilence": 2.52
+      },
+      "dualAsrTranscriptSimilarity": 0.9814,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 0.8235,
+      "independentSentenceAverageSimilarity": 0.9404,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "business-6-6-viral-marketing",
+        "similarity": 0.1242
+      },
+      "reviewedWarnings": [
+        "Connected speech in 'return with a gift' and 'something deeply human' was reconciled against three ASR passes and the known Hero's Journey terminology."
+      ],
+      "issues": []
+    },
+    {
+      "id": "biology-7-11-ant-mandibles",
+      "status": "accepted",
+      "title": "生物学 · 7.11 蚂蚁颚与仿生夹具",
+      "category": "生物学",
+      "materialType": "lecture",
+      "segments": 15,
+      "speakers": 1,
+      "turns": 1,
+      "audio": {
+        "duration": 116.0,
+        "bytes": 1857036,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -15.59,
+        "peakDb": -2.71,
+        "clipPct": 0.0,
+        "dcOffset": -0.001688,
+        "maxSampleJump": 0.6931,
+        "longestSilence": 2.12
+      },
+      "dualAsrTranscriptSimilarity": 0.9378,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 0.9167,
+      "independentSentenceAverageSimilarity": 0.9859,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "history-3-8-inventors",
+        "similarity": 0.0979
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    },
+    {
+      "id": "science-7-13-led-lighting",
+      "status": "accepted",
+      "title": "科学 · 7.13 LED 照明",
+      "category": "科学",
+      "materialType": "lecture",
+      "segments": 15,
+      "speakers": 1,
+      "turns": 1,
+      "audio": {
+        "duration": 100.03,
+        "bytes": 1601663,
+        "codec": "mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "bitRate": 128000,
+        "rmsDb": -20.97,
+        "peakDb": -1.58,
+        "clipPct": 0.0,
+        "dcOffset": -1e-06,
+        "maxSampleJump": 0.5535,
+        "longestSilence": 1.32
+      },
+      "dualAsrTranscriptSimilarity": 0.9934,
+      "thirdModelReviewed": true,
+      "independentSentenceMinSimilarity": 0.8462,
+      "independentSentenceAverageSimilarity": 0.9845,
+      "emptySentenceSegments": [],
+      "closestActiveTranscript": {
+        "id": "art-3-02-cubism",
+        "similarity": 0.1247
+      },
+      "reviewedWarnings": [],
+      "issues": []
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "candidate": "7.8 Outsider Art",
+      "reason": "Rejected: the 270-second file is effectively silent (RMS -84.18 dB; no speech detected by either ASR model)."
+    },
+    {
+      "candidate": "7.8 Wetlands",
+      "reason": "Rejected: the file contains an apartment tail, party/computer conversations, and announcements rather than the named lecture."
+    },
+    {
+      "candidate": "7.8 Sustainable Materials",
+      "reason": "Rejected: the file contains announcements and the Hip-Hop Sampling lecture rather than the named lecture."
+    },
+    {
+      "candidate": "Sustainable Urbanization",
+      "reason": "Rejected: source hard clipping measured 1.16813% with full-scale sample jumps, creating distortion risk."
+    },
+    {
+      "candidate": "Startup Incubators",
+      "reason": "Held back: measurable source clipping remained; the clean Corporate Social Responsibility lecture filled the business slot instead."
+    },
+    {
+      "candidate": "Pack 4 indexed Bioluminescence / Existentialism windows",
+      "reason": "Rejected: indexed timestamps resolve to Cubism and Synesthesia audio, so source identity is not trustworthy."
+    }
+  ],
+  "method": {
+    "selection": "Searched the retained local lecture/dialogue inventory and July archive, removed active and source-level duplicates, then replaced every silent, clipped, discontinuous, or mislabeled candidate.",
+    "sentencePolicy": "Strict complete-sentence segmentation by terminal punctuation with no duration cap. Comma-linked clauses and coordinated phrases remain together.",
+    "speakerPolicy": "Conversation narrator and participant roles are stored as editable speaker records; uninterrupted turns share a turnId.",
+    "audioPolicy": "Only leading/trailing package silence was removed. Three quiet dialogues received transparent level gain; all outputs received 1 dB peak headroom. No denoising, speed change, synthesis, or content splicing was used.",
+    "qualityChecks": [
+      "small.en and base.en full-window ASR for all ten resources",
+      "multilingual small third-pass review for all five lectures and the proper-name dialogue",
+      "independent tiny.en ASR on all 129 final sentence windows",
+      "empty, overlapping, non-contiguous and out-of-range segment checks",
+      "RMS, peak, clipping, DC offset, silence, waveform-jump and encoding checks",
+      "cross-library transcript deduplication against all 82 active lessons",
+      "bad-marker scan for uncertain, blank, inaudible and missing-audio placeholders"
+    ]
+  },
+  "remainingMaterial": {
+    "unusedUniqueConversationWindowsAfterThisBatch": 73,
+    "readyToPublishWithoutFurtherAudit": 0,
+    "notes": [
+      "The remaining dialogue count is an inventory count; many entries are duplicates, have weak source calibration, or still require dual-ASR and waveform review.",
+      "The July 7.8 item-level lecture exports are not reliable: all three newly inspected lecture files were silent or mislabeled.",
+      "Pack material still contains potentially useful talks, but some document timestamps do not match the audio and must be rediscovered rather than trusted directly.",
+      "History and archaeology remain the least represented main lecture categories at five lessons each."
+    ],
+    "newResourceRecommendation": "Request new clean, item-level history and archaeology lectures with verified transcripts before the next balanced lecture expansion."
+  },
+  "deployment": {
+    "githubUpdateAuthorized": true,
+    "note": "The user explicitly requested direct deployment."
+  },
+  "validationErrors": []
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "science-7-13-led-lighting",
+  "title": "科学 · 7.13 LED 照明",
+  "category": "科学",
+  "materialType": "lecture",
+  "source": "7.13 M1 物理讲座 25-28 · LED Lighting",
+  "language": "en",
+  "audioSrc": "./science-7-13-led-lighting/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-07-13",
+    "sourceItem": "Listening M1 Q25-Q28"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 2.18,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a physics class."
+    },
+    {
+      "id": "s002",
+      "start": 2.18,
+      "end": 8.29,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Imagine a time when the only lights available were flickering candles or oil lamps."
+    },
+    {
+      "id": "s003",
+      "start": 8.29,
+      "end": 15.14,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Now fast forward to today, when life is illuminated by the glow of energy-efficient LED lights."
+    },
+    {
+      "id": "s004",
+      "start": 15.14,
+      "end": 19.47,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So what makes these tiny light-emitting diodes so revolutionary?"
+    },
+    {
+      "id": "s005",
+      "start": 19.47,
+      "end": 25.04,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "The first practical visible spectrum LED was developed in 1962."
+    },
+    {
+      "id": "s006",
+      "start": 25.04,
+      "end": 33.02,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It was a breakthrough that altered the landscape of lighting technology and set us on a path toward reduced energy consumption."
+    },
+    {
+      "id": "s007",
+      "start": 33.02,
+      "end": 38.39,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "LEDs, short for light-emitting diodes, are a type of solid-state lighting."
+    },
+    {
+      "id": "s008",
+      "start": 38.39,
+      "end": 43.18,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They use a semiconductor to convert electricity directly into light."
+    },
+    {
+      "id": "s009",
+      "start": 43.18,
+      "end": 50.73,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Unlike traditional incandescent bulbs, which waste a lot of energy as heat, LEDs are incredibly efficient."
+    },
+    {
+      "id": "s010",
+      "start": 50.73,
+      "end": 58.66,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Their biggest benefit is that they use about 75% less energy than incandescent bulbs and last 25 times longer."
+    },
+    {
+      "id": "s011",
+      "start": 58.66,
+      "end": 64.87,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "That lowers electricity bills and also significantly reduces the carbon footprint."
+    },
+    {
+      "id": "s012",
+      "start": 64.87,
+      "end": 69.12,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But the impact of LEDs goes beyond energy savings."
+    },
+    {
+      "id": "s013",
+      "start": 69.12,
+      "end": 80.78,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They have enabled new designs that were previously unimaginable because of their small size, allowing LEDs to be integrated into flexible strips, smart bulbs, and even clothing."
+    },
+    {
+      "id": "s014",
+      "start": 80.78,
+      "end": 86.42,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They also create possibilities in architecture, art, and everyday consumer products."
+    },
+    {
+      "id": "s015",
+      "start": 86.42,
+      "end": 100.03,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "With ongoing research, we could see LEDs that purify the air, improve mood through human-centric lighting, or even transform communication through Li-Fi, a wireless system that uses light from LEDs."
+    }
+  ]
+}

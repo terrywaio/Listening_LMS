@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-4-13-camping-vacation",
+  "title": "对话 · 4.13 露营旅行",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "4.13 Set 1 对话 6-7 · Camping Vacation",
+  "language": "en",
+  "audioSrc": "./conversation-4-13-camping-vacation/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "suggesting a restaurant and camping"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "saving for a vacation"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-04-13",
+    "sourceItem": "Listening Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.0,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.0,
+      "end": 6.45,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "Have you checked out the new restaurant downtown?"
+    },
+    {
+      "id": "s003",
+      "start": 6.45,
+      "end": 11.85,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "The sushi is made by an award-winning chef and is absolutely top-notch."
+    },
+    {
+      "id": "s004",
+      "start": 11.85,
+      "end": 14.95,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I'd love to, but I'm saving money for a vacation."
+    },
+    {
+      "id": "s005",
+      "start": 14.95,
+      "end": 16.69,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Do you have specific plans?"
+    },
+    {
+      "id": "s006",
+      "start": 16.69,
+      "end": 20.52,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "Not yet, but I'd love to spend a month somewhere in nature."
+    },
+    {
+      "id": "s007",
+      "start": 20.52,
+      "end": 22.85,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Have you considered a camping trip?"
+    },
+    {
+      "id": "s008",
+      "start": 22.85,
+      "end": 29.11,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "You could just pack a tent and a sleeping bag into your car and travel all around the mountains while sleeping at campsites."
+    },
+    {
+      "id": "s009",
+      "start": 29.11,
+      "end": 31.95,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "No need for hotels or plane tickets."
+    },
+    {
+      "id": "s010",
+      "start": 31.95,
+      "end": 36.61,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "Well, I do love me a comfortable bed at the end of an eventful day."
+    }
+  ]
+}

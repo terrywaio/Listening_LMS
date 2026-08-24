@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 2,
+  "id": "psychology-pack2-resilience",
+  "title": "心理学 · Pack 2 心理韧性",
+  "category": "心理学",
+  "materialType": "lecture",
+  "source": "Pack 2 心理学讲座 · Resilience",
+  "language": "en",
+  "audioSrc": "./psychology-pack2-resilience/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-pack-2",
+    "sourceItem": "Listening Resilience Talk"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.92,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a psychology class."
+    },
+    {
+      "id": "s002",
+      "start": 3.92,
+      "end": 10.17,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Resilience refers to the ability to adapt and recover from adversity or stress."
+    },
+    {
+      "id": "s003",
+      "start": 10.17,
+      "end": 20.1,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "It's a dynamic process that varies significantly from person to person, influenced by a combination of genetic, psychological, and social factors."
+    },
+    {
+      "id": "s004",
+      "start": 20.1,
+      "end": 24.67,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Research has shown that certain traits and behaviors can enhance resilience."
+    },
+    {
+      "id": "s005",
+      "start": 24.67,
+      "end": 30.62,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "These include optimism, the ability to regulate emotions, and having a strong support network."
+    },
+    {
+      "id": "s006",
+      "start": 30.62,
+      "end": 40.41,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "For instance, people who maintain a positive outlook are better equipped to handle setbacks because they tend to see challenges as temporary and surmountable."
+    },
+    {
+      "id": "s007",
+      "start": 40.41,
+      "end": 47.94,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Emotional regulation involves managing one's feelings in a healthy way, which can prevent stress from becoming overwhelming."
+    },
+    {
+      "id": "s008",
+      "start": 47.94,
+      "end": 52.46,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Moreover, social connections play a crucial role in resilience."
+    },
+    {
+      "id": "s009",
+      "start": 52.46,
+      "end": 58.33,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Support from family and friends can provide emotional comfort and practical assistance during difficult times."
+    },
+    {
+      "id": "s010",
+      "start": 58.33,
+      "end": 67.5,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Communities with strong social bonds typically exhibit higher levels of collective resilience, which is the ability of a group to recover from crises."
+    },
+    {
+      "id": "s011",
+      "start": 67.5,
+      "end": 74.78,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Next, we will discuss various strategies that individuals can use to build and strengthen their resilience over time."
+    }
+  ]
+}

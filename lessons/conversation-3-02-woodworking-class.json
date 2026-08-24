@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "id": "conversation-3-02-woodworking-class",
+  "title": "对话 · 3.02 木工课",
+  "category": "对话",
+  "materialType": "conversation",
+  "source": "3.2 Part 2 对话 6-7 · Woodworking Class",
+  "language": "en",
+  "audioSrc": "./conversation-3-02-woodworking-class/audio.mp3",
+  "speakers": [
+    {
+      "id": "narrator",
+      "label": "旁白",
+      "role": "narrator"
+    },
+    {
+      "id": "student-a",
+      "label": "学生 A",
+      "role": "asking about the class"
+    },
+    {
+      "id": "student-b",
+      "label": "学生 B",
+      "role": "taking a woodworking class"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed dual-ASR",
+    "sourceBatch": "2026-03-02",
+    "sourceItem": "Listening Q6-Q7"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 3.3,
+      "speakerId": "narrator",
+      "speaker": "旁白",
+      "turnId": "t001",
+      "text": "Listen to a conversation."
+    },
+    {
+      "id": "s002",
+      "start": 3.3,
+      "end": 6.34,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "You're taking a woodworking class, right?"
+    },
+    {
+      "id": "s003",
+      "start": 6.34,
+      "end": 8.18,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t002",
+      "text": "In the Fine Arts Department?"
+    },
+    {
+      "id": "s004",
+      "start": 8.18,
+      "end": 10.86,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "Yes, with Professor Williams."
+    },
+    {
+      "id": "s005",
+      "start": 10.86,
+      "end": 13.34,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t003",
+      "text": "I'm building a bookshelf right now."
+    },
+    {
+      "id": "s006",
+      "start": 13.34,
+      "end": 14.38,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Cool."
+    },
+    {
+      "id": "s007",
+      "start": 14.38,
+      "end": 15.9,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t004",
+      "text": "Do you like the class?"
+    },
+    {
+      "id": "s008",
+      "start": 15.9,
+      "end": 17.04,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "I do."
+    },
+    {
+      "id": "s009",
+      "start": 17.04,
+      "end": 24.62,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "I was a little skeptical about the lectures I'd have to sit through, but there's a nice balance between theory and practice."
+    },
+    {
+      "id": "s010",
+      "start": 24.62,
+      "end": 29.12,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t005",
+      "text": "I actually appreciate the lectures as much as working in the studio."
+    },
+    {
+      "id": "s011",
+      "start": 29.12,
+      "end": 30.21,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "That's good."
+    },
+    {
+      "id": "s012",
+      "start": 30.21,
+      "end": 34.43,
+      "speakerId": "student-a",
+      "speaker": "学生 A",
+      "turnId": "t006",
+      "text": "Maybe you could take another class next semester with Professor Williams."
+    },
+    {
+      "id": "s013",
+      "start": 34.43,
+      "end": 39.4,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "Well, I'd really like to be exposed to lots of different teaching styles."
+    },
+    {
+      "id": "s014",
+      "start": 39.4,
+      "end": 42.85,
+      "speakerId": "student-b",
+      "speaker": "学生 B",
+      "turnId": "t007",
+      "text": "The Fine Arts Department has so many great teachers."
+    }
+  ]
+}

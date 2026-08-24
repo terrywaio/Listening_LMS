@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "id": "biology-7-11-ant-mandibles",
+  "title": "生物学 · 7.11 蚂蚁颚与仿生夹具",
+  "category": "生物学",
+  "materialType": "lecture",
+  "source": "7.11 M1 生物学讲座 25-28 · Ant Mandibles",
+  "language": "en",
+  "audioSrc": "./biology-7-11-ant-mandibles/audio.mp3",
+  "speakers": [
+    {
+      "id": "lecturer",
+      "label": "讲师",
+      "role": "lecturer"
+    }
+  ],
+  "workflow": {
+    "status": "reviewed",
+    "editable": true,
+    "reviewRequired": false,
+    "transcriptMethod": "human-reviewed triple-ASR",
+    "sourceBatch": "2026-07-11",
+    "sourceItem": "Listening M1 Q25-Q28"
+  },
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 4.0,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Listen to a talk in a biology class."
+    },
+    {
+      "id": "s002",
+      "start": 4.0,
+      "end": 10.12,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "You've probably heard that ants can carry 50 times their own body weight."
+    },
+    {
+      "id": "s003",
+      "start": 10.12,
+      "end": 11.68,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Amazing, right?"
+    },
+    {
+      "id": "s004",
+      "start": 11.68,
+      "end": 17.44,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Ants also, out on the front of their heads, they have strong mandibles."
+    },
+    {
+      "id": "s005",
+      "start": 17.44,
+      "end": 28.61,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Mandibles are like jaws, though ants use them like pincers, grippers like how humans use our thumb and index finger to pick things up."
+    },
+    {
+      "id": "s006",
+      "start": 28.61,
+      "end": 35.37,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Now, ants' mandibles, their inner surfaces, are covered in tiny hairs."
+    },
+    {
+      "id": "s007",
+      "start": 35.37,
+      "end": 53.29,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "And researchers working on biomimicry, biomimicry means imitating nature in human inventions, a group of researchers studying ant mandibles and their hairs recently wondered if they could use biomimicry with a robot gripper."
+    },
+    {
+      "id": "s008",
+      "start": 53.29,
+      "end": 60.85,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So, a robot gripper is a device with flat plates that come together to pick things up."
+    },
+    {
+      "id": "s009",
+      "start": 60.85,
+      "end": 64.45,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But it's difficult to pick up packaging with curved edges."
+    },
+    {
+      "id": "s010",
+      "start": 64.45,
+      "end": 69.86,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So manufacturers often use grippers with three plates for stability."
+    },
+    {
+      "id": "s011",
+      "start": 69.86,
+      "end": 76.45,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "But three plates are bulky and harder to operate, you know, awkward."
+    },
+    {
+      "id": "s012",
+      "start": 76.45,
+      "end": 91.55,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "So, the researchers built a robot gripper with two plates with tiny artificial hairs, copying ants' mandibles, and another gripper with just the two smooth plates."
+    },
+    {
+      "id": "s013",
+      "start": 91.55,
+      "end": 103.84,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "They did an experiment with over 2,000 tests, an astonishing number, I think, comparing how well the grippers picked up items like a cereal box and a shampoo bottle."
+    },
+    {
+      "id": "s014",
+      "start": 103.84,
+      "end": 112.16,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Well, the hairy gripper was at least 29% better at grabbing and holding onto items."
+    },
+    {
+      "id": "s015",
+      "start": 112.16,
+      "end": 116.0,
+      "speakerId": "lecturer",
+      "speaker": "讲师",
+      "turnId": "t001",
+      "text": "Its grip was more gentle and more secure."
+    }
+  ]
+}
